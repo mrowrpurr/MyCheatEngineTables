@@ -164,6 +164,95 @@
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
+    <CheatEntry>
+      <ID>64</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+237828</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>65</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+237838</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>66</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+23783C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>67</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+237840</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>68</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+237848</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>69</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+237848</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>70</ID>
+      <Description>"Map Something"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+230314</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>71</ID>
+      <Description>"Current Map Name"</Description>
+      <VariableType>String</VariableType>
+      <Length>11</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>falloutwHR.exe+230314-50+30</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>72</ID>
+      <Description>"Map Part 1 maybe"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+230314-50+4C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>73</ID>
+      <Description>"Map Part 2 maybe"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+230314-50+50</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>74</ID>
+      <Description>"Map Stuff Static"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+230314</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>75</ID>
+      <Description>"Current Map - Level 1"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+105BEC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>76</ID>
+      <Description>"Current Map - Level 2"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+105C9C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>77</ID>
+      <Description>"Current Map - Level 3"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+105DE4</Address>
+    </CheatEntry>
   </CheatEntries>
   <CheatCodes>
     <CodeEntry>
@@ -507,7 +596,10 @@
       <Elements>
         <Element Offset="0" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000000" Description="Object ID" DisplayMethod="unsigned integer"/>
         <Element Offset="4" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000004" Description="Current Tile Number" DisplayMethod="signed integer"/>
-        <Element Offset="8" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000008" DisplayMethod="unsigned integer"/>
+        <Element Offset="8" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000008" DisplayMethod="unsigned integer"/>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000010" Description="X Screen Scroll" DisplayMethod="unsigned integer"/>
+        <Element Offset="20" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000014" Description="Y Screen Screen" DisplayMethod="unsigned integer"/>
+        <Element Offset="24" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000018" DisplayMethod="unsigned integer"/>
         <Element Offset="32" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000020" DisplayMethod="hexadecimal"/>
         <Element Offset="40" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000028" DisplayMethod="unsigned integer"/>
         <Element Offset="44" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002C" Description="Inventory Item Count" DisplayMethod="unsigned integer"/>
@@ -2583,7 +2675,7 @@
         <Element Offset="164" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000A4" DisplayMethod="unsigned integer"/>
         <Element Offset="172" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000AC" DisplayMethod="hexadecimal"/>
         <Element Offset="176" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000B0" DisplayMethod="unsigned integer"/>
-        <Element Offset="180" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000B4" DisplayMethod="hexadecimal"/>
+        <Element Offset="180" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000B4" Description="Also Current Tile Number" DisplayMethod="signed integer"/>
         <Element Offset="184" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="000000B8" DisplayMethod="unsigned integer"/>
         <Element Offset="208" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000D0" DisplayMethod="hexadecimal"/>
         <Element Offset="216" Vartype="4 Bytes" Bytesize="4" RLECount="22" OffsetHex="000000D8" DisplayMethod="unsigned integer"/>
@@ -3893,6 +3985,22 @@
         <Element Offset="9900" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000026AC" DisplayMethod="unsigned integer"/>
         <Element Offset="9908" Vartype="4 Bytes" Bytesize="4" OffsetHex="000026B4" DisplayMethod="hexadecimal"/>
         <Element Offset="9912" Vartype="String" Bytesize="88" OffsetHex="000026B8" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="36" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000024" DisplayMethod="unsigned integer"/>
+        <Element Offset="44" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
+        <Element Offset="48" Vartype="String" Bytesize="11" OffsetHex="00000030" DisplayMethod="unsigned integer"/>
+        <Element Offset="59" Vartype="Byte" Bytesize="1" OffsetHex="0000003B" DisplayMethod="unsigned integer"/>
+        <Element Offset="60" Vartype="4 Bytes" Bytesize="4" RLECount="10" OffsetHex="0000003C" DisplayMethod="unsigned integer"/>
+        <Element Offset="100" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000064" DisplayMethod="hexadecimal"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" RLECount="44" OffsetHex="00000068" DisplayMethod="unsigned integer"/>
+        <Element Offset="280" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="00000118" DisplayMethod="unsigned integer"/>
+        <Element Offset="292" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000124" DisplayMethod="unsigned integer"/>
+        <Element Offset="296" Vartype="String" Bytesize="16" OffsetHex="00000128" DisplayMethod="unsigned integer"/>
+        <Element Offset="312" Vartype="4 Bytes" Bytesize="4" RLECount="2422" OffsetHex="00000138" DisplayMethod="unsigned integer"/>
       </Elements>
     </Structure>
   </Structures>
