@@ -83,6 +83,12 @@
               <Address>+04</Address>
             </CheatEntry>
             <CheatEntry>
+              <ID>85</ID>
+              <Description>"Inventory Item Count"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>08B27160+2C</Address>
+            </CheatEntry>
+            <CheatEntry>
               <ID>56</ID>
               <Description>"Inventory"</Description>
               <ShowAsSigned>0</ShowAsSigned>
@@ -146,21 +152,6 @@
               </CheatEntries>
             </CheatEntry>
           </CheatEntries>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>53</ID>
-      <Description>"Shady Sands Dude"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0880ACCC</Address>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>55</ID>
-          <Description>"NPC ID"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>-04</Address>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
@@ -289,6 +280,84 @@
       <Description>"Tile Number under Mouse Cursor"</Description>
       <VariableType>4 Bytes</VariableType>
       <Address>falloutwHR.exe+1054EC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>87</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+195230</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>86</ID>
+          <Description>"Current Render of Mouse Cursor Hex"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+0</Address>
+          <Offsets>
+            <Offset>+04</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>88</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>f1_res.dll+3C908</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>89</ID>
+          <Description>"Current Render of Mouse Cursor Hex"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+0</Address>
+          <Offsets>
+            <Offset>+04</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>90</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>022EB3C4</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>96</ID>
+          <Description>"Should be NPC ID"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>-4</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>97</ID>
+      <Description>"Static Shady Sands Dude"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+16B570</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>98</ID>
+      <Description>"Maybe folks on the current map"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+16B570</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>119</ID>
+      <Description>"Static Ptr to Full List of Scripts"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"falloutwHR.exe"+00072D7C</Address>
+      <Offsets>
+        <Offset>C1C</Offset>
+      </Offsets>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -756,7 +825,8 @@
         <Element Offset="16" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000010" Description="X Screen Scroll" DisplayMethod="unsigned integer"/>
         <Element Offset="20" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000014" Description="Y Screen Screen" DisplayMethod="unsigned integer"/>
         <Element Offset="24" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000018" DisplayMethod="unsigned integer"/>
-        <Element Offset="32" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000020" DisplayMethod="hexadecimal"/>
+        <Element Offset="32" Vartype="Pointer" Bytesize="4" OffsetHex="00000020" DisplayMethod="unsigned integer"/>
+        <Element Offset="36" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000024" DisplayMethod="hexadecimal"/>
         <Element Offset="40" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000028" DisplayMethod="unsigned integer"/>
         <Element Offset="44" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002C" Description="Inventory Item Count" DisplayMethod="unsigned integer"/>
         <Element Offset="48" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000030" DisplayMethod="unsigned integer"/>
@@ -2817,7 +2887,8 @@
         </Element>
         <Element Offset="56" Vartype="4 Bytes" Bytesize="4" RLECount="11" OffsetHex="00000038" DisplayMethod="unsigned integer"/>
         <Element Offset="100" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000064" DisplayMethod="hexadecimal"/>
-        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000068" DisplayMethod="unsigned integer"/>
+        <Element Offset="104" Vartype="Pointer" Bytesize="4" OffsetHex="00000068" DisplayMethod="unsigned integer"/>
+        <Element Offset="108" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000006C" DisplayMethod="unsigned integer"/>
         <Element Offset="112" Vartype="Pointer" Bytesize="4" OffsetHex="00000070" DisplayMethod="unsigned integer"/>
         <Element Offset="116" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000074" DisplayMethod="unsigned integer"/>
         <Element Offset="120" Vartype="Pointer" Bytesize="4" OffsetHex="00000078" DisplayMethod="unsigned integer"/>
