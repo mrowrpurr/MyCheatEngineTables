@@ -201,12 +201,6 @@
       <Address>falloutwHR.exe+237848</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>70</ID>
-      <Description>"Map Something"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>falloutwHR.exe+230314</Address>
-    </CheatEntry>
-    <CheatEntry>
       <ID>71</ID>
       <Description>"Current Map Name"</Description>
       <VariableType>String</VariableType>
@@ -221,12 +215,6 @@
       <Description>"Map Part 1 maybe"</Description>
       <VariableType>4 Bytes</VariableType>
       <Address>falloutwHR.exe+230314-50+4C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>73</ID>
-      <Description>"Map Part 2 maybe"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>falloutwHR.exe+230314-50+50</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>74</ID>
@@ -244,7 +232,8 @@
     <CheatEntry>
       <ID>76</ID>
       <Description>"Current Map - Level 2"</Description>
-      <VariableType>4 Bytes</VariableType>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>2 Bytes</VariableType>
       <Address>falloutwHR.exe+105C9C</Address>
     </CheatEntry>
     <CheatEntry>
@@ -252,6 +241,18 @@
       <Description>"Current Map - Level 3"</Description>
       <VariableType>4 Bytes</VariableType>
       <Address>falloutwHR.exe+105DE4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>78</ID>
+      <Description>"Player Health in UI"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+105708</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>79</ID>
+      <Description>"Player Health"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>08B271B8</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -276,6 +277,54 @@
         <Byte>89</Byte>
         <Byte>D5</Byte>
         <Byte>89</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change map :mov [ebx],eax</Description>
+      <AddressString>falloutwHR.exe+B0D6D</AddressString>
+      <Before>
+        <Byte>8B</Byte>
+        <Byte>04</Byte>
+        <Byte>24</Byte>
+        <Byte>89</Byte>
+        <Byte>E2</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>03</Byte>
+      </Actual>
+      <After>
+        <Byte>89</Byte>
+        <Byte>C8</Byte>
+        <Byte>E8</Byte>
+        <Byte>7A</Byte>
+        <Byte>FF</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Only Trigger on Map Change :mov [falloutwHR.exe+2302F4],dh</Description>
+      <AddressString>falloutwHR.exe+75E57</AddressString>
+      <Before>
+        <Byte>01</Byte>
+        <Byte>74</Byte>
+        <Byte>21</Byte>
+        <Byte>30</Byte>
+        <Byte>F6</Byte>
+      </Before>
+      <Actual>
+        <Byte>CC</Byte>
+        <Byte>35</Byte>
+        <Byte>F4</Byte>
+        <Byte>02</Byte>
+        <Byte>63</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>E8</Byte>
+        <Byte>A6</Byte>
+        <Byte>74</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
       </After>
     </CodeEntry>
   </CheatCodes>
@@ -3985,22 +4034,6 @@
         <Element Offset="9900" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000026AC" DisplayMethod="unsigned integer"/>
         <Element Offset="9908" Vartype="4 Bytes" Bytesize="4" OffsetHex="000026B4" DisplayMethod="hexadecimal"/>
         <Element Offset="9912" Vartype="String" Bytesize="88" OffsetHex="000026B8" DisplayMethod="unsigned integer"/>
-      </Elements>
-    </Structure>
-    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
-      <Elements>
-        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
-        <Element Offset="36" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000024" DisplayMethod="unsigned integer"/>
-        <Element Offset="44" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
-        <Element Offset="48" Vartype="String" Bytesize="11" OffsetHex="00000030" DisplayMethod="unsigned integer"/>
-        <Element Offset="59" Vartype="Byte" Bytesize="1" OffsetHex="0000003B" DisplayMethod="unsigned integer"/>
-        <Element Offset="60" Vartype="4 Bytes" Bytesize="4" RLECount="10" OffsetHex="0000003C" DisplayMethod="unsigned integer"/>
-        <Element Offset="100" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000064" DisplayMethod="hexadecimal"/>
-        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" RLECount="44" OffsetHex="00000068" DisplayMethod="unsigned integer"/>
-        <Element Offset="280" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="00000118" DisplayMethod="unsigned integer"/>
-        <Element Offset="292" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000124" DisplayMethod="unsigned integer"/>
-        <Element Offset="296" Vartype="String" Bytesize="16" OffsetHex="00000128" DisplayMethod="unsigned integer"/>
-        <Element Offset="312" Vartype="4 Bytes" Bytesize="4" RLECount="2422" OffsetHex="00000138" DisplayMethod="unsigned integer"/>
       </Elements>
     </Structure>
   </Structures>
