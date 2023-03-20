@@ -72,6 +72,22 @@
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
+          <ID>155</ID>
+          <Description>"Character Name"</Description>
+          <VariableType>String</VariableType>
+          <Length>19</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>falloutwHR.exe+16BF1C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>156</ID>
+          <Description>"Character Age"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>falloutwHR.exe+1076C8</Address>
+        </CheatEntry>
+        <CheatEntry>
           <ID>0</ID>
           <Description>"Experience"</Description>
           <VariableType>4 Bytes</VariableType>
@@ -102,7 +118,7 @@
           <VariableType>4 Bytes</VariableType>
           <Address>"falloutwHR.exe"+0008ED34</Address>
           <Offsets>
-            <Offset>2C-10</Offset>
+            <Offset>1C</Offset>
           </Offsets>
         </CheatEntry>
         <CheatEntry>
@@ -268,12 +284,13 @@
         <CheatEntry>
           <ID>71</ID>
           <Description>"Current Map Name"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
           <VariableType>String</VariableType>
           <Length>11</Length>
           <Unicode>0</Unicode>
           <CodePage>0</CodePage>
           <ZeroTerminate>1</ZeroTerminate>
-          <Address>falloutwHR.exe+230314-50+30</Address>
+          <Address>falloutwHR.exe+2302F4</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>84</ID>
@@ -337,6 +354,17 @@ mov [eax+34],ebx
 
 
 </AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>141</ID>
+      <Description>"-- WORK IN PROGRESS BELOW --"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>157</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>001E5C30</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -4958,6 +4986,62 @@ mov [eax+34],ebx
         <Element Offset="4112" Vartype="4 Bytes" Bytesize="4" RLECount="8" OffsetHex="00001010" DisplayMethod="unsigned integer"/>
         <Element Offset="4144" Vartype="Pointer" Bytesize="4" RLECount="12" OffsetHex="00001030" DisplayMethod="unsigned integer"/>
         <Element Offset="4192" Vartype="4 Bytes" Bytesize="4" RLECount="1452" OffsetHex="00001060" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="5" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="20" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000014" DisplayMethod="hexadecimal"/>
+        <Element Offset="24" Vartype="4 Bytes" Bytesize="4" RLECount="44" OffsetHex="00000018" DisplayMethod="unsigned integer"/>
+        <Element Offset="200" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="000000C8" DisplayMethod="unsigned integer"/>
+        <Element Offset="212" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000D4" DisplayMethod="unsigned integer"/>
+        <Element Offset="216" Vartype="String" Bytesize="16" OffsetHex="000000D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="232" Vartype="4 Bytes" Bytesize="4" RLECount="2442" OffsetHex="000000E8" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="9" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="36" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000024" DisplayMethod="unsigned integer"/>
+        <Element Offset="44" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
+        <Element Offset="48" Vartype="String" Bytesize="11" OffsetHex="00000030" DisplayMethod="unsigned integer"/>
+        <Element Offset="59" Vartype="Byte" Bytesize="1" OffsetHex="0000003B" DisplayMethod="unsigned integer"/>
+        <Element Offset="60" Vartype="4 Bytes" Bytesize="4" RLECount="10" OffsetHex="0000003C" DisplayMethod="unsigned integer"/>
+        <Element Offset="100" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000064" DisplayMethod="hexadecimal"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" RLECount="44" OffsetHex="00000068" DisplayMethod="unsigned integer"/>
+        <Element Offset="280" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="00000118" DisplayMethod="unsigned integer"/>
+        <Element Offset="292" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000124" DisplayMethod="unsigned integer"/>
+        <Element Offset="296" Vartype="String" Bytesize="16" OffsetHex="00000128" DisplayMethod="unsigned integer"/>
+        <Element Offset="312" Vartype="4 Bytes" Bytesize="4" RLECount="2422" OffsetHex="00000138" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="5" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="20" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000014" DisplayMethod="unsigned integer"/>
+        <Element Offset="28" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000001C" DisplayMethod="unsigned integer"/>
+        <Element Offset="32" Vartype="String" Bytesize="11" OffsetHex="00000020" DisplayMethod="unsigned integer"/>
+        <Element Offset="43" Vartype="Byte" Bytesize="1" OffsetHex="0000002B" DisplayMethod="unsigned integer"/>
+        <Element Offset="44" Vartype="4 Bytes" Bytesize="4" RLECount="10" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
+        <Element Offset="84" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000054" DisplayMethod="hexadecimal"/>
+        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" RLECount="44" OffsetHex="00000058" DisplayMethod="unsigned integer"/>
+        <Element Offset="264" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="00000108" DisplayMethod="unsigned integer"/>
+        <Element Offset="276" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000114" DisplayMethod="unsigned integer"/>
+        <Element Offset="280" Vartype="String" Bytesize="16" OffsetHex="00000118" DisplayMethod="unsigned integer"/>
+        <Element Offset="296" Vartype="4 Bytes" Bytesize="4" RLECount="2426" OffsetHex="00000128" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="String" Bytesize="11" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="11" Vartype="Byte" Bytesize="1" OffsetHex="0000000B" DisplayMethod="unsigned integer"/>
+        <Element Offset="12" Vartype="4 Bytes" Bytesize="4" RLECount="10" OffsetHex="0000000C" DisplayMethod="unsigned integer"/>
+        <Element Offset="52" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000034" DisplayMethod="hexadecimal"/>
+        <Element Offset="56" Vartype="4 Bytes" Bytesize="4" RLECount="44" OffsetHex="00000038" DisplayMethod="unsigned integer"/>
+        <Element Offset="232" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="000000E8" DisplayMethod="unsigned integer"/>
+        <Element Offset="244" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000F4" DisplayMethod="unsigned integer"/>
+        <Element Offset="248" Vartype="String" Bytesize="16" OffsetHex="000000F8" DisplayMethod="unsigned integer"/>
+        <Element Offset="264" Vartype="4 Bytes" Bytesize="4" RLECount="2434" OffsetHex="00000108" DisplayMethod="unsigned integer"/>
       </Elements>
     </Structure>
   </Structures>
