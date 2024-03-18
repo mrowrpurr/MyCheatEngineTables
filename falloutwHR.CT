@@ -5,11 +5,13 @@
       <ID>125</ID>
       <Description>"TODO"</Description>
       <Options moHideChildren="1"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>31</ID>
           <Description>"Cool Character Stat Stuff to look into"</Description>
+          <LastState Value="42338368" RealAddress="006651E8"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+26521C-34</Address>
@@ -17,6 +19,7 @@
         <CheatEntry>
           <ID>74</ID>
           <Description>"Map Stuff Static"</Description>
+          <LastState Value="430" RealAddress="00630314"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+230314</Address>
@@ -24,18 +27,21 @@
         <CheatEntry>
           <ID>72</ID>
           <Description>"Map Part 1 maybe"</Description>
+          <LastState Value="0" RealAddress="00630310"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+230314-50+4C</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>75</ID>
           <Description>"Current Map - Level 1 - one is the real one"</Description>
+          <LastState Value="0" RealAddress="00505BEC"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+105BEC</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>76</ID>
           <Description>"Current Map - Level 2 - one is the real one"</Description>
+          <LastState Value="0" RealAddress="00505C9C"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>2 Bytes</VariableType>
           <Address>falloutwHR.exe+105C9C</Address>
@@ -43,6 +49,7 @@
         <CheatEntry>
           <ID>77</ID>
           <Description>"Current Map - Level 3 - one is the real one"</Description>
+          <LastState Value="0" RealAddress="00505DE4"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+105DE4</Address>
         </CheatEntry>
@@ -58,6 +65,7 @@
         <CheatEntry>
           <ID>98</ID>
           <Description>"I dunno, it's some objects, maybe near the character"</Description>
+          <LastState Value="08D76A40" RealAddress="0056B570"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -69,11 +77,13 @@
       <ID>120</ID>
       <Description>"Character Stats"</Description>
       <Options moHideChildren="1"/>
+      <LastState Value="" Activated="1" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>155</ID>
           <Description>"Character Name"</Description>
+          <LastState RealAddress="0056BF1C"/>
           <VariableType>String</VariableType>
           <Length>19</Length>
           <Unicode>0</Unicode>
@@ -84,30 +94,35 @@
         <CheatEntry>
           <ID>156</ID>
           <Description>"Character Age"</Description>
+          <LastState Value="17" RealAddress="005076C8"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+1076C8</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>0</ID>
           <Description>"Experience"</Description>
+          <LastState Value="0" RealAddress="00665224"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+265224</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>78</ID>
           <Description>"Player Health in UI"</Description>
+          <LastState Value="31" RealAddress="00505708"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+105708</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>1</ID>
           <Description>"Available Skill Points in UI but updateable"</Description>
+          <LastState Value="0" RealAddress="0066521C"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+26521C</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>5</ID>
           <Description>"Character Sheet Struct"</Description>
+          <LastState Value="3" RealAddress="00507644"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
           <Address>"falloutwHR.exe"+0008ED34</Address>
@@ -118,6 +133,7 @@
         <CheatEntry>
           <ID>138</ID>
           <Description>"Skills Struct"</Description>
+          <LastState Value="0" RealAddress="0050775C"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+10775C</Address>
         </CheatEntry>
@@ -127,17 +143,20 @@
       <ID>47</ID>
       <Description>"Character Object"</Description>
       <Options moHideChildren="1"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>126</ID>
           <Description>"Character Static References"</Description>
           <Options moHideChildren="1"/>
+          <LastState Value="" Activated="1" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
               <ID>128</ID>
               <Description>"Character Ref 1"</Description>
+              <LastState Value="18000" RealAddress="08D76A40"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>"falloutwHR.exe"+00262844</Address>
@@ -148,6 +167,7 @@
             <CheatEntry>
               <ID>127</ID>
               <Description>"Character Ref 2"</Description>
+              <LastState Value="18000" RealAddress="08D76A40"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>"falloutwHR.exe"+0016B570</Address>
@@ -158,6 +178,7 @@
             <CheatEntry>
               <ID>129</ID>
               <Description>"Character Ref 3"</Description>
+              <LastState Value="18000" RealAddress="08D76A40"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>"falloutwHR.exe"+0025F638</Address>
@@ -168,12 +189,23 @@
             <CheatEntry>
               <ID>130</ID>
               <Description>"Character Ref 4"</Description>
+              <LastState Value="18000" RealAddress="08D76A40"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>"falloutwHR.exe"+00105734</Address>
               <Offsets>
                 <Offset>0</Offset>
               </Offsets>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>159</ID>
+                  <Description>"No description"</Description>
+                  <LastState Value="7" RealAddress="08D76A6C"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>+2c</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -181,6 +213,7 @@
           <ID>131</ID>
           <Description>"Character Struct"</Description>
           <Options moHideChildren="1"/>
+          <LastState Value="" Activated="1" RealAddress="08D76A40"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>"falloutwHR.exe"+00105734</Address>
@@ -191,6 +224,7 @@
             <CheatEntry>
               <ID>48</ID>
               <Description>"Current Tile"</Description>
+              <LastState Value="17690" RealAddress="08D76A44"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>+04</Address>
@@ -198,6 +232,7 @@
             <CheatEntry>
               <ID>85</ID>
               <Description>"Inventory Item Count"</Description>
+              <LastState Value="7340129" RealAddress="08B2718C"/>
               <VariableType>4 Bytes</VariableType>
               <Address>08B27160+2C</Address>
             </CheatEntry>
@@ -205,6 +240,7 @@
               <ID>132</ID>
               <Description>"Character Inventory"</Description>
               <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="03BEAF38"/>
               <ShowAsSigned>0</ShowAsSigned>
               <GroupHeader>1</GroupHeader>
               <Address>+34</Address>
@@ -215,6 +251,7 @@
                 <CheatEntry>
                   <ID>57</ID>
                   <Description>"Item ID 1"</Description>
+                  <LastState Value="4" RealAddress="03BEB14C"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+0</Address>
@@ -225,6 +262,7 @@
                 <CheatEntry>
                   <ID>62</ID>
                   <Description>"Item ID 1 QTY"</Description>
+                  <LastState Value="6" RealAddress="03BEAF3C"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+4</Address>
@@ -232,6 +270,7 @@
                 <CheatEntry>
                   <ID>60</ID>
                   <Description>"Item ID 2"</Description>
+                  <LastState Value="8" RealAddress="03BEB1E4"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+8</Address>
@@ -242,6 +281,7 @@
                 <CheatEntry>
                   <ID>63</ID>
                   <Description>"Item ID 2 QTY"</Description>
+                  <LastState Value="1" RealAddress="03BEAF44"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+c</Address>
@@ -249,6 +289,7 @@
                 <CheatEntry>
                   <ID>59</ID>
                   <Description>"Item ID 3"</Description>
+                  <LastState Value="29" RealAddress="03BEB314"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+10</Address>
@@ -259,6 +300,7 @@
                 <CheatEntry>
                   <ID>61</ID>
                   <Description>"Item ID 3 QTY"</Description>
+                  <LastState Value="2" RealAddress="03BEAF4C"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+14</Address>
@@ -268,6 +310,7 @@
             <CheatEntry>
               <ID>158</ID>
               <Description>"Character Health"</Description>
+              <LastState Value="31" RealAddress="08D76A98"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>+58</Address>
@@ -280,11 +323,13 @@
       <ID>133</ID>
       <Description>"Map"</Description>
       <Options moHideChildren="1"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>71</ID>
           <Description>"Current Map Name"</Description>
+          <LastState RealAddress="006302F4"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>String</VariableType>
           <Length>11</Length>
@@ -296,12 +341,14 @@
         <CheatEntry>
           <ID>84</ID>
           <Description>"Current Mouse Tile (Game)"</Description>
+          <LastState Value="17690" RealAddress="005054EC"/>
           <VariableType>4 Bytes</VariableType>
           <Address>falloutwHR.exe+1054EC</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>124</ID>
           <Description>"Current Mouse Tile (UI)"</Description>
+          <LastState Value="18091" RealAddress="08D7767C"/>
           <VariableType>4 Bytes</VariableType>
           <Address>"falloutwHR.exe"+00195230</Address>
           <Offsets>
@@ -314,11 +361,13 @@
       <ID>134</ID>
       <Description>"Misc"</Description>
       <Options moHideChildren="1"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>97</ID>
           <Description>"Static Shady Sands Dude"</Description>
+          <LastState Value="08D76A40" RealAddress="0056B570"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -329,17 +378,20 @@
     <CheatEntry>
       <ID>135</ID>
       <Description>"Please Save Me"</Description>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
     <CheatEntry>
       <ID>136</ID>
       <Description>"Carry Weight (RO)"</Description>
+      <LastState Value="125" RealAddress="00507674"/>
       <VariableType>4 Bytes</VariableType>
       <Address>00507644+30</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>137</ID>
       <Description>"Freeze Carry Weight"</Description>
+      <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
 
@@ -359,13 +411,23 @@ mov [eax+34],ebx
     <CheatEntry>
       <ID>141</ID>
       <Description>"-- WORK IN PROGRESS BELOW --"</Description>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
     <CheatEntry>
       <ID>157</ID>
       <Description>"No description"</Description>
+      <LastState Value="3359310774" RealAddress="001E5C30"/>
       <VariableType>4 Bytes</VariableType>
       <Address>001E5C30</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>160</ID>
+      <Description>"No description"</Description>
+      <LastState Value="2304135507" RealAddress="00427D10"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>falloutwHR.exe+27D10</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -602,6 +664,29 @@ mov [eax+34],ebx
         <Byte>F8</Byte>
         <Byte>39</Byte>
         <Byte>3D</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Taking damage :mov [ebx+2C],edx</Description>
+      <AddressString>falloutwHR.exe+27D29</AddressString>
+      <Before>
+        <Byte>8B</Byte>
+        <Byte>53</Byte>
+        <Byte>2C</Byte>
+        <Byte>01</Byte>
+        <Byte>F2</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>53</Byte>
+        <Byte>2C</Byte>
+      </Actual>
+      <After>
+        <Byte>39</Byte>
+        <Byte>D0</Byte>
+        <Byte>7D</Byte>
+        <Byte>05</Byte>
+        <Byte>89</Byte>
       </After>
     </CodeEntry>
   </CheatCodes>
@@ -1295,9 +1380,9 @@ mov [eax+34],ebx
         <Element Offset="20" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000014" Description="Y Screen Screen" DisplayMethod="unsigned integer"/>
         <Element Offset="24" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000018" DisplayMethod="unsigned integer"/>
         <Element Offset="32" Vartype="Pointer" Bytesize="4" OffsetHex="00000020" DisplayMethod="unsigned integer"/>
-        <Element Offset="36" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000024" DisplayMethod="hexadecimal"/>
         <Element Offset="40" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000028" DisplayMethod="unsigned integer"/>
         <Element Offset="44" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002C" Description="Inventory Item Count" DisplayMethod="unsigned integer"/>
+        <Element Offset="44" Vartype="Pointer" Bytesize="4" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
         <Element Offset="48" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000030" DisplayMethod="unsigned integer"/>
         <Element Offset="52" Vartype="Pointer" Bytesize="4" OffsetHex="00000034" Description="Inventory" DisplayMethod="unsigned integer">
           <Structure Name="Autocreated from 088070F4" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
@@ -5043,6 +5128,35 @@ mov [eax+34],ebx
         <Element Offset="244" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000F4" DisplayMethod="unsigned integer"/>
         <Element Offset="248" Vartype="String" Bytesize="16" OffsetHex="000000F8" DisplayMethod="unsigned integer"/>
         <Element Offset="264" Vartype="4 Bytes" Bytesize="4" RLECount="2434" OffsetHex="00000108" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="8" Vartype="Pointer" Bytesize="4" OffsetHex="00000008" DisplayMethod="unsigned integer"/>
+        <Element Offset="12" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="0000000C" DisplayMethod="unsigned integer"/>
+        <Element Offset="40" Vartype="Pointer" Bytesize="4" OffsetHex="00000028" DisplayMethod="unsigned integer"/>
+        <Element Offset="44" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
+        <Element Offset="44" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
+        <Element Offset="56" Vartype="Pointer" Bytesize="4" OffsetHex="00000038" DisplayMethod="unsigned integer"/>
+        <Element Offset="60" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="0000003C" DisplayMethod="unsigned integer"/>
+        <Element Offset="68" Vartype="Pointer" Bytesize="4" OffsetHex="00000044" DisplayMethod="unsigned integer"/>
+        <Element Offset="72" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000048" DisplayMethod="hexadecimal"/>
+        <Element Offset="76" Vartype="Pointer" Bytesize="4" OffsetHex="0000004C" DisplayMethod="unsigned integer"/>
+        <Element Offset="80" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000050" DisplayMethod="unsigned integer"/>
+        <Element Offset="84" Vartype="Double" Bytesize="8" OffsetHex="00000054" DisplayMethod="unsigned integer"/>
+        <Element Offset="92" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000005C" DisplayMethod="hexadecimal"/>
+        <Element Offset="96" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000060" DisplayMethod="unsigned integer"/>
+        <Element Offset="104" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000068" DisplayMethod="hexadecimal"/>
+        <Element Offset="108" Vartype="Pointer" Bytesize="4" OffsetHex="0000006C" DisplayMethod="unsigned integer"/>
+        <Element Offset="112" Vartype="Double" Bytesize="8" OffsetHex="00000070" DisplayMethod="unsigned integer"/>
+        <Element Offset="120" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000078" DisplayMethod="unsigned integer"/>
+        <Element Offset="128" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000080" DisplayMethod="hexadecimal"/>
+        <Element Offset="132" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000084" DisplayMethod="unsigned integer"/>
+        <Element Offset="136" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000088" DisplayMethod="hexadecimal"/>
+        <Element Offset="140" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="0000008C" DisplayMethod="unsigned integer"/>
+        <Element Offset="164" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000A4" DisplayMethod="hexadecimal"/>
+        <Element Offset="172" Vartype="4 Bytes" Bytesize="4" RLECount="21" OffsetHex="000000AC" DisplayMethod="unsigned integer"/>
       </Elements>
     </Structure>
   </Structures>
