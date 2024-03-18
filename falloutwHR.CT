@@ -94,12 +94,6 @@
           <Address>falloutwHR.exe+265224</Address>
         </CheatEntry>
         <CheatEntry>
-          <ID>79</ID>
-          <Description>"Player Health"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>08B271B8</Address>
-        </CheatEntry>
-        <CheatEntry>
           <ID>78</ID>
           <Description>"Player Health in UI"</Description>
           <VariableType>4 Bytes</VariableType>
