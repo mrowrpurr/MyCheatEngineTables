@@ -271,6 +271,13 @@
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
+            <CheatEntry>
+              <ID>158</ID>
+              <Description>"Character Health"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+58</Address>
+            </CheatEntry>
           </CheatEntries>
         </CheatEntry>
       </CheatEntries>
