@@ -1,0 +1,5 @@
+*result*
+*.ptr
+*.scandata
+*.addresslist
+*.sqlite
