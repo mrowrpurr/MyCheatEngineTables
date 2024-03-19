@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Bullets in Machine Gun"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>40113C20</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Bullets in Pistol"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>40101E40</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <Structures StructVersion="2">
+    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="Byte" Bytesize="1" RLECount="2" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="2" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000002" DisplayMethod="unsigned integer"/>
+        <Element Offset="18" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000012" DisplayMethod="hexadecimal"/>
+        <Element Offset="22" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000016" DisplayMethod="unsigned integer"/>
+        <Element Offset="46" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000002E" DisplayMethod="hexadecimal"/>
+        <Element Offset="50" Vartype="4 Bytes" Bytesize="4" RLECount="26" OffsetHex="00000032" DisplayMethod="unsigned integer"/>
+        <Element Offset="154" Vartype="Double" Bytesize="8" OffsetHex="0000009A" DisplayMethod="unsigned integer"/>
+        <Element Offset="162" Vartype="Float" Bytesize="4" OffsetHex="000000A2" DisplayMethod="unsigned integer"/>
+        <Element Offset="166" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="000000A6" DisplayMethod="unsigned integer"/>
+        <Element Offset="170" Vartype="Float" Bytesize="4" RLECount="5" OffsetHex="000000AA" DisplayMethod="unsigned integer"/>
+        <Element Offset="190" Vartype="Double" Bytesize="8" OffsetHex="000000BE" DisplayMethod="unsigned integer"/>
+        <Element Offset="198" Vartype="Float" Bytesize="4" RLECount="5" OffsetHex="000000C6" DisplayMethod="unsigned integer"/>
+        <Element Offset="218" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="000000DA" DisplayMethod="unsigned integer"/>
+        <Element Offset="222" Vartype="Float" Bytesize="4" RLECount="5" OffsetHex="000000DE" DisplayMethod="unsigned integer"/>
+        <Element Offset="242" Vartype="Double" Bytesize="8" OffsetHex="000000F2" DisplayMethod="unsigned integer"/>
+        <Element Offset="250" Vartype="Float" Bytesize="4" OffsetHex="000000FA" DisplayMethod="unsigned integer"/>
+        <Element Offset="254" Vartype="2 Bytes" Bytesize="2" OffsetHex="000000FE" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+  </Structures>
+</CheatTable>
