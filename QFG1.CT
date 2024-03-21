@@ -422,6 +422,58 @@ unregisterSymbol('GameMemoryStart')
       <Address>GameMemoryStart</Address>
       <CheatEntries>
         <CheatEntry>
+          <ID>155</ID>
+          <Description>"Character Inventory"</Description>
+          <Options moHideChildren="1"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <GroupHeader>1</GroupHeader>
+          <Address>+17960</Address>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>153</ID>
+              <Description>"Silver"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>+0</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>162</ID>
+              <Description>"Gold"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>+2</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>161</ID>
+              <Description>"Ration"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>+4</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>160</ID>
+              <Description>"Mandrake Root"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>+6</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>158</ID>
+              <Description>"Dagger"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>+c</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>159</ID>
+              <Description>"Leather Armor"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>2 Bytes</VariableType>
+              <Address>+e</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
           <ID>124</ID>
           <Description>"Game User Interface"</Description>
           <Options moHideChildren="1"/>
