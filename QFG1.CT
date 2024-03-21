@@ -506,7 +506,7 @@ unregisterSymbol('GameMemoryStart')
                       <Description>"Dodge"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>2 Bytes</VariableType>
-                      <Address>+f</Address>
+                      <Address>+e</Address>
                     </CheatEntry>
                     <CheatEntry>
                       <ID>139</ID>
@@ -708,7 +708,7 @@ unregisterSymbol('GameMemoryStart')
   <UserdefinedSymbols>
     <SymbolEntry>
       <Name>GameMemoryStart</Name>
-      <Address>B1C6020</Address>
+      <Address>B1E7020</Address>
     </SymbolEntry>
   </UserdefinedSymbols>
   <Structures StructVersion="2">
