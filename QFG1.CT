@@ -447,6 +447,7 @@ unregisterSymbol('GameMemoryStart')
                 <CheatEntry>
                   <ID>126</ID>
                   <Description>"Attribute Stores"</Description>
+                  <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
                   <Address>+17702</Address>
@@ -544,6 +545,61 @@ unregisterSymbol('GameMemoryStart')
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+                <CheatEntry>
+                  <ID>151</ID>
+                  <Description>"Total Point Scores"</Description>
+                  <Options moHideChildren="1"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <GroupHeader>1</GroupHeader>
+                  <Address>++1771e</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>148</ID>
+                      <Description>"Health Points (x2)"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>2 Bytes</VariableType>
+                      <Address>+0</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>149</ID>
+                      <Description>"Stamina (70 min, 10 inc)"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>2 Bytes</VariableType>
+                      <Address>+2</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>150</ID>
+                      <Description>"Magic Points"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>2 Bytes</VariableType>
+                      <Address>+4</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>145</ID>
+                  <Description>"Points Available"</Description>
+                  <Options moHideChildren="1"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <GroupHeader>1</GroupHeader>
+                  <Address>+1eaa4</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>143</ID>
+                      <Description>"Points Remaining"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>2 Bytes</VariableType>
+                      <Address>+0</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>146</ID>
+                      <Description>"Points Total"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>2 Bytes</VariableType>
+                      <Address>+2</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
               </CheatEntries>
             </CheatEntry>
           </CheatEntries>
@@ -552,7 +608,7 @@ unregisterSymbol('GameMemoryStart')
     </CheatEntry>
     <CheatEntry>
       <ID>82</ID>
-      <Description>"==============================="</Description>
+      <Description>"========[ WIP VGA ]========"</Description>
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
     <CheatEntry>
@@ -644,11 +700,9 @@ unregisterSymbol('GameMemoryStart')
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
-      <ID>112</ID>
-      <Description>"WIP"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
+      <ID>147</ID>
+      <Description>"========[ WIP EGA ]========"</Description>
       <GroupHeader>1</GroupHeader>
-      <Address>GameMemoryStart</Address>
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols>
