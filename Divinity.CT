@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"div.exe"+00258D50</Address>
+      <Offsets>
+        <Offset>8</Offset>
+        <Offset>2C</Offset>
+        <Offset>0</Offset>
+        <Offset>C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"2c"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"div.exe"+00258D50</Address>
+      <Offsets>
+        <Offset>8</Offset>
+        <Offset>2C</Offset>
+        <Offset>0</Offset>
+        <Offset>C</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>DEC Mana :sub [eax+08],ecx</Description>
+      <AddressString>div.exe+21F5B</AddressString>
+      <Before>
+        <Byte>B1</Byte>
+        <Byte>28</Byte>
+        <Byte>8B</Byte>
+        <Byte>40</Byte>
+        <Byte>2C</Byte>
+      </Before>
+      <Actual>
+        <Byte>29</Byte>
+        <Byte>48</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>83</Byte>
+        <Byte>7C</Byte>
+        <Byte>24</Byte>
+        <Byte>34</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+</CheatTable>
