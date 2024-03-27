@@ -145,26 +145,45 @@
 
 {$lua}
 
-ADDRESS_LIST_CURRENT_VALUE = "Mana - Current"
-ADDRESS_LIST_MAX_VALUE = "Mana - Max"
+STAT_NAME = "Mana"
+ADDRESS_LIST_CURRENT_VALUE = STAT_NAME .. " - Current"
+ADDRESS_LIST_MAX_VALUE = STAT_NAME .. " - Max"
 REGEN_INTERVAL_MS = 2500
+REGEN_COOLDOWN_ITERATION_NUM = 5
 
-function regen()
-         local currentValueAddress = getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_CURRENT_VALUE).CurrentAddress
-         local currentValue = readInteger(currentValueAddress)
-         local maxValue = readInteger(getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_MAX_VALUE).CurrentAddress)
-         if currentValue &lt; maxValue then
-            writeInteger(currentValueAddress, currentValue + 1)
-         end
+local lastValue = 0
+local lastValueRemainedUndamagedIterationCount = 0
+
+function attemptRegen()
+  print("Attempt regen " .. STAT_NAME .. " LastValue: " .. lastValue .. " undamagedIterationCount: " .. lastValueRemainedUndamagedIterationCount)
+  local currentValueAddress = getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_CURRENT_VALUE).CurrentAddress
+  local currentValue = readInteger(currentValueAddress)
+  if lastValue == 0 then
+     lastValue = currentValue
+  end
+  if currentValue &lt; lastValue then
+    lastValueRemainedUndamagedIterationCount = 0
+    print("Updated last " .. STAT_NAME .. " value from " .. lastValue .. " to " .. currentValue)
+    lastValue = currentValue
+  else
+    lastValueRemainedUndamagedIterationCount = lastValueRemainedUndamagedIterationCount + 1
+    if lastValueRemainedUndamagedIterationCount &gt;= REGEN_COOLDOWN_ITERATION_NUM then
+      local maxValue = readInteger(getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_MAX_VALUE).CurrentAddress)
+      if currentValue &lt; maxValue then
+        print(STAT_NAME .. " + 1")
+        print("Updated last " .. STAT_NAME .. " value from " .. lastValue .. " to " .. currentValue)
+        lastValue = currentValue + 1
+        writeInteger(currentValueAddress, currentValue + 1)
+      end
+    end
+  end
 end
 
 if not syntaxcheck then
-
-    regenTimer = createTimer(getMainForm())
-    regenTimer.interval = REGEN_INTERVAL_MS
-    regenTimer.OnTimer = regen
-    regenTimer.Enabled = true
-
+  regenTimer = createTimer(getMainForm())
+  regenTimer.interval = REGEN_INTERVAL_MS
+  regenTimer.OnTimer = attemptRegen
+  regenTimer.Enabled = true
 end
 
 {$asm}
@@ -174,11 +193,9 @@ end
 {$lua}
 
 if not syntaxcheck then
-
-    if regenTimer then
-        regenTimer.destroy()
-    end
-
+  if regenTimer then
+     regenTimer.destroy()
+  end
 end
 
 {$asm}
@@ -193,26 +210,45 @@ end
 
 {$lua}
 
-ADDRESS_LIST_CURRENT_VALUE = "Health - Current"
-ADDRESS_LIST_MAX_VALUE = "Health - Max"
-REGEN_INTERVAL_MS = 5000
+STAT_NAME = "Health"
+ADDRESS_LIST_CURRENT_VALUE = STAT_NAME .. " - Current"
+ADDRESS_LIST_MAX_VALUE = STAT_NAME .. " - Max"
+REGEN_INTERVAL_MS = 2500
+REGEN_COOLDOWN_ITERATION_NUM = 5
 
-function regen()
-         local currentValueAddress = getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_CURRENT_VALUE).CurrentAddress
-         local currentValue = readInteger(currentValueAddress)
-         local maxValue = readInteger(getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_MAX_VALUE).CurrentAddress)
-         if currentValue &lt; maxValue then
-            writeInteger(currentValueAddress, currentValue + 1)
-         end
+local lastValue = 0
+local lastValueRemainedUndamagedIterationCount = 0
+
+function attemptRegen()
+  print("Attempt regen " .. STAT_NAME .. " LastValue: " .. lastValue .. " undamagedIterationCount: " .. lastValueRemainedUndamagedIterationCount)
+  local currentValueAddress = getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_CURRENT_VALUE).CurrentAddress
+  local currentValue = readInteger(currentValueAddress)
+  if lastValue == 0 then
+     lastValue = currentValue
+  end
+  if currentValue &lt; lastValue then
+    lastValueRemainedUndamagedIterationCount = 0
+    print("Updated last " .. STAT_NAME .. " value from " .. lastValue .. " to " .. currentValue)
+    lastValue = currentValue
+  else
+    lastValueRemainedUndamagedIterationCount = lastValueRemainedUndamagedIterationCount + 1
+    if lastValueRemainedUndamagedIterationCount &gt;= REGEN_COOLDOWN_ITERATION_NUM then
+      local maxValue = readInteger(getAddressList().getMemoryRecordByDescription(ADDRESS_LIST_MAX_VALUE).CurrentAddress)
+      if currentValue &lt; maxValue then
+        print(STAT_NAME .. " + 1")
+        print("Updated last " .. STAT_NAME .. " value from " .. lastValue .. " to " .. currentValue)
+        lastValue = currentValue + 1
+        writeInteger(currentValueAddress, currentValue + 1)
+      end
+    end
+  end
 end
 
 if not syntaxcheck then
-
-    regenTimer = createTimer(getMainForm())
-    regenTimer.interval = REGEN_INTERVAL_MS
-    regenTimer.OnTimer = regen
-    regenTimer.Enabled = true
-
+  regenTimer = createTimer(getMainForm())
+  regenTimer.interval = REGEN_INTERVAL_MS
+  regenTimer.OnTimer = attemptRegen
+  regenTimer.Enabled = true
 end
 
 {$asm}
@@ -222,11 +258,9 @@ end
 {$lua}
 
 if not syntaxcheck then
-
-    if regenTimer then
-        regenTimer.destroy()
-    end
-
+  if regenTimer then
+     regenTimer.destroy()
+  end
 end
 
 {$asm}
@@ -234,6 +268,13 @@ end
 </AssemblerScript>
         </CheatEntry>
       </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>37</ID>
+      <Description>"TODO - is game paused"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address/>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
