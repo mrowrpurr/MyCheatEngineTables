@@ -2,7 +2,7 @@
 <CheatTable CheatEngineTableVersion="45">
   <CheatEntries>
     <CheatEntry>
-      <ID>14</ID>
+      <ID>53</ID>
       <Description>"========================"</Description>
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
@@ -149,6 +149,11 @@
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
+      <ID>14</ID>
+      <Description>"========================"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
       <ID>27</ID>
       <Description>"Game Data 2"</Description>
       <ShowAsSigned>0</ShowAsSigned>
@@ -279,12 +284,6 @@
       <ID>13</ID>
       <Description>"========================"</Description>
       <GroupHeader>1</GroupHeader>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>45</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>20715034</Address>
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
@@ -7222,9 +7221,9 @@
                           <Element Offset="1264" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="000004F0" DisplayMethod="unsigned integer"/>
                           <Element Offset="1288" Vartype="String" Bytesize="5" OffsetHex="00000508" DisplayMethod="unsigned integer"/>
                           <Element Offset="1293" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="0000050D" DisplayMethod="unsigned integer"/>
-                          <Element Offset="1300" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000514" DisplayMethod="unsigned integer"/>
+                          <Element Offset="1300" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000514" DisplayMethod="unsigned integer"/>
                           <Element Offset="1308" Vartype="Pointer" Bytesize="4" OffsetHex="0000051C" DisplayMethod="unsigned integer"/>
-                          <Element Offset="1308" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="0000051C" DisplayMethod="unsigned integer"/>
+                          <Element Offset="1312" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000520" DisplayMethod="unsigned integer"/>
                           <Element Offset="1320" Vartype="String" Bytesize="5" OffsetHex="00000528" DisplayMethod="unsigned integer"/>
                           <Element Offset="1325" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="0000052D" DisplayMethod="unsigned integer"/>
                           <Element Offset="1328" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000530" DisplayMethod="unsigned integer"/>
