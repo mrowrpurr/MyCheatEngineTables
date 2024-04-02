@@ -1,20 +1,23 @@
 {
-  "name": "mrowr-purr-cheat-engine-tables",
-  "version": "1.0.0",
-  "description": "Mrowr Purr's Cheat Engine Table Scripts",
-  "scripts": {
-    "build": "tstl",
-    "watch": "tstl --watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "0BSD",
-  "dependencies": {
-    "cheat-engine-types": "workspace:*"
-  },
-  "devDependencies": {
-    "lua-types": "^2.13.1",
-    "typescript": "^5.4.3",
-    "typescript-to-lua": "^1.25.1"
-  }
+    "name": "mrowr-purr-cheat-engine-tables",
+    "version": "1.0.0",
+    "description": "Mrowr Purr's Cheat Engine Table Scripts",
+    "scripts": {
+        "build": "tstl",
+        "watch": "tstl --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "0BSD",
+    "devDependencies": {
+        "@stylistic/eslint-plugin": "^1.7.0",
+        "@stylistic/eslint-plugin-ts": "^1.7.0",
+        "@typescript-eslint/eslint-plugin": "^7.5.0",
+        "@typescript-eslint/parser": "^7.5.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-import-newlines": "^1.4.0",
+        "lua-types": "^2.13.1",
+        "typescript": "^5.4.3",
+        "typescript-to-lua": "^1.25.1"
+    }
 }

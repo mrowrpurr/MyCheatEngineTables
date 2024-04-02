@@ -4,3 +4,5 @@
 *.addresslist
 *.sqlite
 node_modules
+*.lua
+*.lua.map

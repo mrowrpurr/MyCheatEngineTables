@@ -1,0 +1,5 @@
+# Only used for JSON files
+tabWidth: 4
+singleQuote: false
+semi: false
+printWidth: 120

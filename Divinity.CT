@@ -880,10 +880,14 @@ end
           <Color>4A04BF</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>{$lua}
--- Uncomment to force refresh:
--- package.loaded.script1 = nil
+package.path = "Lua/?.lua;" .. package.path
 
-printCNPCs = require("Lua/Divine Divinity/PrintCNPCs")
+-- Uncomment to force refresh:
+package.loaded["Divine Divinity/PrintCNPCs"] = nil
+package.loaded["Divine Divinity/EntityList"] = nil
+package.loaded["Common/Common"] = nil
+
+printCNPCs = require("Divine Divinity/PrintCNPCs")
 {$asm}
 
 [ENABLE]

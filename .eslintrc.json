@@ -1,0 +1,79 @@
+{
+    "root": true,
+    "ignorePatterns": ["out", "dist", "Lua"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": ["./tsconfig.json"]
+    },
+    "env": {
+        "browser": true,
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "plugins": ["@stylistic", "eslint-plugin-import", "import-newlines"],
+    "rules": {
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "eqeqeq": "error",
+        "import/order": "error",
+        "import/extensions": "error",
+        "import/newline-after-import": "error",
+        "import-newlines/enforce": ["error", 4, 120],
+        "no-param-reassign": "error",
+        "no-prototype-builtins": "off",
+        "no-throw-literal": "error",
+        "@typescript-eslint/no-unused-vars": [
+            "warn", // or "error"
+            {
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_"
+            }
+        ],
+        "no-useless-return": "error",
+        "object-shorthand": ["error", "methods"],
+        "prefer-template": "error",
+        "@stylistic/array-element-newline": ["error", "consistent"],
+        "@stylistic/arrow-parens": ["error", "always"],
+        "@stylistic/brace-style": "off",
+        "@stylistic/comma-dangle": ["error", "never"],
+        "@stylistic/dot-location": ["error", "property"],
+        "@stylistic/function-call-argument-newline": ["error", "consistent"],
+        "@stylistic/function-paren-newline": ["error", "consistent"],
+        "@stylistic/implicit-arrow-linebreak": ["error", "beside"],
+        "@stylistic/max-statements-per-line": [
+            "error",
+            {
+                "max": 2
+            }
+        ],
+        "@stylistic/multiline-ternary": ["error", "always-multiline"],
+        "@stylistic/newline-per-chained-call": [
+            "error",
+            {
+                "ignoreChainWithDepth": 4
+            }
+        ],
+        "@stylistic/no-extra-parens": "off",
+        "@stylistic/no-tabs": "error",
+        "@stylistic/object-curly-spacing": ["error", "always"],
+        "@stylistic/object-property-newline": [
+            "error",
+            {
+                "allowAllPropertiesOnSameLine": true
+            }
+        ],
+        "@stylistic/operator-linebreak": ["error", "before"],
+        "@stylistic/padded-blocks": "off",
+        "@stylistic/quote-props": ["error", "as-needed"],
+        "@stylistic/quotes": ["error", "double"],
+        "@stylistic/indent": ["error", 4],
+        "@stylistic/semi": ["error", "never"],
+        "@stylistic/space-before-function-paren": ["error", "never"],
+        "@stylistic/spaced-comment": "off"
+    }
+}
