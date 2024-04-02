@@ -722,14 +722,14 @@
           <CheatEntries>
             <CheatEntry>
               <ID>318</ID>
-              <Description>"Variable: First CNpc Offset"</Description>
+              <Description>"First CNpc Offset"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>+d48</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>316</ID>
-              <Description>"Variable: Entity List Pointer"</Description>
+              <Description>"Entity List Pointer"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>"div.exe"+00258D50</Address>
@@ -882,10 +882,22 @@ end
           <AssemblerScript>{$lua}
 package.path = "Lua/?.lua;" .. package.path
 
+function clearRequired(...)
+    -- Iterate over all provided package names
+    for i, packageName in ipairs({...}) do
+        -- Check if the package is currently loaded
+        if package.loaded[packageName] then
+            -- Remove the package from the loaded packages table
+            package.loaded[packageName] = nil
+            --print(packageName .. " has been unloaded.")
+        else
+            --print(packageName .. " is not loaded or does not exist.")
+        end
+    end
+end
+
 -- Uncomment to force refresh:
-package.loaded["Divine Divinity/PrintCNPCs"] = nil
-package.loaded["Divine Divinity/EntityList"] = nil
-package.loaded["Common/Common"] = nil
+clearRequired("Divine Divinity/PrintCNPCs", "Divine Divinity.EntityList", "Common.Common")
 
 printCNPCs = require("Divine Divinity/PrintCNPCs")
 {$asm}
