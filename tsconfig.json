@@ -6,7 +6,7 @@
     "moduleResolution": "Node",
     "types": ["lua-types/5.3"],
     "strict": true,
-    "outDir": "dist"
+    "outDir": "Lua"
   },
   "tstl": {
     "luaTarget": "5.3"
