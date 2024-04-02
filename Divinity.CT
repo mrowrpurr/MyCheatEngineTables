@@ -2,480 +2,469 @@
 <CheatTable CheatEngineTableVersion="45">
   <CheatEntries>
     <CheatEntry>
-      <ID>23</ID>
-      <Description>"Game Data"</Description>
+      <ID>24</ID>
+      <Description>"Entity List"</Description>
+      <Options moHideChildren="1"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>"div.exe"+00258D50</Address>
       <Offsets>
         <Offset>0</Offset>
+        <Offset>c</Offset>
       </Offsets>
       <CheatEntries>
         <CheatEntry>
-          <ID>24</ID>
-          <Description>"Entity List"</Description>
+          <ID>25</ID>
+          <Description>"Player"</Description>
           <Options moHideChildren="1"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
-          <Address>+c</Address>
+          <Address>+0</Address>
           <Offsets>
             <Offset>0</Offset>
           </Offsets>
           <CheatEntries>
             <CheatEntry>
-              <ID>25</ID>
-              <Description>"Player"</Description>
+              <ID>98</ID>
+              <Description>"X at 0x4"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+4</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>148</ID>
+              <Description>"Y at 0x8"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+8</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>153</ID>
+              <Description>"X float at 0xc"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>+C</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>154</ID>
+              <Description>"Y float at 0x10"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>+10</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>152</ID>
+              <Description>"Mystery incorrect X at 0x2FC"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+2fc</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>155</ID>
+              <Description>"Mystery incorrect Y at 0x300"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+300</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>99</ID>
+              <Description>"Unk X at 0x234"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+234</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>149</ID>
+              <Description>"Unk Y at 0x238"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+238</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>150</ID>
+              <Description>"Currently Moving Direction X (read only?) at 0x22c"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>+22c</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>151</ID>
+              <Description>"Currently Moving Direction Y (read only?) at 0x230"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Float</VariableType>
+              <Address>+230</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>232</ID>
+              <Description>"Stats (from Statistics)"</Description>
               <Options moHideChildren="1"/>
               <ShowAsSigned>0</ShowAsSigned>
               <GroupHeader>1</GroupHeader>
-              <Address>+0</Address>
+              <Address>+2c</Address>
               <Offsets>
                 <Offset>0</Offset>
               </Offsets>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>98</ID>
-                  <Description>"X at 0x4"</Description>
+                  <ID>233</ID>
+                  <Description>"Strength"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>+80</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>234</ID>
+                  <Description>"Agility"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>+84</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>235</ID>
+                  <Description>"Intelligence"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>+88</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>236</ID>
+                  <Description>"Constitution"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>+8c</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>20</ID>
+              <Description>"CPlayerStatistics"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+2c</Address>
+              <Offsets>
+                <Offset>0</Offset>
+              </Offsets>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>21</ID>
+                  <Description>"Health - Current"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+4</Address>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>148</ID>
-                  <Description>"Y at 0x8"</Description>
+                  <ID>33</ID>
+                  <Description>"Health - Max"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>+c</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>22</ID>
+                  <Description>"Mana - Current"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
                   <Address>+8</Address>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>153</ID>
-                  <Description>"X float at 0xc"</Description>
+                  <ID>32</ID>
+                  <Description>"Mana - Max"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Float</VariableType>
-                  <Address>+C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>154</ID>
-                  <Description>"Y float at 0x10"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Float</VariableType>
+                  <VariableType>4 Bytes</VariableType>
                   <Address>+10</Address>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>152</ID>
-                  <Description>"Mystery incorrect X at 0x2FC"</Description>
+                  <ID>108</ID>
+                  <Description>"Experience"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
-                  <Address>+2fc</Address>
+                  <Address>+94</Address>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>284</ID>
+          <Description>"CNpc List"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>231</ID>
+              <Description>"CNpc 1"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d48</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>155</ID>
-                  <Description>"Mystery incorrect Y at 0x300"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>+300</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>99</ID>
-                  <Description>"Unk X at 0x234"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>+234</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>149</ID>
-                  <Description>"Unk Y at 0x238"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>+238</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>150</ID>
-                  <Description>"Currently Moving Direction X (read only?) at 0x22c"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Float</VariableType>
-                  <Address>+22c</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>151</ID>
-                  <Description>"Currently Moving Direction Y (read only?) at 0x230"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Float</VariableType>
-                  <Address>+230</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>232</ID>
-                  <Description>"Stats (from Statistics)"</Description>
+                  <ID>224</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+2c</Address>
+                  <Address>+0</Address>
                   <Offsets>
                     <Offset>0</Offset>
+                    <Offset>2c</Offset>
                   </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>233</ID>
-                      <Description>"Strength"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+80</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>234</ID>
-                      <Description>"Agility"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+84</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>235</ID>
-                      <Description>"Intelligence"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+88</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>236</ID>
-                      <Description>"Constitution"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+8c</Address>
-                    </CheatEntry>
-                  </CheatEntries>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>20</ID>
-                  <Description>"CPlayerStatistics"</Description>
-                  <Options moHideChildren="1"/>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <GroupHeader>1</GroupHeader>
-                  <Address>+2c</Address>
-                  <Offsets>
-                    <Offset>0</Offset>
-                  </Offsets>
-                  <CheatEntries>
-                    <CheatEntry>
-                      <ID>21</ID>
-                      <Description>"Health - Current"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+4</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>33</ID>
-                      <Description>"Health - Max"</Description>
+                      <ID>269</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
                       <VariableType>4 Bytes</VariableType>
                       <Address>+c</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>22</ID>
-                      <Description>"Mana - Current"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+8</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>32</ID>
-                      <Description>"Mana - Max"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+10</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>108</ID>
-                      <Description>"Experience"</Description>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <VariableType>4 Bytes</VariableType>
-                      <Address>+94</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
             <CheatEntry>
-              <ID>284</ID>
-              <Description>"CNpc List"</Description>
+              <ID>237</ID>
+              <Description>"CNpc 2"</Description>
               <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
               <GroupHeader>1</GroupHeader>
+              <Address>+d4c</Address>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>231</ID>
-                  <Description>"CNpc 1"</Description>
+                  <ID>238</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d48</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>224</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>270</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>269</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+c</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+4</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>243</ID>
+              <Description>"CNpc 3"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d50</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>237</ID>
-                  <Description>"CNpc 2"</Description>
+                  <ID>244</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d4c</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>238</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>271</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>270</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+4</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+4</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>249</ID>
+              <Description>"CNpc 4"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d54</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>243</ID>
-                  <Description>"CNpc 3"</Description>
+                  <ID>250</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d50</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>244</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>268</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>271</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+4</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+c</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>255</ID>
+              <Description>"CNpc 5"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d58</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>249</ID>
-                  <Description>"CNpc 4"</Description>
+                  <ID>256</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d54</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>250</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>257</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>268</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+c</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+4</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>281</ID>
+              <Description>"CNpc 6"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d5c</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>255</ID>
-                  <Description>"CNpc 5"</Description>
+                  <ID>282</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d58</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>256</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>283</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>257</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+4</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+4</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>278</ID>
+              <Description>"CNpc 7"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d60</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>281</ID>
-                  <Description>"CNpc 6"</Description>
+                  <ID>279</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d5c</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>282</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>280</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>283</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+4</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+c</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>275</ID>
+              <Description>"CNpc 8"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d64</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>278</ID>
-                  <Description>"CNpc 7"</Description>
+                  <ID>276</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d60</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>279</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>277</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>280</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+c</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+c</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>272</ID>
+              <Description>"CNpc 9"</Description>
+              <Options moHideChildren="1"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+d68</Address>
+              <CheatEntries>
                 <CheatEntry>
-                  <ID>275</ID>
-                  <Description>"CNpc 8"</Description>
+                  <ID>273</ID>
+                  <Description>"Creature Stats"</Description>
                   <Options moHideChildren="1"/>
                   <ShowAsSigned>0</ShowAsSigned>
                   <GroupHeader>1</GroupHeader>
-                  <Address>+d64</Address>
+                  <Address>+0</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>2c</Offset>
+                  </Offsets>
                   <CheatEntries>
                     <CheatEntry>
-                      <ID>276</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
+                      <ID>274</ID>
+                      <Description>"HP"</Description>
                       <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>277</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+c</Address>
-                        </CheatEntry>
-                      </CheatEntries>
-                    </CheatEntry>
-                  </CheatEntries>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>272</ID>
-                  <Description>"CNpc 9"</Description>
-                  <Options moHideChildren="1"/>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <GroupHeader>1</GroupHeader>
-                  <Address>+d68</Address>
-                  <CheatEntries>
-                    <CheatEntry>
-                      <ID>273</ID>
-                      <Description>"Creature Stats"</Description>
-                      <Options moHideChildren="1"/>
-                      <ShowAsSigned>0</ShowAsSigned>
-                      <GroupHeader>1</GroupHeader>
-                      <Address>+0</Address>
-                      <Offsets>
-                        <Offset>0</Offset>
-                        <Offset>2c</Offset>
-                      </Offsets>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>274</ID>
-                          <Description>"HP"</Description>
-                          <ShowAsSigned>0</ShowAsSigned>
-                          <VariableType>4 Bytes</VariableType>
-                          <Address>+c</Address>
-                        </CheatEntry>
-                      </CheatEntries>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+c</Address>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
@@ -486,69 +475,8 @@
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
-      <ID>93</ID>
-      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
-      <GroupHeader>1</GroupHeader>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>136</ID>
-      <Description>"Mouse Location"</Description>
-      <Options moHideChildren="1"/>
-      <ShowAsSigned>0</ShowAsSigned>
-      <GroupHeader>1</GroupHeader>
-      <Address>"div.exe"+00258C04</Address>
-      <Offsets>
-        <Offset>0</Offset>
-        <Offset>0</Offset>
-      </Offsets>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>141</ID>
-          <Description>"Current Mouse X"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>+C</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>138</ID>
-          <Description>"Current Mouse Y"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>+10</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>137</ID>
-          <Description>"Current Mouse X (UI?)"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>+20</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>142</ID>
-          <Description>"Current Mouse Y (UI?)"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>+24</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>139</ID>
-          <Description>"Most Recently Clicked Mouse X"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>+30</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>140</ID>
-          <Description>"Most Recently Clicked Mouse Y"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>+34</Address>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
       <ID>144</ID>
-      <Description>"Other Player Things"</Description>
+      <Description>"Player"</Description>
       <Options moHideChildren="1"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
@@ -565,156 +493,215 @@
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
-      <ID>217</ID>
-      <Description>"Screen View Port"</Description>
+      <ID>323</ID>
+      <Description>"UI"</Description>
       <Options moHideChildren="1"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
-          <ID>218</ID>
-          <Description>"I think these"</Description>
+          <ID>217</ID>
+          <Description>"Screen View Port"</Description>
           <Options moHideChildren="1"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>220</ID>
-              <Description>"Top Left"</Description>
+              <ID>218</ID>
+              <Description>"I think these"</Description>
               <Options moHideChildren="1"/>
-              <ShowAsSigned>0</ShowAsSigned>
               <GroupHeader>1</GroupHeader>
-              <Address>"div.exe"+00346A58</Address>
-              <Offsets>
-                <Offset>0</Offset>
-                <Offset>14</Offset>
-              </Offsets>
               <CheatEntries>
                 <CheatEntry>
-                  <ID>221</ID>
-                  <Description>"Top Left X"</Description>
+                  <ID>220</ID>
+                  <Description>"Top Left"</Description>
+                  <Options moHideChildren="1"/>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <GroupHeader>1</GroupHeader>
+                  <Address>"div.exe"+00346A58</Address>
+                  <Offsets>
+                    <Offset>0</Offset>
+                    <Offset>14</Offset>
+                  </Offsets>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>221</ID>
+                      <Description>"Top Left X"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+2c</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>222</ID>
+                      <Description>"Top Left Y"</Description>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>+30</Address>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>223</ID>
+              <Description>"Recon"</Description>
+              <Options moHideChildren="1"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>205</ID>
+                  <Description>"pointerscan result"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
-                  <Address>+2c</Address>
+                  <Address>"div.exe"+00346A58</Address>
+                  <Offsets>
+                    <Offset>30</Offset>
+                    <Offset>14</Offset>
+                  </Offsets>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>222</ID>
-                  <Description>"Top Left Y"</Description>
+                  <ID>207</ID>
+                  <Description>"pointerscan result"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>4 Bytes</VariableType>
-                  <Address>+30</Address>
+                  <Address>"div.exe"+00346A58</Address>
+                  <Offsets>
+                    <Offset>38</Offset>
+                    <Offset>10</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>219</ID>
+              <Description>"But Maybe These"</Description>
+              <Options moHideChildren="1"/>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>208</ID>
+                  <Description>"pointerscan result"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"div.exe"+00346A58</Address>
+                  <Offsets>
+                    <Offset>A0</Offset>
+                    <Offset>18</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>209</ID>
+                  <Description>"pointerscan result"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"div.exe"+00346A58</Address>
+                  <Offsets>
+                    <Offset>30</Offset>
+                    <Offset>10</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>210</ID>
+                  <Description>"pointerscan result"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"div.exe"+00346A58</Address>
+                  <Offsets>
+                    <Offset>30</Offset>
+                    <Offset>2C</Offset>
+                    <Offset>18</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>211</ID>
+                  <Description>"pointerscan result"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"div.exe"+00346A58</Address>
+                  <Offsets>
+                    <Offset>28</Offset>
+                    <Offset>14</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>215</ID>
+                  <Description>"pointerscan result"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"div.exe"+00258C04</Address>
+                  <Offsets>
+                    <Offset>4A4</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>216</ID>
+                  <Description>"pointerscan result"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>"div.exe"+00258C04</Address>
+                  <Offsets>
+                    <Offset>514</Offset>
+                  </Offsets>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
-          <ID>223</ID>
-          <Description>"Recon"</Description>
+          <ID>136</ID>
+          <Description>"Mouse Location"</Description>
           <Options moHideChildren="1"/>
+          <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
+          <Address>"div.exe"+00258C04</Address>
+          <Offsets>
+            <Offset>0</Offset>
+            <Offset>0</Offset>
+          </Offsets>
           <CheatEntries>
             <CheatEntry>
-              <ID>205</ID>
-              <Description>"pointerscan result"</Description>
+              <ID>141</ID>
+              <Description>"Current Mouse X"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00346A58</Address>
-              <Offsets>
-                <Offset>30</Offset>
-                <Offset>14</Offset>
-              </Offsets>
+              <Address>+C</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>207</ID>
-              <Description>"pointerscan result"</Description>
+              <ID>138</ID>
+              <Description>"Current Mouse Y"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00346A58</Address>
-              <Offsets>
-                <Offset>38</Offset>
-                <Offset>10</Offset>
-              </Offsets>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>219</ID>
-          <Description>"But Maybe These"</Description>
-          <Options moHideChildren="1"/>
-          <GroupHeader>1</GroupHeader>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>208</ID>
-              <Description>"pointerscan result"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00346A58</Address>
-              <Offsets>
-                <Offset>A0</Offset>
-                <Offset>18</Offset>
-              </Offsets>
+              <Address>+10</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>209</ID>
-              <Description>"pointerscan result"</Description>
+              <ID>137</ID>
+              <Description>"Current Mouse X (UI?)"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00346A58</Address>
-              <Offsets>
-                <Offset>30</Offset>
-                <Offset>10</Offset>
-              </Offsets>
+              <Address>+20</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>210</ID>
-              <Description>"pointerscan result"</Description>
+              <ID>142</ID>
+              <Description>"Current Mouse Y (UI?)"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00346A58</Address>
-              <Offsets>
-                <Offset>30</Offset>
-                <Offset>2C</Offset>
-                <Offset>18</Offset>
-              </Offsets>
+              <Address>+24</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>211</ID>
-              <Description>"pointerscan result"</Description>
+              <ID>139</ID>
+              <Description>"Most Recently Clicked Mouse X"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00346A58</Address>
-              <Offsets>
-                <Offset>28</Offset>
-                <Offset>14</Offset>
-              </Offsets>
+              <Address>+30</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>215</ID>
-              <Description>"pointerscan result"</Description>
+              <ID>140</ID>
+              <Description>"Most Recently Clicked Mouse Y"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00258C04</Address>
-              <Offsets>
-                <Offset>4A4</Offset>
-              </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>216</ID>
-              <Description>"pointerscan result"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>4 Bytes</VariableType>
-              <Address>"div.exe"+00258C04</Address>
-              <Offsets>
-                <Offset>514</Offset>
-              </Offsets>
+              <Address>+34</Address>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
       </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>146</ID>
-      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
-      <GroupHeader>1</GroupHeader>
     </CheatEntry>
     <CheatEntry>
       <ID>35</ID>
@@ -926,29 +913,196 @@ end
 </DropDownList>
           <Color>4A04BF</Color>
           <VariableType>Auto Assembler Script</VariableType>
-          <AssemblerScript>[ENABLE]
+          <AssemblerScript>{$lua}
+dofile("Divine Divinity/HelloLua.lua")
+{$asm}
+
+[ENABLE]
 
 {$lua}
-
-require("Lua/Divine Divinity/HelloLua")
-
 if not syntaxcheck then
   enable()
 end
-
 {$asm}
 
 [DISABLE]
 
 {$lua}
-
 if not syntaxcheck then
   disable()
 end
-
 {$asm}
 
 </AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>322</ID>
+      <Description>"Experiments"</Description>
+      <Options moHideChildren="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>147</ID>
+          <Description>"Entity or Sprite under Mouse"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>169</ID>
+              <Description>"pointerscan result"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+0000C764</Address>
+              <Offsets>
+                <Offset>758</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>182</ID>
+              <Description>"pointerscan result"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00190830</Address>
+              <Offsets>
+                <Offset>84</Offset>
+                <Offset>E4C</Offset>
+                <Offset>2DC</Offset>
+                <Offset>314</Offset>
+                <Offset>4</Offset>
+                <Offset>0</Offset>
+                <Offset>4F8</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>186</ID>
+              <Description>"pointerscan result"</Description>
+              <VariableType>Byte</VariableType>
+              <Address>"div.exe"+0000C764</Address>
+              <Offsets>
+                <Offset>758</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>187</ID>
+              <Description>"Pointer"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <VariableType>4 Bytes</VariableType>
+              <Address>00198900</Address>
+              <Offsets>
+                <Offset>0</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>143</ID>
+          <Description>"Positions"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>77</ID>
+              <Description>"Player X ?"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>div.exe+255FA4</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>78</ID>
+              <Description>"Player Y ?"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>div.exe+255FA4-8+C</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>97</ID>
+          <Description>"More Positions"</Description>
+          <Options moHideChildren="1"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>79</ID>
+              <Description>"pointerscan result"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00258C04</Address>
+              <Offsets>
+                <Offset>4A0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>80</ID>
+              <Description>"pointerscan result"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00258C04</Address>
+              <Offsets>
+                <Offset>510</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>81</ID>
+              <Description>"pointerscan result"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00258C04</Address>
+              <Offsets>
+                <Offset>4A0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>82</ID>
+              <Description>"pointerscan result"</Description>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00258C04</Address>
+              <Offsets>
+                <Offset>510</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>89</ID>
+              <Description>"pointerscan result"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00258C04</Address>
+              <Offsets>
+                <Offset>4A4</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>90</ID>
+              <Description>"pointerscan result"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00258C04</Address>
+              <Offsets>
+                <Offset>480</Offset>
+                <Offset>0</Offset>
+                <Offset>24</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>91</ID>
+              <Description>"pointerscan result"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>"div.exe"+00258C04</Address>
+              <Offsets>
+                <Offset>4A0</Offset>
+                <Offset>0</Offset>
+                <Offset>4</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>286</ID>
+          <Description>"First CNpc Name I Think"</Description>
+          <VariableType>String</VariableType>
+          <Length>16</Length>
+          <Unicode>0</Unicode>
+          <CodePage>0</CodePage>
+          <ZeroTerminate>1</ZeroTerminate>
+          <Address>00192FD0</Address>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
@@ -958,177 +1112,9 @@ end
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
     <CheatEntry>
-      <ID>37</ID>
-      <Description>"TODO - is game paused"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address/>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>147</ID>
-      <Description>"=======[ Entity Under Mouse Recon ]======="</Description>
-      <Options moHideChildren="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>169</ID>
-          <Description>"pointerscan result"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+0000C764</Address>
-          <Offsets>
-            <Offset>758</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>182</ID>
-          <Description>"pointerscan result"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00190830</Address>
-          <Offsets>
-            <Offset>84</Offset>
-            <Offset>E4C</Offset>
-            <Offset>2DC</Offset>
-            <Offset>314</Offset>
-            <Offset>4</Offset>
-            <Offset>0</Offset>
-            <Offset>4F8</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>186</ID>
-          <Description>"pointerscan result"</Description>
-          <VariableType>Byte</VariableType>
-          <Address>"div.exe"+0000C764</Address>
-          <Offsets>
-            <Offset>758</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>187</ID>
-          <Description>"Pointer"</Description>
-          <ShowAsHex>1</ShowAsHex>
-          <VariableType>4 Bytes</VariableType>
-          <Address>00198900</Address>
-          <Offsets>
-            <Offset>0</Offset>
-          </Offsets>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>143</ID>
-      <Description>"=== Positions ===="</Description>
-      <Options moHideChildren="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>77</ID>
-          <Description>"Player X ?"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>div.exe+255FA4</Address>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>78</ID>
-          <Description>"Player Y ?"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>div.exe+255FA4-8+C</Address>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>97</ID>
-      <Description>"~~~~~~~=== More Positions ====~~~~~~"</Description>
-      <Options moHideChildren="1"/>
-      <GroupHeader>1</GroupHeader>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>79</ID>
-          <Description>"pointerscan result"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00258C04</Address>
-          <Offsets>
-            <Offset>4A0</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>80</ID>
-          <Description>"pointerscan result"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00258C04</Address>
-          <Offsets>
-            <Offset>510</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>81</ID>
-          <Description>"pointerscan result"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00258C04</Address>
-          <Offsets>
-            <Offset>4A0</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>82</ID>
-          <Description>"pointerscan result"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00258C04</Address>
-          <Offsets>
-            <Offset>510</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>89</ID>
-          <Description>"pointerscan result"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00258C04</Address>
-          <Offsets>
-            <Offset>4A4</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>90</ID>
-          <Description>"pointerscan result"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00258C04</Address>
-          <Offsets>
-            <Offset>480</Offset>
-            <Offset>0</Offset>
-            <Offset>24</Offset>
-          </Offsets>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>91</ID>
-          <Description>"pointerscan result"</Description>
-          <ShowAsSigned>0</ShowAsSigned>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"div.exe"+00258C04</Address>
-          <Offsets>
-            <Offset>4A0</Offset>
-            <Offset>0</Offset>
-            <Offset>4</Offset>
-          </Offsets>
-        </CheatEntry>
-      </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
       <ID>191</ID>
       <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
       <GroupHeader>1</GroupHeader>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>286</ID>
-      <Description>"CNPc Name I Think"</Description>
-      <VariableType>String</VariableType>
-      <Length>16</Length>
-      <Unicode>0</Unicode>
-      <CodePage>0</CodePage>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>00192FD0</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>320</ID>
