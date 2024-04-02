@@ -18,13 +18,11 @@ function printMonsterStatsForEntity(entityIndex, entityAddress)
 end
 
 function printEntityInfo(entityIndex, entityAddress)
-  print("PRINT ENTITY @ " .. hex(entityAddress))
+  print("PRINT ENTITY #" .. entityIndex .. " @ " .. hex(entityAddress))
   local possibleIdentifier1 = readInteger(entityAddress + 0x1c)
-  print("> ID1: " .. possibleIdentifier1)
   local possibleIdentifier2 = readInteger(entityAddress + 0x20)
-  print("> ID2: " .. possibleIdentifier2)
-  local possibleIdentifier3 = readInteger(entityAddress + 0x80)
-  print("> ID3: " .. possibleIdentifier3)
+  local possibleIdentifier3 = readSmallInteger(entityAddress + 0x80)
+  print("> IDs: " .. possibleIdentifier1 .. " | " .. possibleIdentifier2 .. " | " .. possibleIdentifier3)
   printMonsterStatsForEntity(entityIndex, entityAddress)
   print("")
 end
