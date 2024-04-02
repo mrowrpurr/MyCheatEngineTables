@@ -29,9 +29,19 @@ end
 
 function Print_CNpc_Info_Enable()
   local entityListAddress = getEntityListAddress()
+  if entityListAddress == 0 then
+    print("Entity list not found.")
+    return
+  end
+
   local firstOffset = getFirstCNpcOffset()
   local offsetDistance = 0x4
   local currentEntityPointerAddress = entityListAddress + firstOffset
+  if not currentEntityPointerAddress then
+    print("No CNpc entities found.")
+    return
+  end
+
   local currentEntityAddress = readPointer(currentEntityPointerAddress)
   local entityCount = 0
 

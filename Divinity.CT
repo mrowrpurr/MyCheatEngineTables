@@ -1119,201 +1119,9 @@ end
       <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
-    <CheatEntry>
-      <ID>327</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>03DE4100</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>328</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>div.exe+351618</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>329</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>div.exe+258C04</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>330</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>751618</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>331</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+000A05E4</Address>
-      <Offsets>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>332</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+000A68B0</Address>
-      <Offsets>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>333</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+00152BE0</Address>
-      <Offsets>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>334</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+001C160C</Address>
-      <Offsets>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>335</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+00028204</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>336</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+0002833C</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>337</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+0003C05C</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>338</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+0009C8E0</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>339</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+00102944</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>340</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+00116670</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>341</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+00191FAC</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>342</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+0019B548</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>343</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+001AD6EC</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>344</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+001C15F4</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>345</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"div.exe"+001CB4D8</Address>
-      <Offsets>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>346</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>27306101</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>347</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>27302A01</Address>
-    </CheatEntry>
   </CheatEntries>
   <CheatCodes>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>DEC Mana :sub [eax+08],ecx</Description>
       <AddressString>div.exe+21F5B</AddressString>
       <Before>
@@ -1336,7 +1144,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Sub player health :sub [ebx+04],esi</Description>
       <AddressString>div.exe+15DED7</AddressString>
       <Before>
@@ -1359,7 +1167,7 @@ end
         <Byte>84</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Sub enemy health :sub [edi+04],eax</Description>
       <AddressString>div.exe+15B064</AddressString>
       <Before>
@@ -1382,7 +1190,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>On character move 1 :mov eax,[esi+000004A4]</Description>
       <AddressString>div.exe+A8237</AddressString>
       <Before>
@@ -1408,7 +1216,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>On character move 2 :add edx,[esi+000004A4]</Description>
       <AddressString>div.exe+A8279</AddressString>
       <Before>
@@ -1434,7 +1242,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Nop some movement [esi+000004E8],eax</Description>
       <AddressString>div.exe+A81D9</AddressString>
       <Before>
@@ -1460,7 +1268,7 @@ end
         <Byte>E4</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Nop more movement [esi+00000454],eax</Description>
       <AddressString>div.exe+A8209</AddressString>
       <Before>
@@ -1486,7 +1294,7 @@ end
         <Byte>F7</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>ACCESS Monster Health on DEC 1 :sub ebx,[ecx+04]</Description>
       <AddressString>div.exe+17C41</AddressString>
       <Before>
@@ -1509,7 +1317,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>ACCESS Monster Health on DEC 2 :mov ecx,[eax+04]</Description>
       <AddressString>div.exe+17F0A</AddressString>
       <Before>
@@ -1532,7 +1340,7 @@ end
         <Byte>E1</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>FN access monster health on kill :push -01</Description>
       <AddressString>div.exe+17B40</AddressString>
       <Before>
@@ -1554,7 +1362,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Change of maybe monster dead check [esi+00000224],00010000</Description>
       <AddressString>div.exe+17F15</AddressString>
       <Before>
@@ -1584,7 +1392,7 @@ end
         <Byte>04</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>On Left Click for character move :fst dword ptr [esi+0C]</Description>
       <AddressString>div.exe+41FFF</AddressString>
       <Before>
@@ -1607,7 +1415,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Set path finding offset :fstp dword ptr [esi+0000022C]</Description>
       <AddressString>div.exe+2767D</AddressString>
       <Before>
@@ -1633,7 +1441,7 @@ end
         <Byte>65</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Write to Y on move :mov [esi+08],eax</Description>
       <AddressString>div.exe+42032</AddressString>
       <Before>
@@ -1656,7 +1464,7 @@ end
         <Byte>5E</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Write to X on move :mov [esi+04],eax</Description>
       <AddressString>div.exe+4201D</AddressString>
       <Before>
@@ -1679,7 +1487,7 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Called on movemens :push ecx</Description>
       <AddressString>div.exe+41A40</AddressString>
       <Before>
@@ -1700,7 +1508,7 @@ end
         <Byte>77</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Read mouse coord on click :mov edx,[esi+20]</Description>
       <AddressString>div.exe+A23E1</AddressString>
       <Before>
@@ -1723,7 +1531,35 @@ end
         <Byte>46</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
+      <Description>Change of call 00547B90</Description>
+      <AddressString>div.exe+A68E7</AddressString>
+      <Before>
+        <Byte>74</Byte>
+        <Byte>00</Byte>
+        <Byte>6A</Byte>
+        <Byte>00</Byte>
+        <Byte>55</Byte>
+      </Before>
+      <Actual>
+        <Byte>E8</Byte>
+        <Byte>A4</Byte>
+        <Byte>12</Byte>
+        <Byte>0A</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry Color="00FFFF00" GroupHeader="1">
+      <Description>Change Map</Description>
+    </CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Change Map 1 :mov [0064D90C],esi</Description>
       <AddressString>div.exe+A6945</AddressString>
       <Before>
@@ -1749,7 +1585,7 @@ end
         <Byte>C3</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Change Map 2 :mov [0064D910],ebp</Description>
       <AddressString>div.exe+A68EC</AddressString>
       <Before>
@@ -1775,32 +1611,7 @@ end
         <Byte>74</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
-      <Description>Change of call 00547B90</Description>
-      <AddressString>div.exe+A68E7</AddressString>
-      <Before>
-        <Byte>74</Byte>
-        <Byte>00</Byte>
-        <Byte>6A</Byte>
-        <Byte>00</Byte>
-        <Byte>55</Byte>
-      </Before>
-      <Actual>
-        <Byte>E8</Byte>
-        <Byte>A4</Byte>
-        <Byte>12</Byte>
-        <Byte>0A</Byte>
-        <Byte>00</Byte>
-      </Actual>
-      <After>
-        <Byte>90</Byte>
-        <Byte>90</Byte>
-        <Byte>90</Byte>
-        <Byte>90</Byte>
-        <Byte>90</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Called BEFORE map move :call 0054BF60</Description>
       <AddressString>div.exe+147BB2</AddressString>
       <Before>
@@ -1825,7 +1636,7 @@ end
         <Byte>89</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>Also BEFORE map move :mov eax,[esp+04]</Description>
       <AddressString>div.exe+147BAD</AddressString>
       <Before>
@@ -1849,53 +1660,29 @@ end
         <Byte>00</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
-      <Description>Part of frame render cycle loop :call 004AB4A0</Description>
-      <AddressString>div.exe+E39B</AddressString>
+    <CodeEntry Color="00FFFF00">
+      <Description>Runs AFTER player moves :test al,al</Description>
+      <AddressString>div.exe+A73F5</AddressString>
       <Before>
-        <Byte>1D</Byte>
-        <Byte>34</Byte>
-        <Byte>8D</Byte>
-        <Byte>65</Byte>
+        <Byte>E8</Byte>
+        <Byte>8B</Byte>
+        <Byte>05</Byte>
+        <Byte>0A</Byte>
         <Byte>00</Byte>
       </Before>
       <Actual>
-        <Byte>E8</Byte>
-        <Byte>00</Byte>
-        <Byte>D1</Byte>
-        <Byte>09</Byte>
-        <Byte>00</Byte>
+        <Byte>84</Byte>
+        <Byte>C0</Byte>
       </Actual>
       <After>
-        <Byte>39</Byte>
-        <Byte>1D</Byte>
-        <Byte>DC</Byte>
-        <Byte>8C</Byte>
-        <Byte>65</Byte>
-      </After>
-    </CodeEntry>
-    <CodeEntry>
-      <Description>Start Frame Render or something :push esi</Description>
-      <AddressString>div.exe+AB4A0</AddressString>
-      <Before>
-        <Byte>CC</Byte>
-        <Byte>CC</Byte>
-        <Byte>CC</Byte>
-        <Byte>CC</Byte>
-        <Byte>CC</Byte>
-      </Before>
-      <Actual>
-        <Byte>56</Byte>
-      </Actual>
-      <After>
+        <Byte>74</Byte>
+        <Byte>07</Byte>
+        <Byte>8B</Byte>
+        <Byte>CB</Byte>
         <Byte>E8</Byte>
-        <Byte>5A</Byte>
-        <Byte>E6</Byte>
-        <Byte>FF</Byte>
-        <Byte>FF</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
+    <CodeEntry Color="00FFFF00">
       <Description>BEFORE map move :mov ecx,[007469EC]</Description>
       <AddressString>div.exe+A6924</AddressString>
       <Before>
@@ -1921,26 +1708,53 @@ end
         <Byte>AE</Byte>
       </After>
     </CodeEntry>
-    <CodeEntry>
-      <Description>Runs AFTER player moves :test al,al</Description>
-      <AddressString>div.exe+A73F5</AddressString>
+    <CodeEntry Color="00FFFF00" GroupHeader="1">
+      <Description>Main Loop and Render</Description>
+    </CodeEntry>
+    <CodeEntry Color="00FFFF00">
+      <Description>Part of frame render cycle loop :call 004AB4A0</Description>
+      <AddressString>div.exe+E39B</AddressString>
       <Before>
-        <Byte>E8</Byte>
-        <Byte>8B</Byte>
-        <Byte>05</Byte>
-        <Byte>0A</Byte>
+        <Byte>1D</Byte>
+        <Byte>34</Byte>
+        <Byte>8D</Byte>
+        <Byte>65</Byte>
         <Byte>00</Byte>
       </Before>
       <Actual>
-        <Byte>84</Byte>
-        <Byte>C0</Byte>
+        <Byte>E8</Byte>
+        <Byte>00</Byte>
+        <Byte>D1</Byte>
+        <Byte>09</Byte>
+        <Byte>00</Byte>
       </Actual>
       <After>
-        <Byte>74</Byte>
-        <Byte>07</Byte>
-        <Byte>8B</Byte>
-        <Byte>CB</Byte>
+        <Byte>39</Byte>
+        <Byte>1D</Byte>
+        <Byte>DC</Byte>
+        <Byte>8C</Byte>
+        <Byte>65</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry Color="00FFFF00">
+      <Description>Start Frame Render or something :push esi</Description>
+      <AddressString>div.exe+AB4A0</AddressString>
+      <Before>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+      </Before>
+      <Actual>
+        <Byte>56</Byte>
+      </Actual>
+      <After>
         <Byte>E8</Byte>
+        <Byte>5A</Byte>
+        <Byte>E6</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
       </After>
     </CodeEntry>
   </CheatCodes>

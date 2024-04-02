@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "type": "lua-local",
+      "request": "launch",
+      "name": "Debug Cheat Engine",
+      "program": {
+        "command": "C:/Program Files/Cheat Engine 7.5/Cheat Engine.exe"
+      },
+      "args": ["${workspaceFolder}"]
+    }
+  ]
+}

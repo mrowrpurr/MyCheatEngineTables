@@ -30,7 +30,11 @@ def find_common_chains(chains_sets)
   end
 end
 
-db_paths = %w[ mana-one.sqlite mana-two.sqlite mana-three.sqlite mana-six.sqlite ]
+puts "Magicka (4)"
+
+# db_paths = %w[ max-mana.sqlite max-mana-two.sqlite max-mana-three.sqlite max-mana-four.sqlite max-mana-five.sqlite ]
+# db_paths = %w[ mana-one.sqlite mana-two.sqlite mana-three.sqlite mana-six.sqlite ]
+db_paths = %w[ magicka-one.sqlite magicka-two.sqlite magicka-three.sqlite magicka-four.sqlite ]
 puts "Loading pointer chains from #{db_paths.join(", ")}..."
 
 chains_sets = db_paths.map { |path| load_pointer_chains(path) }
