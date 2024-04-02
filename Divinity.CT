@@ -6,6 +6,7 @@
       <Description>"Entity List"</Description>
       <Options moHideChildren="1"/>
       <ShowAsSigned>0</ShowAsSigned>
+      <Color>349922</Color>
       <GroupHeader>1</GroupHeader>
       <Address>"div.exe"+00258D50</Address>
       <Offsets>
@@ -476,8 +477,9 @@
     </CheatEntry>
     <CheatEntry>
       <ID>144</ID>
-      <Description>"Player"</Description>
+      <Description>"Player (more)"</Description>
       <Options moHideChildren="1"/>
+      <Color>FF0080</Color>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
@@ -496,6 +498,7 @@
       <ID>323</ID>
       <Description>"UI"</Description>
       <Options moHideChildren="1"/>
+      <Color>0080FF</Color>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
@@ -707,12 +710,14 @@
       <ID>35</ID>
       <Description>"Scripts"</Description>
       <Options moHideChildren="1"/>
+      <Color>FF00FF</Color>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>319</ID>
           <Description>"Variables"</Description>
           <Options moHideChildren="1"/>
+          <Color>8000FF</Color>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
@@ -935,12 +940,41 @@ end
 
 </AssemblerScript>
         </CheatEntry>
+        <CheatEntry>
+          <ID>324</ID>
+          <Description>"Test EXTERNAL Script"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Two
+3:Three
+</DropDownList>
+          <Color>4A04BF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+{$lua}
+if not syntaxcheck then
+  print("Calling the other enable!")
+  enable()
+end
+{$asm}
+
+[DISABLE]
+
+{$lua}
+if not syntaxcheck then
+  disable()
+end
+{$asm}
+
+</AssemblerScript>
+        </CheatEntry>
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
       <ID>322</ID>
       <Description>"Experiments"</Description>
       <Options moHideChildren="1"/>
+      <Color>FF8000</Color>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
