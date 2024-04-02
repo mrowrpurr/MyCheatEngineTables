@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheatTable CheatEngineTableVersion="45">
-  <Forms>
-    <UDF1 Class="TCEForm" Encoding="Ascii85">B}DvTgFqCW7Rpqpd,;u#)@PlR3=)JO1_3;Ho3UKrCcxluO^04-agkk!0y$sjm2:z}V](m?cq)=GHjRA?!Y4b1f-E[A[JCzY+5k{db!YvsMTR,5_C_fe5$e[%@9!MCZEWB7+=j.#mTig,BuQlbvQ=.CT8l}/3B+[1gN*8%zkQRt*SaxM%lW0wDkShmZQ7mR=nZV^4LC}*rG_%NG[=_;OU2!yJ1K,ey?qM$@.6YIUz]@ofl(pyv4}G#]r#@nUJuxK8Me8.N;T+eyY=@GVuRn1Gxi4</UDF1>
-  </Forms>
   <CheatEntries>
     <CheatEntry>
       <ID>23</ID>
@@ -917,6 +914,39 @@ end
 {$asm}
 
 [DISABLE]
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>321</ID>
+          <Description>"Test EXTERNAL Script"</Description>
+          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">1:One
+2:Two
+3:Three
+</DropDownList>
+          <Color>4A04BF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+{$lua}
+
+require("Lua/Divine Divinity/HelloLua")
+
+if not syntaxcheck then
+  enable()
+end
+
+{$asm}
+
+[DISABLE]
+
+{$lua}
+
+if not syntaxcheck then
+  disable()
+end
+
+{$asm}
 
 </AssemblerScript>
         </CheatEntry>
