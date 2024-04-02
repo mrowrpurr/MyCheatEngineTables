@@ -28,6 +28,8 @@ function printEntityInfo(entityIndex, entityAddress)
 end
 
 function Print_CNpc_Info_Enable()
+  getLuaEngine().MenuItem5.doClick()
+
   local entityListAddress = getEntityListAddress()
   if entityListAddress == 0 then
     print("Entity list not found.")
