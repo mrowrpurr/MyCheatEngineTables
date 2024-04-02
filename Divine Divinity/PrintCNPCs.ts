@@ -1,10 +1,27 @@
-import { clear, getAddress, hex } from "../Common/Common"
-import { getEntityListAddress } from "./EntityList"
+import { getAddress, hex } from "../Common/Common"
+import { getEntityListAddress, getEntityTypeName } from "./Entities"
+import { clearLogWindow, showLogWindow } from "./UI"
 
 const VAR_FIRST_CNPC_OFFSET = "First CNpc Offset"
 
-function printCNPC(address: number) {
-    print(`CNpc at ${hex(address)}`)
+function printCNpc(npcNumber: number, npcAddress: number, npcOffset: number) {
+    const possibleIdentifier1 = readInteger(npcAddress + 0x1c)
+    // const possibleIdentifier2 = readInteger(npcAddress + 0x20)
+    // const possibleIdentifier3 = readSmallInteger(npcAddress + 0x80)
+    const entityTypeName = getEntityTypeName(possibleIdentifier1)
+    print(`${entityTypeName} - #${npcNumber} @ ${hex(npcAddress)} [${hex(npcOffset)}]`)
+    printMonsterStats(npcNumber, npcAddress)
+    print("")
+}
+
+function printMonsterStats(npcNumber: number, npcAddress: number) {
+    const monsterStatsAddress = npcAddress + 0x2c
+    const monsterStats = readPointer(monsterStatsAddress)
+    writeInteger(monsterStats + 0x4, npcNumber)
+    const hp = readInteger(monsterStats + 0x4)
+    print(`> HP: ${hp}`)
+    const level = readInteger(monsterStats + 0x1c)
+    print(`> Level: ${level}`)
 }
 
 function getCNpcPointer(pointerAddress: number) {
@@ -17,23 +34,31 @@ function printCNPCs(entityListAddress: number) {
         print("First CNpc offset not found")
         return
     }
-
-    let npcCount = 0
-    let npcPointerAddress = entityListAddress + firstNpcOffset
+    const maxLookupMisses = 10
+    let npcLookupMisses = 0
+    let npcNumber = 0
+    let currentNpcOffset = firstNpcOffset
+    let npcPointerAddress = entityListAddress + currentNpcOffset
     let npcPointer = getCNpcPointer(npcPointerAddress)
-    while (npcPointer > 0 && npcCount < 10) {
-        // TODO! REMOVE the 10 limit!!!!!!
-        npcCount++ // TODO <--- use this to set HP of entities
-        printCNPC(npcPointer)
-        npcPointerAddress += 0x04
+    while (npcPointer > 0 && npcNumber < 100) {
+        npcNumber++
+        printCNpc(npcNumber, npcPointer, currentNpcOffset)
+        currentNpcOffset += 0x04
+        npcPointerAddress = entityListAddress + currentNpcOffset
         npcPointer = getCNpcPointer(npcPointerAddress)
+        while (npcPointer === 0 && npcLookupMisses < maxLookupMisses) {
+            npcNumber++
+            npcLookupMisses++
+            npcPointerAddress += 0x04
+            npcPointer = getCNpcPointer(npcPointerAddress)
+        }
     }
-
-    print(`Found ${npcCount} CNpcs`)
+    print(`Found ${npcNumber} CNpcs`)
 }
 
 export function enable() {
-    clear()
+    clearLogWindow()
+    showLogWindow()
     const entityList = getEntityListAddress()
     if (!entityList) {
         print("Entity list not found")

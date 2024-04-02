@@ -1,7 +1,3 @@
-export function clear() {
-    getLuaEngine().MenuItem5.doClick()
-}
-
 export function hex(int: number) {
     return int.toString(16)
 }
