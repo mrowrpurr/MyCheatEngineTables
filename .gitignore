@@ -3,3 +3,4 @@
 *.scandata
 *.addresslist
 *.sqlite
+node_modules

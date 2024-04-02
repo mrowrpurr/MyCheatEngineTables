@@ -1,0 +1,19 @@
+{
+  "name": "cheat-engine-types",
+  "version": "1.0.0",
+  "description": "",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "0BSD",
+  "dependencies": {
+    "lua-types": "^2.13.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.3",
+    "typescript-to-lua": "^1.25.1"
+  }
+}

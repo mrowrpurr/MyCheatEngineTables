@@ -1,0 +1,20 @@
+{
+  "name": "mrowr-purr-cheat-engine-tables",
+  "version": "1.0.0",
+  "description": "Mrowr Purr's Cheat Engine Table Scripts",
+  "scripts": {
+    "build": "tstl",
+    "watch": "tstl --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "0BSD",
+  "dependencies": {
+    "cheat-engine-types": "workspace:*"
+  },
+  "devDependencies": {
+    "lua-types": "^2.13.1",
+    "typescript": "^5.4.3",
+    "typescript-to-lua": "^1.25.1"
+  }
+}
