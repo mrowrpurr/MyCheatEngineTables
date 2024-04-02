@@ -871,8 +871,8 @@ end
 </AssemblerScript>
         </CheatEntry>
         <CheatEntry>
-          <ID>321</ID>
-          <Description>"Print CNpc Info"</Description>
+          <ID>327</ID>
+          <Description>"Script1 Example"</Description>
           <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">1:One
 2:Two
 3:Three
@@ -880,16 +880,17 @@ end
           <Color>4A04BF</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>{$lua}
-dofile("Divine Divinity/Print_CNpc_Info.lua")
+-- Uncomment to force refresh:
+-- package.loaded.script1 = nil
+
+printCNPCs = require("Lua/Divine Divinity/PrintCNPCs")
 {$asm}
 
 [ENABLE]
 
 {$lua}
 if not syntaxcheck then
-  print("================================")
-  Print_CNpc_Info_Enable()
-  print("================================")
+  printCNPCs.enable()
 end
 {$asm}
 
@@ -897,7 +898,7 @@ end
 
 {$lua}
 if not syntaxcheck then
-  Print_CNpc_Info_Disable()
+  printCNPCs.disable()
 end
 {$asm}
 

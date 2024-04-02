@@ -6,9 +6,11 @@
     "moduleResolution": "Node",
     "types": ["lua-types/5.3"],
     "strict": true,
+    "sourceMap": true,
     "outDir": "Lua"
   },
   "tstl": {
-    "luaTarget": "5.3"
+    "luaTarget": "5.3",
+    "buildMode": "library"
   }
 }
