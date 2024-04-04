@@ -33,8 +33,12 @@ export class Debugger {
         return debug_isDebugging()
     }
 
+    hasRegisters() {
+        return EAX !== undefined
+    }
+
     getRegisters() {
-        return new Registers()
+        return this.hasRegisters() ? new Registers() : undefined
     }
 }
 
