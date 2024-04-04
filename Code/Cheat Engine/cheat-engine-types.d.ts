@@ -27,6 +27,8 @@ declare namespace CheatEngine {
 declare function getAddressList(): CheatEngine.AddressList
 declare function getLuaEngine(): CheatEngine.Form
 
+declare function getAddressSafe(address: number): number | undefined
+
 declare function readPointer(address: number): number
 declare function writePointer(address: number, value: number): void
 
@@ -35,6 +37,9 @@ declare function writeInteger(address: number, value: number): void
 
 declare function readSmallInteger(address: number): number
 declare function writeSmallInteger(address: number, value: number): void
+
+declare function readFloat(address: number): number
+declare function writeFloat(address: number, value: number): void
 
 declare function debug_isDebugging(): boolean
 
