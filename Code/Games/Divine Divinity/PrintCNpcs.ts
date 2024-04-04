@@ -1,6 +1,6 @@
-import { getAddress, hex } from "../Common/Common"
+import { clearLogWindow, showLogWindow } from "@cheat-engine"
+import { getAddress, hex } from "@common"
 import { getEntityListAddress, getEntityTypeName } from "./Entities"
-import { clearLogWindow, showLogWindow } from "./UI"
 
 const VAR_FIRST_CNPC_OFFSET = "First CNpc Offset"
 
@@ -25,7 +25,7 @@ function printMonsterStats(npcNumber: number, npcAddress: number) {
 }
 
 function getCNpcPointer(pointerAddress: number) {
-    return pointerAddress ? readPointer(pointerAddress) : 0
+    return pointerAddress !== undefined ? readPointer(pointerAddress) : 0
 }
 
 function printCNPCs(entityListAddress: number) {

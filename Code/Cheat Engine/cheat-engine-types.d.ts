@@ -35,3 +35,15 @@ declare function writeInteger(address: number, value: number): void
 
 declare function readSmallInteger(address: number): number
 declare function writeSmallInteger(address: number, value: number): void
+
+declare function debug_isDebugging(): boolean
+
+declare const EAX: number | undefined
+declare const EBX: number | undefined
+declare const ECX: number | undefined
+declare const EDX: number | undefined
+declare const ESI: number | undefined
+declare const EDI: number | undefined
+declare const ESP: number | undefined
+declare const EBP: number | undefined
+declare const EIP: number | undefined

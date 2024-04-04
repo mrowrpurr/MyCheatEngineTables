@@ -14,12 +14,19 @@
         "noImplicitOverride": true,
         "noImplicitAny": true,
         "noUncheckedIndexedAccess": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+
+        /* Paths! */
+        "paths": {
+            "@common": ["Code/common.ts"],
+            "@cheat-engine": ["Code/Cheat Engine/cheat-engine.ts"]
+        },
+        "baseUrl": "./"
     },
     "tstl": {
         "luaTarget": "5.3",
         "buildMode": "library",
         "noImplicitSelf": true
     },
-    "include": ["cheat-engine.d.ts", "Common/**.ts", "Divine Divinity/**.ts"]
+    "include": ["./Code/**/*.ts"]
 }

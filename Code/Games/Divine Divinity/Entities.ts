@@ -1,4 +1,4 @@
-import { getAddress } from "../Common/Common"
+import { getAddress } from "@common"
 
 const VAR_ENTITY_LIST_PTR = "Entity List Pointer"
 
