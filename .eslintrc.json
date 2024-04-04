@@ -67,7 +67,7 @@
                 "allowAllPropertiesOnSameLine": true
             }
         ],
-        "@stylistic/operator-linebreak": ["error", "before"],
+        "@stylistic/operator-linebreak": ["off"],
         "@stylistic/padded-blocks": "off",
         "@stylistic/quote-props": ["error", "as-needed"],
         "@stylistic/quotes": ["error", "double"],
