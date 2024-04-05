@@ -5,7 +5,16 @@ local __TS__StringIncludes = ____lualib.__TS__StringIncludes
 local ____exports = {}
 local _____40cheat_2Dengine = require("Code.Cheat Engine.cheat-engine")
 local clearLogWindow = _____40cheat_2Dengine.clearLogWindow
-function ____exports.printAddress(address)
+function ____exports.printStackOffset(offset)
+    if ESP == nil then
+        return false
+    end
+    local offsetString = __TS__StringPadStart(
+        string.upper(__TS__NumberToString(offset, 16)),
+        3,
+        "0"
+    )
+    local address = ESP + offset
     local addressString = __TS__StringPadStart(
         string.upper(__TS__NumberToString(address, 16)),
         8,
@@ -25,28 +34,38 @@ function ____exports.printAddress(address)
     if ____opt_0 then
         asFloat = nil
     end
+    local ____opt_4 = asFloat
+    if ____opt_4 ~= nil then
+        local ____opt_5 = asFloat
+        ____opt_4 = __TS__StringIncludes(
+            ____opt_5 and tostring(asFloat),
+            "nan"
+        )
+    end
+    if ____opt_4 then
+        asFloat = nil
+    end
+    if asInteger == 0 then
+        asFloat = nil
+    end
     local asPointer = asInteger and getAddressSafe(asInteger) and readPointer(asInteger) or nil
-    local ____temp_4
+    local ____temp_8
     if asPointer == nil then
-        ____temp_4 = nil
+        ____temp_8 = nil
     else
-        ____temp_4 = __TS__StringPadStart(
+        ____temp_8 = __TS__StringPadStart(
             string.upper(__TS__NumberToString(asPointer, 16)),
             8,
             "0"
         )
     end
-    local pointerAddressString = ____temp_4
-    local output = addressString
+    local pointerAddressString = ____temp_8
+    local output = "0x" .. offsetString
     if asInteger ~= nil then
         if asPointer ~= nil then
-            output = output .. " \t* " .. tostring(pointerAddressString)
-            output = output .. (" \t[" .. tostring(asInteger)) .. "]"
-            if asFloat ~= nil then
-                output = output .. (" \t(" .. tostring(asFloat)) .. ")"
-            end
+            output = output .. " \t\t-> " .. tostring(pointerAddressString)
         else
-            output = output .. ": \t" .. tostring(asInteger)
+            output = output .. " \t" .. tostring(asInteger)
             if asFloat ~= nil then
                 output = output .. (" \t(" .. tostring(asFloat)) .. ")"
             end
@@ -57,7 +76,7 @@ function ____exports.printAddress(address)
 end
 function ____exports.printTopOfStack(items)
     if items == nil then
-        items = 10
+        items = 30
     end
     if ESP == nil then
         return
@@ -70,7 +89,7 @@ function ____exports.printTopOfStack(items)
     do
         local i = 0
         while i < items do
-            if not ____exports.printAddress(ESP + i * 4) then
+            if not ____exports.printStackOffset(i * 4) then
                 break
             end
             i = i + 1

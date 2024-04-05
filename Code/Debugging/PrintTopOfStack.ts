@@ -1,25 +1,27 @@
 import { clearLogWindow } from "@cheat-engine"
 
-export function printAddress(address: number) {
+export function printStackOffset(offset: number) {
+    if (ESP === undefined) return false
+
+    const offsetString = offset.toString(16).toUpperCase().padStart(3, "0")
+    const address = ESP + offset
     const addressString = address.toString(16).toUpperCase().padStart(8, "0")
     const isSafe = getAddressSafe(address) !== undefined
     const asInteger = isSafe ? readInteger(address) : undefined
     let asFloat = isSafe ? readFloat(address) : undefined
     if (asFloat?.toString().includes("e")) asFloat = undefined
+    if (asFloat?.toString().includes("nan")) asFloat = undefined
+    if (asInteger === 0) asFloat = undefined
     const asPointer = asInteger && getAddressSafe(asInteger) ? readPointer(asInteger) : undefined
     const pointerAddressString =
         asPointer === undefined ? undefined : asPointer.toString(16).toUpperCase().padStart(8, "0")
 
-    // TODO: don't show float if it has an E in it
-
-    let output = `${addressString}`
+    let output = `0x${offsetString}`
     if (asInteger !== undefined) {
         if (asPointer !== undefined) {
-            output += ` \t* ${pointerAddressString}`
-            output += ` \t[${asInteger}]`
-            if (asFloat !== undefined) output += ` \t(${asFloat})`
+            output += ` \t\t-> ${pointerAddressString}`
         } else {
-            output += `: \t${asInteger}`
+            output += ` \t${asInteger}`
             if (asFloat !== undefined) output += ` \t(${asFloat})`
         }
     }
@@ -29,10 +31,10 @@ export function printAddress(address: number) {
     return asInteger !== undefined
 }
 
-export function printTopOfStack(items: number = 10) {
+export function printTopOfStack(items: number = 30) {
     if (ESP === undefined) return
     print(`Top of stack: ESP = ${ESP.toString(16).toUpperCase().padStart(8, "0")}`)
-    for (let i = 0; i < items; i++) if (!printAddress(ESP + i * 0x4)) break
+    for (let i = 0; i < items; i++) if (!printStackOffset(i * 0x4)) break
 }
 
 export function enable() {
