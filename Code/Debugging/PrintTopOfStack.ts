@@ -15,11 +15,12 @@ export function printStackOffset(offset: number) {
     const pointerAddressString =
         asPointer === undefined ? undefined : asPointer.toString(16).toUpperCase().padStart(8, "0")
     const rttiClassName = asPointer && asInteger ? getRTTIClassName(asInteger) : undefined
+    const asIntegerAddressString = asInteger?.toString(16).toUpperCase().padStart(8, "0")
 
     let output = `0x${offsetString}`
     if (asInteger !== undefined) {
         if (asPointer !== undefined) {
-            output += ` \t\t-> ${pointerAddressString}`
+            output += ` \t${asIntegerAddressString} \t-> ${pointerAddressString}`
             if (rttiClassName !== undefined) output += ` \t(${rttiClassName})`
         } else {
             output += ` \t${asInteger}`

@@ -62,10 +62,20 @@ function ____exports.printStackOffset(offset)
         ____temp_9 = nil
     end
     local rttiClassName = ____temp_9
+    local ____opt_10 = asInteger
+    if ____opt_10 ~= nil then
+        local ____opt_11 = asInteger
+        if ____opt_11 ~= nil then
+            local ____opt_12 = asInteger
+            ____opt_11 = string.upper(____opt_12 and __TS__NumberToString(asInteger, 16))
+        end
+        ____opt_10 = __TS__StringPadStart(____opt_11, 8, "0")
+    end
+    local asIntegerAddressString = ____opt_10
     local output = "0x" .. offsetString
     if asInteger ~= nil then
         if asPointer ~= nil then
-            output = output .. " \t\t-> " .. tostring(pointerAddressString)
+            output = output .. ((" \t" .. tostring(asIntegerAddressString)) .. " \t-> ") .. tostring(pointerAddressString)
             if rttiClassName ~= nil then
                 output = output .. (" \t(" .. rttiClassName) .. ")"
             end
