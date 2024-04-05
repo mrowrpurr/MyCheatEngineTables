@@ -1063,7 +1063,7 @@ end
           <Color>AE5EFF</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>{$lua}
-printRegisters = requireScript("Debugging/PrintRegisters", true)
+printRegisters = requireScript("Debugging/PrintRegisters", true, true)
 {$asm}
 
 [ENABLE]
@@ -1899,6 +1899,49 @@ end
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
       <Address>0019F72C+8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>454</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>20D525E8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>455</ID>
+      <Description>"USE THIS STRENGTH"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>20D5260C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>456</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>Byte</VariableType>
+      <Address>"div.exe"+0025F638</Address>
+      <Offsets>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>457</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>Byte</VariableType>
+      <Address>"div.exe"+00346884</Address>
+      <Offsets>
+        <Offset>70C</Offset>
+        <Offset>3F8</Offset>
+        <Offset>18</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>458</ID>
+      <Description>"pointerscan result"</Description>
+      <VariableType>Byte</VariableType>
+      <Address>"div.exe"+0034685C</Address>
+      <Offsets>
+        <Offset>70C</Offset>
+        <Offset>3F8</Offset>
+        <Offset>F8</Offset>
+      </Offsets>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -22610,7 +22653,7 @@ function requireScript(scriptPath, reloadScript, reloadAll)
   if reloadAll then
     local toDelete = {}
     for name, _ in pairs(package.loaded) do
-        if startsWith(name, "Code/") then
+        if startsWith(name, "Code") then
             table.insert(toDelete, name)
         end
     end
