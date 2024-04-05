@@ -41,6 +41,8 @@ declare function writeSmallInteger(address: number, value: number): void
 declare function readFloat(address: number): number
 declare function writeFloat(address: number, value: number): void
 
+declare function getRTTIClassName(address: number): string | undefined
+
 declare function debug_isDebugging(): boolean
 
 declare const EAX: number | undefined

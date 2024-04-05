@@ -15,11 +15,6 @@ function ____exports.printStackOffset(offset)
         "0"
     )
     local address = ESP + offset
-    local addressString = __TS__StringPadStart(
-        string.upper(__TS__NumberToString(address, 16)),
-        8,
-        "0"
-    )
     local isSafe = getAddressSafe(address) ~= nil
     local asInteger = isSafe and readInteger(address) or nil
     local asFloat = isSafe and readFloat(address) or nil
@@ -60,10 +55,20 @@ function ____exports.printStackOffset(offset)
         )
     end
     local pointerAddressString = ____temp_8
+    local ____temp_9
+    if asPointer and asInteger then
+        ____temp_9 = getRTTIClassName(asInteger)
+    else
+        ____temp_9 = nil
+    end
+    local rttiClassName = ____temp_9
     local output = "0x" .. offsetString
     if asInteger ~= nil then
         if asPointer ~= nil then
             output = output .. " \t\t-> " .. tostring(pointerAddressString)
+            if rttiClassName ~= nil then
+                output = output .. (" \t(" .. rttiClassName) .. ")"
+            end
         else
             output = output .. " \t" .. tostring(asInteger)
             if asFloat ~= nil then
