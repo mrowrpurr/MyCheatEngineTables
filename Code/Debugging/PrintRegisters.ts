@@ -1,5 +1,9 @@
 import { clearLogWindow } from "@cheat-engine"
 
+export function getAddressString(address: number, padding: number = 8) {
+    return address.toString(16).toUpperCase().padStart(padding, "0")
+}
+
 export function readSimpleFloat(address: number) {
     const floatString = readFloat(address).toString()
     if (floatString.includes("e")) return undefined
@@ -7,55 +11,34 @@ export function readSimpleFloat(address: number) {
     return floatString
 }
 
-export function getValueDebugString(value: number, pointerDepth: 2) {
-    return "TODO"
-    // const valueAtAddress = readPointer(value)
-    // if (valueAtAddress === undefined) return value.toString()
+export function getValueDebugString(value: number, pointerDepth: number = 2) {
+    const valueAtAddress = readPointer(value)
+    if (valueAtAddress === undefined || valueAtAddress === 0) return value.toString()
 
-    // const floatAtAddress = readFloat(value)
+    const floatAtAddress = readSimpleFloat(value)
 
-    // if (getAddressSafe(valueAtAddress) === undefined) return value.toString()
-}
+    if (getAddressSafe(valueAtAddress) === undefined) {
+        return floatAtAddress ?? valueAtAddress.toString()
+    }
 
-// export function __getPrettyAddressValueString(address: number) {
-//     const isSafe = getAddressSafe(address) !== undefined
-//     const asInteger = isSafe ? readInteger(address) : undefined
-//     let asFloat = isSafe ? readFloat(address) : undefined
-//     if (asFloat?.toString().includes("e")) asFloat = undefined
-//     if (asFloat?.toString().includes("nan")) asFloat = undefined
-//     if (asInteger === 0) asFloat = undefined
-//     const asPointer = asInteger && getAddressSafe(asInteger) ? readPointer(asInteger) : undefined
-//     const pointerAddressString =
-//         asPointer === undefined ? undefined : asPointer.toString(16).toUpperCase().padStart(8, "0")
-//     const rttiClassName = asPointer && asInteger ? getRTTIClassName(asInteger) : undefined
+    let pointerDebugString = ""
+    if (pointerDepth > 0 && valueAtAddress !== 0) {
+        pointerDebugString = `\t\t ${getValueDebugString(valueAtAddress, pointerDepth - 1)}`
+    }
 
-//     let output = ""
-//     if (asInteger !== undefined) {
-//         if (asPointer !== undefined) {
-//             output += ` \t\t-> ${pointerAddressString}`
-//             if (rttiClassName !== undefined) output += ` \t(${rttiClassName})`
-//         } else {
-//             output += ` \t${asInteger}`
-//             if (asFloat !== undefined) output += ` \t(${asFloat})`
-//         }
-//     }
-//     return output
-// }
+    const rttiClassName = getRTTIClassName(value)
+    if (rttiClassName !== undefined) {
+        return `-> ${getAddressString(valueAtAddress)} (${rttiClassName})${pointerDebugString}`
+    }
 
-export function getAddressString(address: number, padding: number = 8) {
-    return address.toString(16).toUpperCase().padStart(padding, "0")
+    return `-> ${getAddressString(valueAtAddress)}${pointerDebugString}`
 }
 
 export function printRegister(registerName: string, registerValue: number) {
-    const valueAtAddress = readPointer(registerValue)
-    if (valueAtAddress === undefined) {
-        // This is a simple integer (it does not point to safe memory)
-        print(`${registerName}: ${registerValue}`)
-        return
-    }
-
     print(
-        `${registerName}: ${getAddressString(registerValue)} -> ${getAddressString(valueAtAddress)}`
+        `${registerName}\t ${getAddressString(registerValue)}\t ${getValueDebugString(
+            registerValue
+        )}`
     )
 }
 
