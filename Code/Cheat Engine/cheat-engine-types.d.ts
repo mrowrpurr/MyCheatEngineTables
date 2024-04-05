@@ -183,6 +183,7 @@ declare function writeFloat(address: number, value: number): void
 declare function getRTTIClassName(address: number): string | undefined
 
 declare function debug_isDebugging(): boolean
+declare function debug_getContext(includeFloats: boolean): void
 
 declare function doKeyPress(key: VirtualKeyCode): void
 declare function keyDown(key: VirtualKeyCode): void
@@ -200,5 +201,16 @@ declare const EDI: number | undefined
 declare const ESP: number | undefined
 declare const EBP: number | undefined
 declare const EIP: number | undefined
+
+declare const FP0: unknown
+declare const FP1: unknown
+declare const FP2: unknown
+declare const FP3: unknown
+declare const FP4: unknown
+declare const FP5: unknown
+declare const FP6: unknown
+declare const FP7: unknown
+
+declare function byteTableToExtended(byteTable: unknown): number
 
 declare function sleep(milliseconds: number): void

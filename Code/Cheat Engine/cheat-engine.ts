@@ -26,6 +26,30 @@ export class Registers {
     get eip() {
         return EIP === undefined ? 0 : EIP
     }
+    get fp0(): number {
+        return byteTableToExtended(FP0)
+    }
+    get fp1(): number {
+        return byteTableToExtended(FP1)
+    }
+    get fp2(): number {
+        return byteTableToExtended(FP2)
+    }
+    get fp3(): number {
+        return byteTableToExtended(FP3)
+    }
+    get fp4(): number {
+        return byteTableToExtended(FP4)
+    }
+    get fp5(): number {
+        return byteTableToExtended(FP5)
+    }
+    get fp6(): number {
+        return byteTableToExtended(FP6)
+    }
+    get fp7(): number {
+        return byteTableToExtended(FP7)
+    }
 }
 
 export class Debugger {
@@ -37,7 +61,8 @@ export class Debugger {
         return EAX !== undefined
     }
 
-    getRegisters() {
+    getRegisters(includeFloats: boolean = true) {
+        if (includeFloats) debug_getContext(true)
         return this.hasRegisters() ? new Registers() : undefined
     }
 }
