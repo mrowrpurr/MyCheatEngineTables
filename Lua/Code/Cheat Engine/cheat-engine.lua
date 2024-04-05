@@ -80,6 +80,70 @@ __TS__SetDescriptor(
     end},
     true
 )
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp0",
+    {get = function(self)
+        return byteTableToExtended(FP0)
+    end},
+    true
+)
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp1",
+    {get = function(self)
+        return byteTableToExtended(FP1)
+    end},
+    true
+)
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp2",
+    {get = function(self)
+        return byteTableToExtended(FP2)
+    end},
+    true
+)
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp3",
+    {get = function(self)
+        return byteTableToExtended(FP3)
+    end},
+    true
+)
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp4",
+    {get = function(self)
+        return byteTableToExtended(FP4)
+    end},
+    true
+)
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp5",
+    {get = function(self)
+        return byteTableToExtended(FP5)
+    end},
+    true
+)
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp6",
+    {get = function(self)
+        return byteTableToExtended(FP6)
+    end},
+    true
+)
+__TS__SetDescriptor(
+    Registers.prototype,
+    "fp7",
+    {get = function(self)
+        return byteTableToExtended(FP7)
+    end},
+    true
+)
 ____exports.Debugger = __TS__Class()
 local Debugger = ____exports.Debugger
 Debugger.name = "Debugger"
@@ -91,7 +155,13 @@ end
 function Debugger.prototype.hasRegisters(self)
     return EAX ~= nil
 end
-function Debugger.prototype.getRegisters(self)
+function Debugger.prototype.getRegisters(self, includeFloats)
+    if includeFloats == nil then
+        includeFloats = true
+    end
+    if includeFloats then
+        debug_getContext(true)
+    end
     return self:hasRegisters() and __TS__New(____exports.Registers) or nil
 end
 function ____exports.getDebugger()
