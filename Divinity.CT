@@ -1487,461 +1487,453 @@ end
     </CheatEntry>
     <CheatEntry>
       <ID>397</ID>
-      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
+      <Description>"MISC Recon"</Description>
+      <Options moHideChildren="1"/>
+      <Color>4080FF</Color>
       <GroupHeader>1</GroupHeader>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>395</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>1DD3E960</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>396</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>div.exe+35182C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>358</ID>
-      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
-      <GroupHeader>1</GroupHeader>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>398</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>1E223F04</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>399</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>1E223F80</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>400</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>1E223F84</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>408</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258C04</Address>
-      <Offsets>
-        <Offset>454</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>402</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258BF8</Address>
-      <Offsets>
-        <Offset>454</Offset>
-        <Offset>28</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>403</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258BF0</Address>
-      <Offsets>
-        <Offset>454</Offset>
-        <Offset>28</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>404</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258C04</Address>
-      <Offsets>
-        <Offset>430</Offset>
-        <Offset>0</Offset>
-        <Offset>24</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>405</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258C04</Address>
-      <Offsets>
-        <Offset>450</Offset>
-        <Offset>0</Offset>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>406</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258BF0</Address>
-      <Offsets>
-        <Offset>450</Offset>
-        <Offset>0</Offset>
-        <Offset>4</Offset>
-        <Offset>28</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>191</ID>
-      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
-      <GroupHeader>1</GroupHeader>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>407</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258BF0</Address>
-      <Offsets>
-        <Offset>0</Offset>
-        <Offset>4</Offset>
-        <Offset>28</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>401</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258C04</Address>
-      <Offsets>
-        <Offset>454</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>409</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258C04</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>410</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>1DF17F0C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>411</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>div.exe+251CA4</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>412</ID>
-      <Description>"Inventory Highlighted Item Index"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>div.exe+251CA4</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>413</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B84C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>414</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B870</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>415</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B89C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>416</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B8A0</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>417</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B8A8</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>418</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B8B0</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>419</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B8BC</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>420</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B8C4</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>421</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B8F8</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>422</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B918</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>423</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B91C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>424</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B930</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>425</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B93C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>426</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B940</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>427</ID>
-      <Description>"EAC of 491150"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>div.exe+258BEC</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>428</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>214E8610</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>429</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>293F4F58</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>430</ID>
-      <Description>"EAC of 0048FF10  and 00490330 "</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00258BEC</Address>
-      <Offsets>
-        <Offset>0</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>435</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0018B954</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>436</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>001988D0</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>437</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0019F944</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>438</ID>
-      <Description>"No description"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0FED7B48</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>439</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+0010BFE8</Address>
-      <Offsets>
-        <Offset>54</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>440</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00010194</Address>
-      <Offsets>
-        <Offset>154</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>441</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00010834</Address>
-      <Offsets>
-        <Offset>154</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>442</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00010BD0</Address>
-      <Offsets>
-        <Offset>154</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>443</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00011188</Address>
-      <Offsets>
-        <Offset>154</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>444</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00074408</Address>
-      <Offsets>
-        <Offset>154</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>445</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>4 Bytes</VariableType>
-      <Address>07B54B18</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>446</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"OsirisDLL.dll"+000CD4A4</Address>
-      <Offsets>
-        <Offset>D74</Offset>
-        <Offset>74</Offset>
-        <Offset>10</Offset>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>449</ID>
-      <Description>"pointerscan result"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>Byte</VariableType>
-      <Address>"OsirisDLL.dll"+000CD4A4</Address>
-      <Offsets>
-        <Offset>74</Offset>
-        <Offset>10</Offset>
-        <Offset>4</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>447</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"OsirisDLL.dll"+000CD384</Address>
-      <Offsets>
-        <Offset>D74</Offset>
-        <Offset>74</Offset>
-        <Offset>10</Offset>
-        <Offset>44</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>448</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"OsirisDLL.dll"+000CD384</Address>
-      <Offsets>
-        <Offset>D74</Offset>
-        <Offset>74</Offset>
-        <Offset>10</Offset>
-        <Offset>44</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>451</ID>
-      <Description>"Pointer to instance of CBMCInventoryViewer"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>0019F72C+8</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>454</ID>
-      <Description>"No description"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>20D525E8</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>455</ID>
-      <Description>"USE THIS STRENGTH"</Description>
-      <VariableType>4 Bytes</VariableType>
-      <Address>20D5260C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>456</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+0025F638</Address>
-      <Offsets>
-        <Offset>538</Offset>
-      </Offsets>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>457</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+00346884</Address>
-      <Offsets>
-        <Offset>70C</Offset>
-        <Offset>3F8</Offset>
-        <Offset>18</Offset>
-      </Offsets>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>457</ID>
+          <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>395</ID>
+          <Description>"No description"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1DD3E960</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>396</ID>
+          <Description>"No description"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>div.exe+35182C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>358</ID>
+          <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>398</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1E223F04</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>399</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1E223F80</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>400</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1E223F84</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>408</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258C04</Address>
+          <Offsets>
+            <Offset>454</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>402</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258BF8</Address>
+          <Offsets>
+            <Offset>454</Offset>
+            <Offset>28</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>403</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258BF0</Address>
+          <Offsets>
+            <Offset>454</Offset>
+            <Offset>28</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>404</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258C04</Address>
+          <Offsets>
+            <Offset>430</Offset>
+            <Offset>0</Offset>
+            <Offset>24</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>405</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258C04</Address>
+          <Offsets>
+            <Offset>450</Offset>
+            <Offset>0</Offset>
+            <Offset>4</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>406</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258BF0</Address>
+          <Offsets>
+            <Offset>450</Offset>
+            <Offset>0</Offset>
+            <Offset>4</Offset>
+            <Offset>28</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>191</ID>
+          <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>407</ID>
+          <Description>"pointerscan result"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258BF0</Address>
+          <Offsets>
+            <Offset>0</Offset>
+            <Offset>4</Offset>
+            <Offset>28</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>401</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258C04</Address>
+          <Offsets>
+            <Offset>454</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>409</ID>
+          <Description>"pointerscan result"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258C04</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>410</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>1DF17F0C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>411</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>div.exe+251CA4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>412</ID>
+          <Description>"Inventory Highlighted Item Index"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>div.exe+251CA4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>413</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B84C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>414</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B870</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>415</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B89C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>416</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B8A0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>417</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B8A8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>418</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B8B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>419</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B8BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>420</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B8C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>421</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B8F8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>422</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B918</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>423</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B91C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>424</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B930</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>425</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B93C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>426</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B940</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>427</ID>
+          <Description>"EAC of 491150"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>div.exe+258BEC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>428</ID>
+          <Description>"No description"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>214E8610</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>429</ID>
+          <Description>"No description"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>293F4F58</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>430</ID>
+          <Description>"EAC of 0048FF10  and 00490330 "</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00258BEC</Address>
+          <Offsets>
+            <Offset>0</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>435</ID>
+          <Description>"No description"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0018B954</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>436</ID>
+          <Description>"No description"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>001988D0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>437</ID>
+          <Description>"No description"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0019F944</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>438</ID>
+          <Description>"No description"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0FED7B48</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>439</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+0010BFE8</Address>
+          <Offsets>
+            <Offset>54</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>440</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00010194</Address>
+          <Offsets>
+            <Offset>154</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>441</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00010834</Address>
+          <Offsets>
+            <Offset>154</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>442</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00010BD0</Address>
+          <Offsets>
+            <Offset>154</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>443</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00011188</Address>
+          <Offsets>
+            <Offset>154</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>444</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+00074408</Address>
+          <Offsets>
+            <Offset>154</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>445</ID>
+          <Description>"No description"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>07B54B18</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>446</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"OsirisDLL.dll"+000CD4A4</Address>
+          <Offsets>
+            <Offset>D74</Offset>
+            <Offset>74</Offset>
+            <Offset>10</Offset>
+            <Offset>4</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>449</ID>
+          <Description>"pointerscan result"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>"OsirisDLL.dll"+000CD4A4</Address>
+          <Offsets>
+            <Offset>74</Offset>
+            <Offset>10</Offset>
+            <Offset>4</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>447</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"OsirisDLL.dll"+000CD384</Address>
+          <Offsets>
+            <Offset>D74</Offset>
+            <Offset>74</Offset>
+            <Offset>10</Offset>
+            <Offset>44</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>448</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"OsirisDLL.dll"+000CD384</Address>
+          <Offsets>
+            <Offset>D74</Offset>
+            <Offset>74</Offset>
+            <Offset>10</Offset>
+            <Offset>44</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>451</ID>
+          <Description>"Pointer to instance of CBMCInventoryViewer"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0019F72C+8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>454</ID>
+          <Description>"No description"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>20D525E8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>455</ID>
+          <Description>"USE THIS STRENGTH"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>20D5260C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>456</ID>
+          <Description>"pointerscan result"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>"div.exe"+0025F638</Address>
+          <Offsets>
+            <Offset>538</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
     </CheatEntry>
     <CheatEntry>
       <ID>458</ID>
-      <Description>"pointerscan result"</Description>
-      <VariableType>Byte</VariableType>
-      <Address>"div.exe"+0034685C</Address>
-      <Offsets>
-        <Offset>70C</Offset>
-        <Offset>3F8</Offset>
-        <Offset>F8</Offset>
-      </Offsets>
+      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
+      <GroupHeader>1</GroupHeader>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
