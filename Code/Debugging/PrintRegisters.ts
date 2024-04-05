@@ -1,27 +1,7 @@
 import { clearLogWindow, getDebugger } from "@cheat-engine"
-import { getAddressString, readSimpleFloat } from "@common"
+import { getAddressString, getValueDebugString } from "@common"
 
-export function getValueDebugString(value: number, pointerDepth: number = 2) {
-    const valueAtAddress = readPointer(value)
-    if (valueAtAddress === undefined || valueAtAddress === 0) return value.toString()
-
-    const floatAtAddress = readSimpleFloat(value)
-
-    if (getAddressSafe(valueAtAddress) === undefined)
-        return floatAtAddress ?? valueAtAddress.toString()
-
-    let pointerDebugString = ""
-    if (pointerDepth > 0 && valueAtAddress !== 0)
-        pointerDebugString = `\t\t ${getValueDebugString(valueAtAddress, pointerDepth - 1)}`
-
-    const rttiClassName = getRTTIClassName(value)
-    if (rttiClassName !== undefined)
-        return `-> ${getAddressString(valueAtAddress)} (${rttiClassName})${pointerDebugString}`
-
-    return `-> ${getAddressString(valueAtAddress)}${pointerDebugString}`
-}
-
-export function printRegister(registerName: string, registerValue: number) {
+function printRegister(registerName: string, registerValue: number) {
     print(
         `${registerName}\t ${getAddressString(registerValue)}\t ${getValueDebugString(
             registerValue
@@ -29,13 +9,13 @@ export function printRegister(registerName: string, registerValue: number) {
     )
 }
 
-export function printFloatRegister(registerName: string, registerValue: number) {
+function printFloatRegister(registerName: string, registerValue: number) {
     const floatString = registerValue.toString()
     if (floatString.includes("nan")) return print(registerName)
     print(`${registerName}: ${floatString}`)
 }
 
-export function printRegisters(includeFloats: boolean = true) {
+function printRegisters(includeFloats: boolean = true) {
     if (EAX === undefined) return
 
     printRegister("EAX", EAX)

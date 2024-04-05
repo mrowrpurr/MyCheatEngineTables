@@ -13,6 +13,11 @@ function ____exports.getAddress(addressString)
     end
     return address and address.CurrentAddress
 end
+--- Return padded hex string of address
+-- 
+-- @param address
+-- @param padding
+-- @returns
 function ____exports.getAddressString(address, padding)
     if padding == nil then
         padding = 8
@@ -23,6 +28,10 @@ function ____exports.getAddressString(address, padding)
         "0"
     )
 end
+--- `readFloat` but returns undefined for non-simple floats (e.g. NaN, Infinity)
+-- 
+-- @param address
+-- @returns
 function ____exports.readSimpleFloat(address)
     local floatString = tostring(readFloat(address))
     if __TS__StringIncludes(floatString, "e") then
@@ -32,5 +41,32 @@ function ____exports.readSimpleFloat(address)
         return nil
     end
     return floatString
+end
+--- Get a debug string for a value. If the value is a pointer, it will recursively print the value at the address.
+-- 
+-- @param value
+-- @param pointerDepth
+-- @returns
+function ____exports.getValueDebugString(value, pointerDepth)
+    if pointerDepth == nil then
+        pointerDepth = 2
+    end
+    local valueAtAddress = readPointer(value)
+    if valueAtAddress == nil or valueAtAddress == 0 then
+        return tostring(value)
+    end
+    local floatAtAddress = ____exports.readSimpleFloat(value)
+    if getAddressSafe(valueAtAddress) == nil then
+        return floatAtAddress or tostring(valueAtAddress)
+    end
+    local pointerDebugString = ""
+    if pointerDepth > 0 and valueAtAddress ~= 0 then
+        pointerDebugString = "\t --> \t " .. ____exports.getValueDebugString(valueAtAddress, pointerDepth - 1)
+    end
+    local rttiClassName = getRTTIClassName(value)
+    if rttiClassName ~= nil then
+        return (((____exports.getAddressString(valueAtAddress) .. " (") .. rttiClassName) .. ")") .. pointerDebugString
+    end
+    return ____exports.getAddressString(valueAtAddress) .. pointerDebugString
 end
 return ____exports

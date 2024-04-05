@@ -1,36 +1,23 @@
 import { clearLogWindow } from "@cheat-engine"
+import { getAddressString, getValueDebugString } from "@common"
 
-export function printStackOffset(offset: number) {
+function printStackOffset(offset: number) {
     if (ESP === undefined) return false
 
-    const offsetString = offset.toString(16).toUpperCase().padStart(3, "0")
     const address = ESP + offset
-    const isSafe = getAddressSafe(address) !== undefined
-    const asInteger = isSafe ? readInteger(address) : undefined
-    let asFloat = isSafe ? readFloat(address) : undefined
-    if (asFloat?.toString().includes("e")) asFloat = undefined
-    if (asFloat?.toString().includes("nan")) asFloat = undefined
-    if (asInteger === 0) asFloat = undefined
-    const asPointer = asInteger && getAddressSafe(asInteger) ? readPointer(asInteger) : undefined
-    const pointerAddressString =
-        asPointer === undefined ? undefined : asPointer.toString(16).toUpperCase().padStart(8, "0")
-    const rttiClassName = asPointer && asInteger ? getRTTIClassName(asInteger) : undefined
-    const asIntegerAddressString = asInteger?.toString(16).toUpperCase().padStart(8, "0")
 
-    let output = `0x${offsetString}`
-    if (asInteger !== undefined) {
-        if (asPointer !== undefined) {
-            output += ` \t${asIntegerAddressString} \t-> ${pointerAddressString}`
-            if (rttiClassName !== undefined) output += ` \t(${rttiClassName})`
-        } else {
-            output += ` \t${asInteger}`
-            if (asFloat !== undefined) output += ` \t(${asFloat})`
-        }
-    }
+    if (getAddressSafe(address) === undefined) return false
 
-    print(output)
+    const pointerValue = readPointer(address)
+    if (pointerValue === undefined) return false
 
-    return asInteger !== undefined
+    const addressString = getAddressString(address)
+    const offsetString = getAddressString(offset, 3)
+    const valueString = getValueDebugString(address)
+
+    print(`${addressString}   0x${offsetString}: \t ${valueString}`)
+
+    return true
 }
 
 export function printTopOfStack(items: number = 30) {
