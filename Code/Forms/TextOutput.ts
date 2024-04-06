@@ -8,19 +8,14 @@ interface frmTextOutput extends CheatEngine.Form {
 export class TextOutput {
     private _form: frmTextOutput
 
-    constructor(defaultTitle: string | undefined = undefined) {
-        print(`Creating form from file ${TEXT_OUTPUT_FORM_FILE}`)
-        const form = createFormFromFile(TEXT_OUTPUT_FORM_FILE)
-        if (form === undefined) {
-            print(`Error: Could not create form from file ${TEXT_OUTPUT_FORM_FILE}`)
-            this._form = {} as frmTextOutput
-        } else {
-            this._form = form as frmTextOutput
-            print("Form created successfully")
-        }
-        // this._form = <frmTextOutput>createFormFromFile(TEXT_OUTPUT_FORM_FILE)
-        if (defaultTitle !== undefined) this.title = defaultTitle
-        print(".....")
+    constructor(form: CheatEngine.Form | undefined = undefined) {
+        this._form = form
+            ? (form as frmTextOutput)
+            : (createFormFromFile(TEXT_OUTPUT_FORM_FILE) as frmTextOutput)
+    }
+
+    get form() {
+        return this._form
     }
 
     set title(value: string) {
@@ -50,12 +45,5 @@ export class TextOutput {
 
     hide() {
         this._form.hide()
-    }
-
-    onClose(callback: any) {
-        print("SKIPPING onClose")
-        // print("Setting onClose...")
-        // this._form.onClose(callback)
-        // print("onClose set")
     }
 }

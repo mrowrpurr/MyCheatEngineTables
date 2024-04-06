@@ -6,20 +6,8 @@ local TEXT_OUTPUT_FORM_FILE = "Forms/TextOutput.FRM"
 ____exports.TextOutput = __TS__Class()
 local TextOutput = ____exports.TextOutput
 TextOutput.name = "TextOutput"
-function TextOutput.prototype.____constructor(self, defaultTitle)
-    print("Creating form from file " .. TEXT_OUTPUT_FORM_FILE)
-    local form = createFormFromFile(TEXT_OUTPUT_FORM_FILE)
-    if form == nil then
-        print("Error: Could not create form from file " .. TEXT_OUTPUT_FORM_FILE)
-        self._form = {}
-    else
-        self._form = form
-        print("Form created successfully")
-    end
-    if defaultTitle ~= nil then
-        self.title = defaultTitle
-    end
-    print(".....")
+function TextOutput.prototype.____constructor(self, form)
+    self._form = form and form or createFormFromFile(TEXT_OUTPUT_FORM_FILE)
 end
 function TextOutput.prototype.clear(self)
     self._form.lblContents.caption = ""
@@ -38,9 +26,14 @@ end
 function TextOutput.prototype.hide(self)
     self._form.hide()
 end
-function TextOutput.prototype.onClose(self, callback)
-    print("SKIPPING onClose")
-end
+__TS__SetDescriptor(
+    TextOutput.prototype,
+    "form",
+    {get = function(self)
+        return self._form
+    end},
+    true
+)
 __TS__SetDescriptor(
     TextOutput.prototype,
     "title",
