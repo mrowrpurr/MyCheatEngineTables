@@ -8,6 +8,27 @@ declare namespace CheatEngine {
         getMemoryRecordByDescription(addressString: string): MemoryRecord | undefined
     }
 
+    export interface Timer {
+        enabled: boolean
+        interval: number
+        onTimer: (timer: Timer) => void
+
+        /** @noSelf **/
+        setInterval(milliseconds: number): void
+
+        /** @noSelf **/
+        getInterval(): number
+
+        /** @noSelf **/
+        setEnabled(enabled: boolean): void
+
+        /** @noSelf **/
+        getEnabled(): boolean
+
+        /** @noSelf **/
+        setOnTimer(callback: (timer: Timer) => void): void
+    }
+
     export interface MenuItem {
         /** @noSelf **/
         doClick(): void
@@ -31,9 +52,6 @@ declare namespace CheatEngine {
 
         /** @noSelf **/
         hide(): void
-
-        /** @noSelf **/
-        onClose(callback: any): void
     }
 
     export interface MemoryView extends Form {
@@ -171,6 +189,8 @@ declare function getAddressList(): CheatEngine.AddressList
 declare function getLuaEngine(): CheatEngine.Form
 declare function getMemoryViewForm(): CheatEngine.MemoryView
 declare function getMainForm(): CheatEngine.Form
+declare function getFormCount(): number
+declare function getForm(index: number): CheatEngine.Form
 declare function getAddressSafe(address: number): number | undefined
 declare function getRTTIClassName(address: number): string | undefined
 
@@ -220,3 +240,4 @@ declare function byteTableToExtended(byteTable: unknown): number
 declare function sleep(milliseconds: number): void
 
 declare function createFormFromFile(filePath: string): CheatEngine.Form
+declare function createTimer(form: CheatEngine.Form): CheatEngine.Timer
