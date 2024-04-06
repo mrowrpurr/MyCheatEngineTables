@@ -38,6 +38,55 @@ declare namespace CheatEngine {
         Items: MenuItem[][]
     }
 
+    export interface Strings {
+        text: string
+        count: number
+
+        /** @noSelf **/
+        clear(): void
+
+        /** @noSelf **/
+        getText(): string
+
+        /** @noSelf **/
+        setText(text: string): void
+
+        /** @noSelf **/
+        add(text: string): void
+
+        /** @noSelf **/
+        delete(index: number): void
+
+        /** @noSelf **/
+        indexOf(text: string): number
+
+        /** @noSelf **/
+        insert(index: number, text: string): void
+
+        /** @noSelf **/
+        getString(index: number): string
+
+        /** @noSelf **/
+        setString(index: number, text: string): void
+
+        /** @noSelf **/
+        loadFromFile(filePath: string): void
+    }
+
+    export interface Edit {
+        text: string
+    }
+
+    export interface Memo extends Edit {
+        lines: Strings
+
+        /** @noSelf **/
+        getLines(): Strings
+
+        /** @noSelf **/
+        append(text: string): void
+    }
+
     export interface Label {
         caption: string
     }

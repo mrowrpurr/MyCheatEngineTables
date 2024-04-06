@@ -4,6 +4,7 @@ import { TextOutput } from "Code/Forms/TextOutput"
 
 const FORM_CAPTION = "Registers"
 
+export let timerEnabled = false
 export let textOutput: TextOutput | undefined = undefined
 
 function appendText(text: string) {
@@ -67,13 +68,14 @@ function setupTextOutput() {
     const timer = createTimer(textOutput.form)
     timer.interval = 1000
     timer.onTimer = () => {
-        showRegisters()
+        if (timerEnabled) showRegisters()
     }
     timer.enabled = true
     textOutput.show()
 }
 
 export function enable() {
+    timerEnabled = !timerEnabled
     setupTextOutput()
     showRegisters()
     if (textOutput) textOutput.show()

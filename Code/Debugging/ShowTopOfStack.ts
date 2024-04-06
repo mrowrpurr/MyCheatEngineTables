@@ -3,6 +3,7 @@ import { TextOutput } from "Code/Forms/TextOutput"
 
 const FORM_CAPTION = "Stack (ESP)"
 
+export let timerEnabled = false
 export let textOutput: TextOutput | undefined = undefined
 
 function appendText(text: string) {
@@ -51,12 +52,13 @@ function setupTextOutput() {
     const timer = createTimer(textOutput.form)
     timer.interval = 1000
     timer.onTimer = () => {
-        showTopOfStack()
+        if (timerEnabled) showTopOfStack()
     }
     timer.enabled = true
 }
 
 export function enable() {
+    timerEnabled = !timerEnabled
     setupTextOutput()
     showTopOfStack()
     if (textOutput) textOutput.show()

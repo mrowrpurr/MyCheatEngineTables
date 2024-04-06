@@ -10,15 +10,13 @@ function TextOutput.prototype.____constructor(self, form)
     self._form = form and form or createFormFromFile(TEXT_OUTPUT_FORM_FILE)
 end
 function TextOutput.prototype.clear(self)
-    self._form.lblContents.caption = ""
+    self._form.memoContents.lines.clear()
 end
 function TextOutput.prototype.append(self, value)
-    local ____self__form_lblContents_0, ____caption_1 = self._form.lblContents, "caption"
-    ____self__form_lblContents_0[____caption_1] = ____self__form_lblContents_0[____caption_1] .. value
+    self._form.memoContents.append(value)
 end
 function TextOutput.prototype.appendLine(self, value)
-    local ____self__form_lblContents_2, ____caption_3 = self._form.lblContents, "caption"
-    ____self__form_lblContents_2[____caption_3] = ____self__form_lblContents_2[____caption_3] .. value .. "\n"
+    self._form.memoContents.append(value .. "\n")
 end
 function TextOutput.prototype.show(self)
     self._form.show()
@@ -47,7 +45,7 @@ __TS__SetDescriptor(
     TextOutput.prototype,
     "contents",
     {set = function(self, value)
-        self._form.lblContents.caption = value
+        self._form.memoContents.lines.text = value
     end},
     true
 )

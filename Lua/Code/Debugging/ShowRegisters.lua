@@ -11,6 +11,7 @@ local getValueDebugString = _____40common.getValueDebugString
 local ____TextOutput = require("Code.Forms.TextOutput")
 local TextOutput = ____TextOutput.TextOutput
 local FORM_CAPTION = "Registers"
+____exports.timerEnabled = false
 ____exports.textOutput = nil
 local function appendText(text)
     if ____exports.textOutput == nil then
@@ -72,12 +73,15 @@ local function setupTextOutput()
     local timer = createTimer(____exports.textOutput.form)
     timer.interval = 1000
     timer.onTimer = function()
-        showRegisters()
+        if ____exports.timerEnabled then
+            showRegisters()
+        end
     end
     timer.enabled = true
     ____exports.textOutput:show()
 end
 function ____exports.enable()
+    ____exports.timerEnabled = not ____exports.timerEnabled
     setupTextOutput()
     showRegisters()
     if ____exports.textOutput then

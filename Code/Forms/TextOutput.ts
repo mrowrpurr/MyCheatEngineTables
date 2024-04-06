@@ -2,7 +2,7 @@ const TEXT_OUTPUT_FORM_FILE = "Forms/TextOutput.FRM"
 
 interface frmTextOutput extends CheatEngine.Form {
     lblTitle: CheatEngine.Label
-    lblContents: CheatEngine.Label
+    memoContents: CheatEngine.Memo
 }
 
 export class TextOutput {
@@ -24,19 +24,19 @@ export class TextOutput {
     }
 
     set contents(value: string) {
-        this._form.lblContents.caption = value
+        this._form.memoContents.lines.text = value
     }
 
     clear() {
-        this._form.lblContents.caption = ""
+        this._form.memoContents.lines.clear()
     }
 
     append(value: string) {
-        this._form.lblContents.caption += value
+        this._form.memoContents.append(value)
     }
 
     appendLine(value: string) {
-        this._form.lblContents.caption += `${value}\n`
+        this._form.memoContents.append(`${value}\n`)
     }
 
     show() {
