@@ -2,11 +2,31 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Cheat Engine",
+            "name": "Debug Cheat Engine (x64)",
             "type": "lua-local",
             "request": "launch",
             "program": {
-                "command": "C:/Program Files/Cheat Engine 7.5/Cheat Engine.exe"
+                "command": "C:/Program Files/Cheat Engine 7.5/cheatengine-x86_64.exe"
+            },
+            "args": [],
+            "scriptFiles": ["**/*.lua"]
+        },
+        {
+            "name": "Debug Cheat Engine (x64 SSE4 AVX2)",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "C:/Program Files/Cheat Engine 7.5/cheatengine-x86_64-SSE4-AVX2.exe"
+            },
+            "args": [],
+            "scriptFiles": ["**/*.lua"]
+        },
+        {
+            "name": "Debug Cheat Engine (x86)",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "C:/Program Files/Cheat Engine 7.5/cheatengine-i386.exe"
             },
             "args": [],
             "scriptFiles": ["**/*.lua"]
