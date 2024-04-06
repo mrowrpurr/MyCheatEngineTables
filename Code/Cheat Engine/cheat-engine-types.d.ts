@@ -17,9 +17,13 @@ declare namespace CheatEngine {
         Items: MenuItem[][]
     }
 
-    export interface Form {
-        Menu: Menu
+    export interface Label {
+        caption: string
+    }
 
+    export interface Form {
+        caption: string
+        Menu: Menu
         MenuItem5: MenuItem
 
         /** @noSelf **/
@@ -27,6 +31,9 @@ declare namespace CheatEngine {
 
         /** @noSelf **/
         hide(): void
+
+        /** @noSelf **/
+        onClose(callback: any): void
     }
 
     export interface MemoryView extends Form {
@@ -161,12 +168,11 @@ declare enum VirtualKeyCode {
 }
 
 declare function getAddressList(): CheatEngine.AddressList
-
 declare function getLuaEngine(): CheatEngine.Form
 declare function getMemoryViewForm(): CheatEngine.MemoryView
 declare function getMainForm(): CheatEngine.Form
-
 declare function getAddressSafe(address: number): number | undefined
+declare function getRTTIClassName(address: number): string | undefined
 
 declare function readPointer(address: number): number
 declare function writePointer(address: number, value: number): void
@@ -179,8 +185,6 @@ declare function writeSmallInteger(address: number, value: number): void
 
 declare function readFloat(address: number): number
 declare function writeFloat(address: number, value: number): void
-
-declare function getRTTIClassName(address: number): string | undefined
 
 declare function debug_isDebugging(): boolean
 declare function debug_getContext(includeFloats: boolean): void
@@ -214,3 +218,5 @@ declare const FP7: unknown
 declare function byteTableToExtended(byteTable: unknown): number
 
 declare function sleep(milliseconds: number): void
+
+declare function createFormFromFile(filePath: string): CheatEngine.Form
