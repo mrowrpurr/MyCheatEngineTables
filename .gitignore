@@ -4,3 +4,4 @@
 *.addresslist
 *.sqlite
 node_modules
+*.exe
