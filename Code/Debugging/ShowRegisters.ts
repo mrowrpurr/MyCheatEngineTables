@@ -1,6 +1,8 @@
 import { getDebugger } from "@cheat-engine"
-import { getAddressString, getValueDebugString } from "@common"
+import { findFormFromCaption, getAddressString, getValueDebugString } from "@common"
 import { TextOutput } from "Code/Forms/TextOutput"
+
+const FORM_CAPTION = "Registers"
 
 export let textOutput: TextOutput | undefined = undefined
 
@@ -24,9 +26,10 @@ function showFloatRegister(registerName: string, registerValue: number) {
 }
 
 function showRegisters(includeFloats: boolean = true) {
-    print("Showing registers... ?")
+    if (textOutput === undefined) return
+    textOutput.clear()
+
     if (EAX === undefined) return
-    print("Yes, there ARE some registers...")
 
     showRegister("EAX", EAX)
     showRegister("EBX", EBX!)
@@ -50,27 +53,30 @@ function showRegisters(includeFloats: boolean = true) {
         showFloatRegister("FP6", registers.fp6)
         showFloatRegister("FP7", registers.fp7)
     }
+}
 
-    print("SHOW!")
-    textOutput?.show()
+function setupTextOutput() {
+    const existingForm = findFormFromCaption(FORM_CAPTION)
+    if (existingForm) {
+        textOutput = new TextOutput(existingForm)
+        return
+    }
+
+    textOutput = new TextOutput()
+    textOutput.title = FORM_CAPTION
+    const timer = createTimer(textOutput.form)
+    timer.interval = 1000
+    timer.onTimer = () => {
+        showRegisters()
+    }
+    timer.enabled = true
+    textOutput.show()
 }
 
 export function enable() {
-    print("enable()")
-    if (textOutput === undefined) {
-        print("!!!! Creating text output! Because it's UNDEFINED!")
-        textOutput = new TextOutput("Registers")
-        print("Text output created")
-        print("Setting onClose")
-        textOutput.onClose(() => print("Text output closed"))
-        // textOutput.onClose(() => (textOutput = undefined))
-        print("Text output created")
-        _G
-    }
-    print("Showing registers...")
-    // textOutput.show()
-    textOutput.clear()
+    setupTextOutput()
     showRegisters()
+    if (textOutput) textOutput.show()
 }
 
 export function disable() {}

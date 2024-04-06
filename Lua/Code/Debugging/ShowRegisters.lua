@@ -5,10 +5,12 @@ local ____exports = {}
 local _____40cheat_2Dengine = require("Code.Cheat Engine.cheat-engine")
 local getDebugger = _____40cheat_2Dengine.getDebugger
 local _____40common = require("Code.common")
+local findFormFromCaption = _____40common.findFormFromCaption
 local getAddressString = _____40common.getAddressString
 local getValueDebugString = _____40common.getValueDebugString
 local ____TextOutput = require("Code.Forms.TextOutput")
 local TextOutput = ____TextOutput.TextOutput
+local FORM_CAPTION = "Registers"
 ____exports.textOutput = nil
 local function appendText(text)
     if ____exports.textOutput == nil then
@@ -30,11 +32,13 @@ local function showRegisters(includeFloats)
     if includeFloats == nil then
         includeFloats = true
     end
-    print("Showing registers... ?")
+    if ____exports.textOutput == nil then
+        return
+    end
+    ____exports.textOutput:clear()
     if EAX == nil then
         return
     end
-    print("Yes, there ARE some registers...")
     showRegister("EAX", EAX)
     showRegister("EBX", EBX)
     showRegister("ECX", ECX)
@@ -56,26 +60,29 @@ local function showRegisters(includeFloats)
         showFloatRegister("FP6", registers.fp6)
         showFloatRegister("FP7", registers.fp7)
     end
-    print("SHOW!")
-    local ____opt_0 = ____exports.textOutput
-    if ____opt_0 ~= nil then
-        ____exports.textOutput:show()
+end
+local function setupTextOutput()
+    local existingForm = findFormFromCaption(FORM_CAPTION)
+    if existingForm then
+        ____exports.textOutput = __TS__New(TextOutput, existingForm)
+        return
     end
+    ____exports.textOutput = __TS__New(TextOutput)
+    ____exports.textOutput.title = FORM_CAPTION
+    local timer = createTimer(____exports.textOutput.form)
+    timer.interval = 1000
+    timer.onTimer = function()
+        showRegisters()
+    end
+    timer.enabled = true
+    ____exports.textOutput:show()
 end
 function ____exports.enable()
-    print("enable()")
-    if ____exports.textOutput == nil then
-        print("!!!! Creating text output! Because it's UNDEFINED!")
-        ____exports.textOutput = __TS__New(TextOutput, "Registers")
-        print("Text output created")
-        print("Setting onClose")
-        ____exports.textOutput:onClose(function() return print("Text output closed") end)
-        print("Text output created")
-        local ____ = _G
-    end
-    print("Showing registers...")
-    ____exports.textOutput:clear()
+    setupTextOutput()
     showRegisters()
+    if ____exports.textOutput then
+        ____exports.textOutput:show()
+    end
 end
 function ____exports.disable()
 end

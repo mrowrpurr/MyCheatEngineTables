@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheatTable CheatEngineTableVersion="45">
   <Forms>
-    <frmTextOutput Class="TCEForm" Encoding="Ascii85">y.I9;8%Gdab0scC$[VT?agKcuauNt5$K0ef6$v0LLR=!%V;H[(8:9Br.V3@5/cIPfIR]oBBhs?gOP}M,L0.I*PS.d+cXiLN!:h+wC$Fleo{E}*pRT-a?Ft$8:u,I7/0[UH/=s_}y?^nO%f]C$$0xg(*W%Ku]%YC07s.C8B)tEW=bnLX#5;ZYKY!xv*;c],b8v7[JbjIU*{_qii@W.[Q=Y,yO]O(n.g:Yz^i8R[v-kDs)ZzDsjC(_@t4gZN4Mm*Eu_Cn?x4rK4Mra)4mbkVEZ[j$xf{-41/CS_SJc%oX*w!va4OqS0YWRKjpaaJ9dj1Z5$h{qHO!N1u7[m!pafNE6u2e%(.g=57ZmeHYi]gqK(qQxkwR]?)LI1?*%Dz1SU+3Zkx(8/6i-(OjtM*_j$2LZ+yV)rJx1$,,ohLIG-wx*NovNpY$+#C(WGJrl^YqSSV#V]g;s$0oCnTBmwAXsJ9qa??-.Q/c!T7}=w6AC_zT1Y,nzLp.gYV8}OE^ff%;J+j[TgpxLE(V$3ddHp#bhBoZ)o.TH0{?i,Nijn:Y.2)=Pn/bt(!d;#Pe/Z!O.HU%*h$F]?rMH-Qs[]H05FUo)JFl#jP2M;t5zRUZ4G,pA@O1delHJBn?qz9R!NNOArr1S]$!4jLCy($x,BUfQlFl+fIf-QqZ:Ah{tokjHH(?WFn+pN=fr#VC/z4v^*MfLeYmLrtmfb8q%x^n*1([J[;yZ9{*#HHbkFVz#H[EqR1sfQc7rPd+ytI0[9AdBssneD7bLVHQBxaP8Fx^I!lTa5y(U5r0/mscyt}(XxJ!joC6:NN^-VZm(2U]hJYYRsZS1ZLkU*CO)KHH1%b:(f=b-z;[)!Cn6i!Rft6CA/a.tXYDLTp=!tM=3uCg2+)pvclX4;W4R+C6Ndj67:rgLV%4LXb5V0NM+4Lz]_JHloJ0UNiwk/yL.2)Y5qf1[}OE27BQ51gw</frmTextOutput>
+    <frmTextOutput Class="TCEForm" Encoding="Ascii85">y.I9;8%Ge[a3wB9$[U})agKcuauNt5#^fP@Ybp^zScJH=j;c%VNj5Yu(%.svBEOSE^v,og$9zP3c4Y_@pdiQ#d*euls[w4t]E@)n(En*m*zq@S;-CeB+A3pp@Auf+J9Avc?}2^WinQLu)v?XnUHP*yy])m7%HMaYTDVBo3?4cdJ#D^MgeKmRCjI#%XScS;]kjM:gW{06474@4X/RJM$^(mU6KmqM-Uz=MSnVIZUY?/HPmeB@vu4}wnOjv-U2Z7iq;J@52EXlfr]JN]aJ0m:MR.?8vlbNPrW(u?Tj5DuDXh+-t!%+R]Bua4vIiY7p4aoY:tJ)U]evHH7sZHOnu^w]BXy-3iVD9xGIC?6l3L7Oad^=stE%1e=,yAd=osyb0r;nLyvX%GfS*}t@Ix=mf/Lw}THVcNFuonl.Ojh?!T5GCzwA@!Jxq4RH6ufDo$puTx*Up(9$Vj^UpgVltf#%!XWPL{?bm3h#}zHIZAbfx2IISJ[[R4_/{;+2e71zs+}RSt8fzb3#vc=.hO2OFRa.CJ!t=fZ8Ajv(kgtu3]+{]yp4one!rvO^-9kLw#vcsrAI_*%d%O:kUfeDIr%O^FcJF!c=O*uQk,_,/^@Rx8_M]:mm_Kq.$c3b#(9j3+5qJsWAxLWi%7]({5G@=hSqD%Ng8@G608$Ftwh(P{CX/oWQkzVK6hVnAmIsWzG:dguBS0v6pTrd2L[kBDwLw$/]M@h@58-^H0LF(sQww.5UQ!gfWJpR0Ep4xyFHxYJsgoqfmjMMAuDK?LH@8al6kcUXks/;5#Fg}Dk@zs-._2^I#f?^_gH[3KI@:S:Q?^]qBq^aLA#NzaDy;OGFu5Rb]CYI{Q/(XIbP-dwkv+[d3Y2[LCP%G@nZaE,Z,T%%b{;7{No7)[/i5eKRwPM4ivfK]wN/$ckqsiYBi#C$@z]3*=_UcY1:P01M.]p6k9%}/D_YFH,bfFV4+</frmTextOutput>
   </Forms>
   <CheatEntries>
     <CheatEntry>
@@ -774,6 +774,7 @@
 2:Two
 3:Three
 </DropDownList>
+          <ShowAsHex>1</ShowAsHex>
           <Color>40FF00</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>{$lua}
@@ -785,11 +786,6 @@ helloWorld = requireScript("Examples/HelloWorld", true)
 {$lua}
 if not syntaxcheck then
   helloWorld.enable()
-
-  frm1 = createFormFromFile("Forms/TextOutput.frm.lfm")
-  frm1.caption = "the LFM one!!!!"
-  frm1.lblTitle.caption = "Cooool!"
-  frm1.show()
 
   frm2 = createFormFromFile("Forms/TextOutput.frm")
   frm2.caption = "WORLD!"
@@ -809,12 +805,12 @@ end
 
 </AssemblerScript>
           <Hotkeys>
-            <Hotkey Active="0" OnlyWhileDown="1">
+            <Hotkey OnlyWhileDown="1">
               <Action>Activate</Action>
               <Keys>
                 <Key>17</Key>
-                <Key>16</Key>
-                <Key>78</Key>
+                <Key>18</Key>
+                <Key>72</Key>
               </Keys>
               <Description>Run Print CNpcs</Description>
               <ID>0</ID>
@@ -1027,7 +1023,7 @@ end
         </CheatEntry>
         <CheatEntry>
           <ID>432</ID>
-          <Description>"Print Top of Current Stack (ESP) - Ctrl+Alt+C"</Description>
+          <Description>"Show Top of Current Stack (ESP) - Ctrl+Alt+C"</Description>
           <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">1:One
 2:Two
 3:Three
@@ -1035,14 +1031,14 @@ end
           <Color>8000FF</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>{$lua}
-printTopOfStack = requireScript("Debugging/PrintTopOfStack", true)
+showTopOfStack = requireScript("Debugging/ShowTopOfStack")
 {$asm}
 
 [ENABLE]
 
 {$lua}
 if not syntaxcheck then
-  printTopOfStack.enable()
+  showTopOfStack.enable()
 end
 {$asm}
 
@@ -1050,7 +1046,7 @@ end
 
 {$lua}
 if not syntaxcheck then
-  printTopOfStack.disable()
+  showTopOfStack.disable()
 end
 {$asm}
 
@@ -1077,7 +1073,7 @@ end
           <Color>AE5EFF</Color>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>{$lua}
-showRegisters = requireScript("Debugging/ShowRegisters") -- , true, true)
+showRegisters = requireScript("Debugging/ShowRegisters")
 {$asm}
 
 [ENABLE]
@@ -4032,6 +4028,8 @@ end
     </Structure>
   </Structures>
   <LuaScript>package.path = "Lua/?.lua;" .. package.path
+
+frmTextOutput.show()
 
 function startsWith(str, start)
     return string.sub(str, 1, string.len(start)) == start
