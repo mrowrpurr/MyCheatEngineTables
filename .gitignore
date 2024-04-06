@@ -5,3 +5,5 @@
 *.sqlite
 node_modules
 *.exe
+*.lua
+*.lua.map
