@@ -25418,7 +25418,13 @@ end
       </Elements>
     </Structure>
   </Structures>
-  <LuaScript>package.path = "Lua/?.lua;" .. package.path
+  <LuaScript>if os.getenv("LOCAL_LUA_DEBUGGER_VSCODE") == "1" then
+  luaDebugger = require("lldebugger")
+  luaDebugger.start()
+  print("Lua Debugger Started.")
+end
+
+package.path = "Lua/?.lua;" .. package.path
 
 function startsWith(str, start)
     return string.sub(str, 1, string.len(start)) == start
