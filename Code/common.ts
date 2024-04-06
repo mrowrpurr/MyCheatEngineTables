@@ -55,3 +55,17 @@ export function getValueDebugString(value: number, pointerDepth: number = 2) {
 
     return `${getAddressString(valueAtAddress)}${pointerDebugString}`
 }
+
+/**
+ * Given a caption, find the form with that caption (else return undefined)
+ * @param captionText
+ * @returns CheatEngine.Form | undefined
+ */
+export function findFormFromCaption(captionText: string) {
+    const formCount = getFormCount()
+    for (let i = 0; i < formCount; i++) {
+        const form = getForm(i)
+        if (form.caption === captionText) return form
+    }
+    return undefined
+}

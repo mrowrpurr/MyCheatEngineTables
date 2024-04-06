@@ -69,4 +69,22 @@ function ____exports.getValueDebugString(value, pointerDepth)
     end
     return ____exports.getAddressString(valueAtAddress) .. pointerDebugString
 end
+--- Given a caption, find the form with that caption (else return undefined)
+-- 
+-- @param captionText
+-- @returns CheatEngine.Form | undefined
+function ____exports.findFormFromCaption(captionText)
+    local formCount = getFormCount()
+    do
+        local i = 0
+        while i < formCount do
+            local form = getForm(i)
+            if form.caption == captionText then
+                return form
+            end
+            i = i + 1
+        end
+    end
+    return nil
+end
 return ____exports
