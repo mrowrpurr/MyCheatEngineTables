@@ -1,12 +1,19 @@
 #include <_Log_.h>
 #include <cepluginsdk.h>
 
+#include <sol/sol.hpp>
 #include <string>
 #include <vector>
 
 _LogToFile_("C:/Temp/CEPlugin_HelloWorld.log");
 
 const std::string PLUGIN_NAME = "Hello, plugin";
+
+// Your C++ function
+void call_this_function() {
+    // Your function's implementation here
+    _Log_("CALLED LUA FUNCTION!");
+}
 
 extern "C" BOOL __declspec(dllexport) CEPlugin_GetVersion(PPluginVersion pluginVersion, int sizeofpluginversion) {
     _Log_("CEPlugin_GetVersion!");
@@ -23,7 +30,8 @@ extern "C" BOOL __declspec(dllexport) CEPlugin_GetVersion(PPluginVersion pluginV
 extern "C" BOOL __declspec(dllexport) CEPlugin_InitializePlugin(PExportedFunctions exportedFunctions, int pluginId) {
     _Log_("CEPlugin_InitializePlugin!");
 
-    // exportedFunctions->ShowMessage("Hello, CEPlugin!");
+    sol::state_view state{exportedFunctions->GetLuaState()};
+    state.set_function("callThisFunction", call_this_function);
 
     return TRUE;
 }
