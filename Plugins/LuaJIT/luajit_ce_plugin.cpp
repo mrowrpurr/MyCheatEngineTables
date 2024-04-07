@@ -1,3 +1,4 @@
+#include <Shared/Foo.h>
 #include <_Log_.h>
 #include <cepluginsdk_nolua.h>
 
@@ -42,3 +43,7 @@ extern "C" BOOL __declspec(dllexport) CEPlugin_DisablePlugin() {
 
     return TRUE;
 }
+
+Foo foo{42};
+
+extern "C" __declspec(dllexport) Foo* getFoo() { return &foo; }

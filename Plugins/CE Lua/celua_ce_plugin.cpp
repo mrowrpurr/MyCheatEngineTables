@@ -1,3 +1,4 @@
+#include <Shared/CE_LuaJIT_API.h>
 #include <_Log_.h>
 #include <cepluginsdk.h>
 
@@ -37,6 +38,19 @@ extern "C" BOOL __declspec(dllexport) CEPlugin_InitializePlugin(PExportedFunctio
 
     ceLuaState = make_unique<sol::state_view>(exportedFunctions->GetLuaState());
     ceLuaState->set_function("ceLuaFunction", call_this_function);
+
+    // Try to get and call getFoo from the other plugin!
+    auto* getFooFn = fn_getFoo();
+    if (getFooFn != nullptr) {
+        auto* foo = getFooFn();
+        if (foo != nullptr) {
+            _Log_("Got Foo from the other plugin! Foo's number: {}", foo->getSomeNumberFromFoo());
+        } else {
+            _Log_("Failed to get Foo from the other plugin!");
+        }
+    } else {
+        _Log_("Failed to get getFoo from the other plugin!");
+    }
 
     return TRUE;
 }
