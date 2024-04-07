@@ -1,5 +1,5 @@
 #include <_Log_.h>
-#include <cepluginsdk.h>
+#include <cepluginsdk_nolua.h>
 
 #include <filesystem>
 #include <sol/sol.hpp>
@@ -27,6 +27,12 @@ extern "C" BOOL __declspec(dllexport) CEPlugin_InitializePlugin(PExportedFunctio
 
     auto currentWorkingDirectory = std::filesystem::current_path();
     _Log_("Current working directory: {}", currentWorkingDirectory.string());
+
+    // Make a Lua state
+    // and run some code (e.g. 69 + 420) and get the result:
+    sol::state state;
+    auto       result = state.script("return 69 + 420;");
+    _Log_("Lua: 69 + 420 = {}", result.get<int>());
 
     return TRUE;
 }
