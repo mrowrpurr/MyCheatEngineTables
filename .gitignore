@@ -7,3 +7,6 @@ node_modules
 *.exe
 *.lua
 *.lua.map
+build
+compile_commands
+.xmake
