@@ -1,6 +1,6 @@
 import { getDebugger } from "@cheat-engine"
 import { findFormFromCaption, getAddressString, getValueDebugString } from "@common"
-import { TextOutput } from "Code/Forms/TextOutput"
+import { TextOutput } from "Forms/TextOutput"
 
 const FORM_CAPTION = "Registers"
 

@@ -18,15 +18,16 @@
 
         /* Paths! */
         "paths": {
-            "@common": ["Code/common.ts"],
-            "@cheat-engine": ["Code/Cheat Engine/cheat-engine.ts"]
+            "@common": ["common.ts"],
+            "@cheat-engine": ["Cheat Engine/cheat-engine.ts"]
         },
-        "baseUrl": "./"
+        "baseUrl": "./TypeScript",
+        "rootDir": "./TypeScript"
     },
     "tstl": {
         "luaTarget": "5.3",
         "buildMode": "library",
         "noImplicitSelf": true
     },
-    "include": ["./Code/**/*.ts"]
+    "include": ["./TypeScript/**/*.ts"]
 }
