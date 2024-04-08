@@ -30,6 +30,9 @@ namespace LuaFunctions {
     // TODO: params!
     void GameLibraryManager_CallFunction(const char* functionName) {
         _Log_("GameLibraryManager_CallFunction: {}", functionName);
+        _Log_("Sending message to named pipe server");
+        _namedPipeServer->sendMessage(functionName);
+        _Log_("Message sent!");
     }
 
     void BindLuaFunctions(lua_State* state) {
