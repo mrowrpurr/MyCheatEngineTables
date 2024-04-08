@@ -1,13 +1,22 @@
 #include <_Log_.h>
+_LogToFile_("C:/Temp/CEPlugin_GameDLLManager_CEPlugin.log");
+//
+
+#include <NamedPipes/Server.h>
 #include <cepluginsdk.h>
 
 #include <sol/sol.hpp>
 #include <string>
 #include <vector>
 
-_LogToFile_("C:/Temp/CEPlugin_GameDLLManager_CEPlugin.log");
+using namespace std;
 
-const std::string PLUGIN_NAME = "Game DLL Manager - CE Plugin";
+const string PLUGIN_NAME = "Game DLL Manager - CE Plugin";
+
+constexpr auto NAMED_PIPE = L"GameDLLManager";
+
+PExportedFunctions          exportedFunctions;
+unique_ptr<NamedPipeServer> _namedPipeServer = nullptr;
 
 namespace LuaFunctions {
     void GameLibraryManager_Start() { _Log_("GameLibraryManager_Start!"); }
@@ -54,12 +63,11 @@ extern "C" BOOL __declspec(dllexport) CEPlugin_GetVersion(PPluginVersion pluginV
     return TRUE;
 }
 
-PExportedFunctions exportedFunctions;
-
 extern "C" BOOL __declspec(dllexport) CEPlugin_InitializePlugin(PExportedFunctions exportedFunctions, int pluginId) {
     _Log_("CEPlugin_InitializePlugin!");
     LuaFunctions::BindLuaFunctions(exportedFunctions->GetLuaState());
     ::exportedFunctions = exportedFunctions;
+    _namedPipeServer    = make_unique<NamedPipeServer>(NAMED_PIPE);
     return TRUE;
 }
 
