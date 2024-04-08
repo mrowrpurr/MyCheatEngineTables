@@ -10,6 +10,7 @@ private:
 
 public:
     NamedPipeServer(std::wstring_view name) : pipeName{L"\\\\.\\pipe\\" + std::wstring{name}} {
+        // TODO: move into a start()
         _Log_("Creating named pipe...");
         pipe = CreateNamedPipeW(
             pipeName.c_str(), PIPE_ACCESS_OUTBOUND, PIPE_TYPE_BYTE | PIPE_READMODE_BYTE | PIPE_WAIT,
@@ -42,6 +43,11 @@ public:
         if (!WriteFile(pipe, message.data(), static_cast<DWORD>(message.size()), &written, nullptr))
             _Log_("Failed to send message.");
         else _Log_("Message sent successfully.");
+    }
+
+    void sendCommand(std::string_view command, std::string_view text = "") {
+        std::string message = std::string(command) + "|" + std::string(text);
+        sendMessage(message);
     }
 
     void shutdown() {

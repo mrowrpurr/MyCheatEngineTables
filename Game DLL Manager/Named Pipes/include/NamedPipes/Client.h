@@ -1,13 +1,31 @@
 #include <_Log_.h>
 #include <windows.h>
 
+#include <functional>
+#include <optional>
+#include <string>
 #include <string_view>
+#include <unordered_map>
+
+struct CommandTextMessage {
+    std::string command;
+    std::string text;
+};
+
+constexpr auto MESSAGE_COMMAND_SEPARATOR = '|';
 
 class NamedPipeClient {
 private:
-    HANDLE             pipe;
-    const std::wstring pipeName;
-    bool               isConnected;
+    HANDLE                                                                           pipe;
+    const std::wstring                                                               pipeName;
+    bool                                                                             isConnected;
+    std::unordered_map<std::string, std::function<void(const std::string& message)>> messageHandlers;
+
+    std::optional<CommandTextMessage> ExtractCommandAndMessage(const std::string& message) {
+        auto pos = message.find(MESSAGE_COMMAND_SEPARATOR);
+        if (pos == std::string::npos) return std::nullopt;
+        return CommandTextMessage{message.substr(0, pos), message.substr(pos + 1)};
+    }
 
 public:
     NamedPipeClient(std::wstring_view name) : pipeName{L"\\\\.\\pipe\\" + std::wstring{name}}, isConnected(false) {
@@ -32,6 +50,10 @@ public:
 
     ~NamedPipeClient() { shutdown(); }
 
+    void addMessageHandler(std::string_view command, std::function<void(const std::string& message)> handler) {
+        messageHandlers.emplace(command, handler);
+    }
+
     void listenForMessages() {
         if (!isConnected) {
             _Log_("Not connected to any pipe.");
@@ -43,12 +65,24 @@ public:
         while (isConnected) {
             bool success = ReadFile(pipe, buffer, sizeof(buffer), &read, nullptr);
             if (!success || read == 0) {
-                if (GetLastError() == ERROR_BROKEN_PIPE) {
-                    _Log_("Server closed the connection.");
-                }
+                if (GetLastError() == ERROR_BROKEN_PIPE) _Log_("Server closed the connection.");
                 break;
             }
-            _Log_("Received message: {}", std::string{buffer, read});
+
+            auto text = std::string{buffer, read};
+            _Log_("Received message: {}", text);
+
+            auto commandText = ExtractCommandAndMessage(std::string{buffer, read});
+            if (commandText.has_value()) {
+                if (auto handler = messageHandlers.find(commandText->command); handler != messageHandlers.end()) {
+                    _Log_("Handling command [{}] with message {}", commandText->command, commandText->text);
+                    handler->second(text);
+                } else {
+                    _Log_("No handler found for message: {}", text);
+                }
+            } else {
+                _Log_("Invalid message without command: {}", std::string{buffer, read});
+            }
         }
     }
 

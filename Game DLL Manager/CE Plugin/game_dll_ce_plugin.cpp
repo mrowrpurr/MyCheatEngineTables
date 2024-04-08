@@ -15,21 +15,47 @@ const string PLUGIN_NAME = "Game DLL Manager - CE Plugin";
 
 constexpr auto NAMED_PIPE = L"GameDLLManager";
 
+bool _dllWasInjected = false;
+
 PExportedFunctions          exportedFunctions;
 unique_ptr<NamedPipeServer> _namedPipeServer = nullptr;
 
 namespace LuaFunctions {
-    void GameLibraryManager_Start() { _Log_("GameLibraryManager_Start!"); }
+    void GameLibraryManager_Start() {
+        _Log_("GameLibraryManager_Start!");
+        _namedPipeServer = make_unique<NamedPipeServer>(NAMED_PIPE);
+    }
 
-    void GameLibraryManager_Stop() { _Log_("GameLibraryManager_Stop!"); }
+    void GameLibraryManager_Stop() {
+        _Log_("GameLibraryManager_Stop!");
+        _namedPipeServer->sendCommand("eject");
+        _namedPipeServer->shutdown();
+        _namedPipeServer.reset();
+    }
 
-    void GameLibraryManager_LoadDLL(const char* dllPath) { _Log_("GameLibraryManager_LoadDLL: {}", dllPath); }
+    void GameLibraryManager_LoadDLL(const char* dllPath) {
+        _Log_("GameLibraryManager_LoadDLL: {}", dllPath);
+        if (_namedPipeServer == nullptr) {
+            _Log_("Named pipe server is not initialized!");
+            return;
+        }
+    }
 
-    void GameLibraryManager_UnloadDLL(const char* dllPath) { _Log_("GameLibraryManager_UnloadDLL: {}", dllPath); }
+    void GameLibraryManager_UnloadDLL(const char* dllPath) {
+        _Log_("GameLibraryManager_UnloadDLL: {}", dllPath);
+        if (_namedPipeServer == nullptr) {
+            _Log_("Named pipe server is not initialized!");
+            return;
+        }
+    }
 
     // TODO: params!
     void GameLibraryManager_CallFunction(const char* functionName) {
         _Log_("GameLibraryManager_CallFunction: {}", functionName);
+        if (_namedPipeServer == nullptr) {
+            _Log_("Named pipe server is not initialized!");
+            return;
+        }
         _Log_("Sending message to named pipe server");
         _namedPipeServer->sendMessage(functionName);
         _Log_("Message sent!");
@@ -70,7 +96,6 @@ extern "C" BOOL __declspec(dllexport) CEPlugin_InitializePlugin(PExportedFunctio
     _Log_("CEPlugin_InitializePlugin!");
     LuaFunctions::BindLuaFunctions(exportedFunctions->GetLuaState());
     ::exportedFunctions = exportedFunctions;
-    _namedPipeServer    = make_unique<NamedPipeServer>(NAMED_PIPE);
     return TRUE;
 }
 
