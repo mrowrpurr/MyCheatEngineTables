@@ -7,9 +7,10 @@ class NamedPipeClient {
 private:
     HANDLE             pipe;
     const std::wstring pipeName;
+    bool               isConnected;
 
 public:
-    NamedPipeClient(std::wstring_view name) : pipeName{L"\\\\.\\pipe\\" + std::wstring{name}} {
+    NamedPipeClient(std::wstring_view name) : pipeName{L"\\\\.\\pipe\\" + std::wstring{name}}, isConnected(false) {
         _Log_("Connecting to named pipe...");
         pipe = CreateFileW(
             pipeName.c_str(), GENERIC_READ,
@@ -20,24 +21,44 @@ public:
             nullptr  // No template file
         );
 
-        if (pipe == INVALID_HANDLE_VALUE) _Log_("Failed to connect to pipe. Ensure that the server is running.");
-        else _Log_("Connected to pipe successfully.");
+        if (pipe == INVALID_HANDLE_VALUE) {
+            _Log_("Failed to connect to pipe. Ensure that the server is running.");
+            isConnected = false;
+        } else {
+            _Log_("Connected to pipe successfully.");
+            isConnected = true;
+        }
     }
 
-    ~NamedPipeClient() {
-        _Log_("Destroying named pipe client...");
-        CloseHandle(pipe);
-        _Log_("Pipe client destroyed successfully.");
-    }
+    ~NamedPipeClient() { shutdown(); }
 
     void listenForMessages() {
+        if (!isConnected) {
+            _Log_("Not connected to any pipe.");
+            return;
+        }
+
         char  buffer[1024];
         DWORD read;
-        while (true) {
+        while (isConnected) {
             bool success = ReadFile(pipe, buffer, sizeof(buffer), &read, nullptr);
-            if (!success || read == 0) break;
+            if (!success || read == 0) {
+                if (GetLastError() == ERROR_BROKEN_PIPE) {
+                    _Log_("Server closed the connection.");
+                }
+                break;
+            }
             _Log_("Received message: {}", std::string{buffer, read});
         }
-        _Log_("Server closed the connection.");
+    }
+
+    void shutdown() {
+        if (pipe != INVALID_HANDLE_VALUE) {
+            _Log_("Shutting down the client...");
+            CloseHandle(pipe);
+            pipe        = INVALID_HANDLE_VALUE;
+            isConnected = false;
+            _Log_("Client shutdown successfully.");
+        }
     }
 };
