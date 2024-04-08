@@ -1,4 +1,5 @@
-includes("Example Plugin")
+includes("Cheat Engine Resources")
 includes("Shared")
 includes("LuaJIT")
 includes("CE Lua")
+includes("Example Plugin")
