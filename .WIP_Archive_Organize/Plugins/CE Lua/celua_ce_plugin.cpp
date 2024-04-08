@@ -21,6 +21,12 @@ void call_this_function() {
     print("Hello from C++!");
 }
 
+// char* StringToCharPtr(std::string_view text) {
+//     std::vector<char> writable(text.begin(), text.end());
+//     writable.push_back('\0');
+//     return writable.data();
+// }
+
 extern "C" BOOL __declspec(dllexport) CEPlugin_GetVersion(PPluginVersion pluginVersion, int sizeofpluginversion) {
     _Log_("CEPlugin_GetVersion!");
 
