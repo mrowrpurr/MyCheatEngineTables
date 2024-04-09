@@ -656,96 +656,116 @@ unregisterSymbol('GameMemoryStart')
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
+        <CheatEntry>
+          <ID>172</ID>
+          <Description>"Teleports to Map ID"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>2 Bytes</VariableType>
+          <Address>+17606</Address>
+        </CheatEntry>
       </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>175</ID>
+      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>173</ID>
+      <Description>"-----------------------------------------------------"</Description>
+      <GroupHeader>1</GroupHeader>
     </CheatEntry>
     <CheatEntry>
       <ID>82</ID>
       <Description>"========[ WIP VGA ]========"</Description>
+      <Options moHideChildren="1"/>
       <GroupHeader>1</GroupHeader>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>6</ID>
-      <Description>"Daggers"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>2 Bytes</VariableType>
-      <Address>GameMemoryStart+23d6e</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>7</ID>
-      <Description>"Flasks"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>2 Bytes</VariableType>
-      <Address>GameMemoryStart+23ed6</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>8</ID>
-      <Description>"Food Rations"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>2 Bytes</VariableType>
-      <Address>GameMemoryStart+23c06</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>9</ID>
-      <Description>"Next one"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>2 Bytes</VariableType>
-      <Address>GameMemoryStart+23c06</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>75</ID>
-      <Description>"Relative Stuff"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <GroupHeader>1</GroupHeader>
-      <Address>GameMemoryStart</Address>
       <CheatEntries>
         <CheatEntry>
-          <ID>19</ID>
-          <Description>"Character Builder Screen Attributes"</Description>
+          <ID>6</ID>
+          <Description>"Daggers"</Description>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>2 Bytes</VariableType>
-          <Address>+25448+24</Address>
+          <Address>GameMemoryStart+23d6e</Address>
         </CheatEntry>
         <CheatEntry>
-          <ID>41</ID>
-          <Description>"Calculated Scores (Health/Stamina/Magic)"</Description>
+          <ID>7</ID>
+          <Description>"Flasks"</Description>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>2 Bytes</VariableType>
-          <Address>+2198A</Address>
+          <Address>GameMemoryStart+23ed6</Address>
         </CheatEntry>
         <CheatEntry>
-          <ID>45</ID>
-          <Description>"Items"</Description>
+          <ID>8</ID>
+          <Description>"Food Rations"</Description>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>2 Bytes</VariableType>
-          <Address>+23c06</Address>
+          <Address>GameMemoryStart+23c06</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"Next one"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>2 Bytes</VariableType>
+          <Address>GameMemoryStart+23c06</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>75</ID>
+          <Description>"Relative Stuff"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <GroupHeader>1</GroupHeader>
+          <Address>GameMemoryStart</Address>
           <CheatEntries>
             <CheatEntry>
-              <ID>48</ID>
-              <Description>"Item 1 Quantity"</Description>
+              <ID>19</ID>
+              <Description>"Character Builder Screen Attributes"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>+0</Address>
+              <Address>+25448+24</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>49</ID>
-              <Description>"Item 2 Quantity"</Description>
+              <ID>41</ID>
+              <Description>"Calculated Scores (Health/Stamina/Magic)"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>+0+168</Address>
+              <Address>+2198A</Address>
             </CheatEntry>
             <CheatEntry>
-              <ID>51</ID>
-              <Description>"Item 3 Quantity"</Description>
+              <ID>45</ID>
+              <Description>"Items"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>2 Bytes</VariableType>
-              <Address>+0+168+168</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>50</ID>
-              <Description>"Item 4 Quantity"</Description>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>2 Bytes</VariableType>
-              <Address>+0+168+168+168</Address>
+              <Address>+23c06</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>48</ID>
+                  <Description>"Item 1 Quantity"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>+0</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>49</ID>
+                  <Description>"Item 2 Quantity"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>+0+168</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>51</ID>
+                  <Description>"Item 3 Quantity"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>+0+168+168</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>50</ID>
+                  <Description>"Item 4 Quantity"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>2 Bytes</VariableType>
+                  <Address>+0+168+168+168</Address>
+                </CheatEntry>
+              </CheatEntries>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -757,76 +777,41 @@ unregisterSymbol('GameMemoryStart')
       <GroupHeader>1</GroupHeader>
     </CheatEntry>
     <CheatEntry>
-      <ID>164</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>String</VariableType>
-      <Length>128</Length>
-      <Unicode>0</Unicode>
-      <CodePage>0</CodePage>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>0B260760</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>165</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>String</VariableType>
-      <Length>128</Length>
-      <Unicode>0</Unicode>
-      <CodePage>0</CodePage>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>0B260760+4</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>167</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>String</VariableType>
-      <Length>128</Length>
-      <Unicode>0</Unicode>
-      <CodePage>0</CodePage>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>0B26076F</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>168</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>String</VariableType>
-      <Length>128</Length>
-      <Unicode>0</Unicode>
-      <CodePage>0</CodePage>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>0B260772</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>166</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>String</VariableType>
-      <Length>128</Length>
-      <Unicode>0</Unicode>
-      <CodePage>0</CodePage>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>0B26079F</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>169</ID>
-      <Description>"No description"</Description>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>String</VariableType>
-      <Length>128</Length>
-      <Unicode>0</Unicode>
-      <CodePage>0</CodePage>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>0B2607AB</Address>
+      <ID>174</ID>
+      <Description>"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</Description>
+      <GroupHeader>1</GroupHeader>
     </CheatEntry>
   </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change Map ID :mov [eax+ebx],si</Description>
+      <AddressString>DOSBox.exe+EF162</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>85</Byte>
+        <Byte>C0</Byte>
+        <Byte>74</Byte>
+        <Byte>4E</Byte>
+      </Before>
+      <Actual>
+        <Byte>66</Byte>
+        <Byte>89</Byte>
+        <Byte>34</Byte>
+        <Byte>18</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>14</Byte>
+        <Byte>8B</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
   <UserdefinedSymbols>
     <SymbolEntry>
       <Name>GameMemoryStart</Name>
-      <Address>B1E7020</Address>
+      <Address>D986020</Address>
     </SymbolEntry>
   </UserdefinedSymbols>
   <Structures StructVersion="2">
