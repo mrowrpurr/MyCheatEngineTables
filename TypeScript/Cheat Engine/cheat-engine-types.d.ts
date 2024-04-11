@@ -30,13 +30,31 @@ declare namespace CheatEngine {
     }
 
     export interface MenuItem {
+        caption: string
+
+        /** @noSelf **/
+        add(item: MenuItem): void
+
         /** @noSelf **/
         doClick(): void
+
+        /** @noSelf **/
+        setOnClick(callback: () => void): void
+
+        /** @noSelf **/
+        setShortcut(shortcutString: string): void
     }
 
     export interface Menu {
-        Items: MenuItem[][]
+        caption: string
+
+        Items: MenuItem
+
+        /** @noSelf **/
+        getItems(): MenuItem[][]
     }
+
+    export interface MainMenu extends Menu {}
 
     export interface Strings {
         text: string
@@ -94,7 +112,7 @@ declare namespace CheatEngine {
     export interface Form {
         caption: string
         Menu: Menu
-        MenuItem5: MenuItem
+        // MenuItem5: MenuItem
 
         /** @noSelf **/
         show(): void
@@ -104,11 +122,11 @@ declare namespace CheatEngine {
     }
 
     export interface MemoryView extends Form {
-        Search1: MenuItem
-        Tools4: MenuItem
-        Tools5: MenuItem
-        Tools6: MenuItem
-        Tools7: MenuItem
+        // Search1: MenuItem
+        // Tools4: MenuItem
+        // Tools5: MenuItem
+        // Tools6: MenuItem
+        // Tools7: MenuItem
     }
 }
 
@@ -242,6 +260,10 @@ declare function getFormCount(): number
 declare function getForm(index: number): CheatEngine.Form
 declare function getAddressSafe(address: number): number | undefined
 declare function getRTTIClassName(address: number): string | undefined
+declare function createMainMenu(): CheatEngine.MainMenu
+declare function createMenuItem(
+    parent: CheatEngine.Menu | CheatEngine.MenuItem
+): CheatEngine.MenuItem
 
 declare function readPointer(address: number): number
 declare function writePointer(address: number, value: number): void
@@ -290,3 +312,5 @@ declare function sleep(milliseconds: number): void
 
 declare function createFormFromFile(filePath: string): CheatEngine.Form
 declare function createTimer(form: CheatEngine.Form): CheatEngine.Timer
+
+declare function showMessage(message: string): void

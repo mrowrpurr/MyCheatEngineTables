@@ -72,7 +72,8 @@ export function getDebugger(): Debugger {
 }
 
 export function clearLogWindow() {
-    getLuaEngine().MenuItem5.doClick()
+    // getLuaEngine().MenuItem5.doClick()
+    print("TODO: re-implement clearLogWindow() without using MenuItem5")
 }
 
 export function showLogWindow() {
