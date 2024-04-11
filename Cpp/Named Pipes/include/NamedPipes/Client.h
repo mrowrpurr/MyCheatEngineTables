@@ -16,6 +16,7 @@ constexpr auto MESSAGE_COMMAND_SEPARATOR = '|';
 
 class NamedPipeClient {
 private:
+    static constexpr auto                                                            bufferSize = 4096;
     HANDLE                                                                           pipe;
     const std::wstring                                                               pipeName;
     bool                                                                             isConnected;
@@ -60,7 +61,7 @@ public:
             return;
         }
 
-        char  buffer[1024];
+        char  buffer[bufferSize];
         DWORD read;
         while (isConnected) {
             bool success = ReadFile(pipe, buffer, sizeof(buffer), &read, nullptr);

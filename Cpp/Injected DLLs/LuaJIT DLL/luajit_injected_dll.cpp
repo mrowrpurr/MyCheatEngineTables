@@ -39,7 +39,7 @@ void setupNewLuaState() {
 void onAttach() {
     setupNewLuaState();
     _namedPipeClient = make_unique<NamedPipeClient>(NAMED_PIPE);
-    _namedPipeClient->addMessageHandler("lua", runLua);
+    _namedPipeClient->addMessageHandler("luaJIT", runLua);
     _Log_("Client connecting to server...");
     thread{[&] { _namedPipeClient->listenForMessages(); }}.detach();
     _Log_("Client listening for messages.");

@@ -5,8 +5,9 @@
 
 class NamedPipeServer {
 private:
-    HANDLE             pipe;
-    const std::wstring pipeName;
+    static constexpr auto bufferSize = 4096;
+    HANDLE                pipe;
+    const std::wstring    pipeName;
 
 public:
     NamedPipeServer(std::wstring_view name) : pipeName{L"\\\\.\\pipe\\" + std::wstring{name}} {
@@ -14,11 +15,11 @@ public:
         _Log_("Creating named pipe...");
         pipe = CreateNamedPipeW(
             pipeName.c_str(), PIPE_ACCESS_OUTBOUND, PIPE_TYPE_BYTE | PIPE_READMODE_BYTE | PIPE_WAIT,
-            1,       // Only one instance
-            1024,    // Out buffer size
-            1024,    // In buffer size
-            0,       // Default timeout
-            nullptr  // Default security attributes
+            1,           // Only one instance
+            bufferSize,  // Out buffer size
+            bufferSize,  // In buffer size
+            0,           // Default timeout
+            nullptr      // Default security attributes
         );
 
         if (pipe == INVALID_HANDLE_VALUE) _Log_("Failed to create pipe.");
@@ -39,6 +40,11 @@ public:
     }
 
     void sendMessage(std::string_view message) {
+        if (message.size() > bufferSize) {
+            _Log_("Message is too large.");
+            return;
+        }
+
         DWORD written;
         if (!WriteFile(pipe, message.data(), static_cast<DWORD>(message.size()), &written, nullptr))
             _Log_("Failed to send message.");
