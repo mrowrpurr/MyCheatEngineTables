@@ -57,11 +57,15 @@ function setupTextOutput() {
     timer.enabled = true
 }
 
-export function enable() {
+export function showStackWindow() {
     timerEnabled = !timerEnabled
     setupTextOutput()
     showTopOfStack()
     if (textOutput) textOutput.show()
+}
+
+export function enable() {
+    showStackWindow()
 }
 
 export function disable() {}

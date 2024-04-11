@@ -74,11 +74,15 @@ function setupTextOutput() {
     textOutput.show()
 }
 
-export function enable() {
+export function showRegistersWindow() {
     timerEnabled = !timerEnabled
     setupTextOutput()
     showRegisters()
     if (textOutput) textOutput.show()
+}
+
+export function enable() {
+    showRegistersWindow()
 }
 
 export function disable() {}

@@ -1,4 +1,6 @@
-const TEXT_OUTPUT_FORM_FILE = "Forms/TextOutput.FRM"
+import { getFormPath } from "Forms"
+
+const TEXT_OUTPUT_FORM_FILE = "TextOutput.FRM"
 
 interface frmTextOutput extends CheatEngine.Form {
     lblTitle: CheatEngine.Label
@@ -11,7 +13,7 @@ export class TextOutput {
     constructor(form: CheatEngine.Form | undefined = undefined) {
         this._form = form
             ? (form as frmTextOutput)
-            : (createFormFromFile(TEXT_OUTPUT_FORM_FILE) as frmTextOutput)
+            : (createFormFromFile(getFormPath(TEXT_OUTPUT_FORM_FILE)) as frmTextOutput)
     }
 
     get form() {
