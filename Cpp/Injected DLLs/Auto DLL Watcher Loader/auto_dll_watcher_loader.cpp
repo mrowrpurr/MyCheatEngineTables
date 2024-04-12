@@ -6,6 +6,7 @@ _LogToFile_("C:/Temp/AutoDLLWatcherLoader.log");
 #include <efsw/efsw.hpp>
 #include <filesystem>
 #include <memory>
+#include <thread>
 
 using namespace std;
 
@@ -27,7 +28,27 @@ public:
         std::string oldFilename = ""
     ) override {
         if (action == efsw::Actions::Add && filename.substr(filename.find_last_of(".") + 1) == "dll") {
-            _Log_("New DLL added. Dir: {} Filename: {}", dir, filename);
+            auto directoryPath = filesystem::path(dir);
+            auto dllPath       = directoryPath / filename;
+
+            _Log_("New DLL: {}", dllPath.string());
+            if (!filesystem::exists(dllPath)) {
+                _Log_("DLL does not exist: {}", dllPath.string());
+                return;
+            } else {
+                _Log_("DLL exists: {}", dllPath.string());
+            }
+
+            // Wait 500ms before injecting:
+            this_thread::sleep_for(500ms);
+
+            _Log_("Injecting DLL...");
+            auto module = LoadLibraryA(dllPath.string().c_str());
+            if (!module) {
+                _Log_("Failed to inject DLL. Error: {}", GetLastError());
+            } else {
+                _Log_("DLL injected.");
+            }
         }
     }
 };

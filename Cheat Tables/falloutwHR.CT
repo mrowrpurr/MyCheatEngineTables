@@ -384,9 +384,30 @@ mov [eax+34],ebx
 
 if not syntaxcheck and not injectedDLLLoaderDLL then
    print("Injecting DLL Loader dll...")
-   injectDLL("C:/Code/mrowrpurr/MyCheatEngineTables/build/windows/x86/release/Auto DLL Watcher Loader.dll")
+   injectDLL("C:/Code/mrowrpurr/MyCheatEngineTables/build/windows/x86/debug/Auto DLL Watcher Loader.dll")
    injectedDLLLoaderDLL = true
    print("Injected DLL Loader dll.")
+end
+
+{$asm}
+
+[DISABLE]
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>204</ID>
+          <Description>"Inject Another DLL"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+{$lua}
+
+if not syntaxcheck and not injectedAnotherDLL then
+   print("Injecting Another DLL ...")
+   injectDLL("C:/Code/mrowrpurr/MyCheatEngineTables/build/windows/x86/debug/Fallout 1 - Misc Hacking.dll")
+   injectedAnotherDLL = true
+   print("Injected Another DLL")
 end
 
 {$asm}
