@@ -22,7 +22,7 @@ namespace Pointers {
 namespace Functions {
     using GetStatNumber_Maybe = uint32_t(__fastcall*)(uint32_t, uint32_t);
     using MoveNPC_Maybe       = int(__fastcall*)(int ptr, int tile);
-    using IncreaseSkill_Maybe = int(__fastcall*)(uint32_t unk0, uint32_t skillIndex);
+    using IncreaseSkill_Maybe = int(__fastcall*)(uintptr_t critterPtr, uint32_t skillIndex);
 
     namespace Offsets {
         constexpr auto MoveNPC_Maybe       = 0x7F69C;
@@ -47,9 +47,22 @@ namespace DoStuff {
         auto function       = reinterpret_cast<levelUp>(GetAddress(levelUpAddress));
         function();
     }
+
+    void IncCharacterStat() {
+        // 000DFE30	 000DFE04
+
+        // uintptr_t unkArgument1 = 0x000DFE30;
+        uintptr_t playerCharacter = GetPointer(Pointers::PlayerCharacter);
+        uint32_t  skillIndex      = 1;
+        auto      function = GetFunction<Functions::IncreaseSkill_Maybe>(Functions::Offsets::IncreaseSkill_Maybe);
+        function(playerCharacter, skillIndex);
+    }
 }
 
-void DoSomething() { DoStuff::LevelUp(); }
+void DoSomething() {
+    // DoStuff::LevelUp();
+    DoStuff::IncCharacterStat();
+}
 
 void HackThePlanet() {
     _Log_("Hack the Planet!");
@@ -60,14 +73,6 @@ void HackThePlanet() {
     _Log_("Doing the thing...");
     DoSomething();
     _Log_("Did the thing!");
-
-    // 000DFE30	 000DFE04
-    // uintptr_t unkArgument1 = 0x000DFE30;
-    // uint32_t  skillIndex   = 1;
-    // auto      function     = GetFunction<Functions::IncreaseSkill_Maybe>(Functions::Offsets::IncreaseSkill_Maybe);
-    // _Log_("Calling...");
-    // function(unkArgument1, skillIndex);
-    // _Log_("Called!");
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
