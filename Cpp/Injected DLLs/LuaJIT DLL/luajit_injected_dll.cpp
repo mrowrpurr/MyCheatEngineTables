@@ -22,7 +22,20 @@ unordered_map<HMODULE, string> _loadedDllModules;
 void runLua(std::string_view luaScript) {
     _Log_("Running Lua script: {}", luaScript);
     try {
-        _luaState->script(luaScript.data());
+        auto script = _luaState->load(luaScript.data());
+        if (script.valid()) {
+            auto result = script();
+            if (result.valid()) {
+                _Log_("Lua script executed successfully.");
+                _Log_("Result: {}", result.get<string>());
+            } else {
+                sol::error err = result;
+                _Log_("Lua error: {}", err.what());
+            }
+        } else {
+            sol::error err = script;
+            _Log_("Lua error: {}", err.what());
+        }
     } catch (const sol::error& e) {
         _Log_("Lua error: {}", e.what());
     }
