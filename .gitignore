@@ -10,3 +10,5 @@ node_modules
 build
 compile_commands
 .xmake
+*.dll
+*.pdb
