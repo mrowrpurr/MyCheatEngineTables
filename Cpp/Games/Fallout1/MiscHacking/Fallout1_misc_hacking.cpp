@@ -4,15 +4,30 @@ _LogToFile_("C:/Temp/Fallout1_Misc_Hacks.log");
 //
 #include <windows.h>
 
-using MoveNPC_Maybe = int(__fastcall*)(int, int);
-
-constexpr auto CHARACTER_ID = 18000;
-
 constexpr auto MODULE_BASE = 0x400000;
 
-namespace Offsets {
-    namespace Functions {
-        constexpr auto MoveNPCMaybe = 0x7F69C;
+namespace Identifiers {
+    constexpr auto CHARACTER_ID = 18000;
+
+    namespace SkillIndexes {
+        constexpr uint32_t SmallGuns = 0;
+        constexpr uint32_t BigGuns   = 1;
+    }
+}
+
+namespace Pointers {
+    constexpr auto PlayerCharacter = 0x105734;
+}
+
+namespace Functions {
+    using GetStatNumber_Maybe = uint32_t(__fastcall*)(uint32_t, uint32_t);
+    using MoveNPC_Maybe       = int(__fastcall*)(int ptr, int tile);
+    using IncreaseSkill_Maybe = int(__fastcall*)(uint32_t unk0, uint32_t skillIndex);
+
+    namespace Offsets {
+        constexpr auto MoveNPC_Maybe       = 0x7F69C;
+        constexpr auto GetStatNumber_Maybe = 0x98898;
+        constexpr auto IncreaseSkill_Maybe = 0x989f4;
     }
 }
 
@@ -23,14 +38,36 @@ T GetFunction(uint32_t offset) {
     return reinterpret_cast<T>(GetAddress(offset));
 }
 
+uintptr_t GetPointer(uint32_t offset) { return *reinterpret_cast<uintptr_t*>(GetAddress(offset)); }
+
+namespace DoStuff {
+    void LevelUp() {
+        using levelUp       = void(__fastcall*)(void);
+        auto levelUpAddress = 0x42c0ac;
+        auto function       = reinterpret_cast<levelUp>(GetAddress(levelUpAddress));
+        function();
+    }
+}
+
+void DoSomething() { DoStuff::LevelUp(); }
+
 void HackThePlanet() {
     _Log_("Hack the Planet!");
+    _Log_("====================");
+    _Log_("Timestamp: {}", __TIMESTAMP__);
+    _Log_("====================");
 
-    auto fn = GetFunction<MoveNPC_Maybe>(Offsets::Functions::MoveNPCMaybe);
+    _Log_("Doing the thing...");
+    DoSomething();
+    _Log_("Did the thing!");
 
-    _Log_("Calling function ...");
-    fn(CHARACTER_ID, 18490);
-    _Log_("Function called!");
+    // 000DFE30	 000DFE04
+    // uintptr_t unkArgument1 = 0x000DFE30;
+    // uint32_t  skillIndex   = 1;
+    // auto      function     = GetFunction<Functions::IncreaseSkill_Maybe>(Functions::Offsets::IncreaseSkill_Maybe);
+    // _Log_("Calling...");
+    // function(unkArgument1, skillIndex);
+    // _Log_("Called!");
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
