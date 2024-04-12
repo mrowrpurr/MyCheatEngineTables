@@ -376,6 +376,27 @@ mov [eax+34],ebx
       <CheatEntries>
         <CheatEntry>
           <ID>198</ID>
+          <Description>"Inject Auto DLL Loader DLL"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+{$lua}
+
+if not syntaxcheck and not injectedDLLLoaderDLL then
+   print("Injecting DLL Loader dll...")
+   injectDLL("C:/Code/mrowrpurr/MyCheatEngineTables/build/windows/x86/release/Auto DLL Watcher Loader.dll")
+   injectedDLLLoaderDLL = true
+   print("Injected DLL Loader dll.")
+end
+
+{$asm}
+
+[DISABLE]
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>203</ID>
           <Description>"Inject LuaJIT DLL"</Description>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>[ENABLE]
@@ -20319,4 +20340,7 @@ end
       </Elements>
     </Structure>
   </Structures>
+  <LuaScript>openProcess("falloutwHR.exe")
+
+</LuaScript>
 </CheatTable>
