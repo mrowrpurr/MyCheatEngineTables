@@ -77,7 +77,7 @@ public:
             if (commandText.has_value()) {
                 if (auto handler = messageHandlers.find(commandText->command); handler != messageHandlers.end()) {
                     _Log_("Handling command [{}] with message {}", commandText->command, commandText->text);
-                    handler->second(text);
+                    handler->second(commandText->text);
                 } else {
                     _Log_("No handler found for message: {}", text);
                 }
