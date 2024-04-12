@@ -32,8 +32,9 @@ void RegisterLuaFunctions() {
     ceLuaState.set_function("luaJIT", RunLuaJITScript);
 }
 
-CEPlugin_OnInit { RegisterLuaFunctions(); }
-
-CEPlugin_OnEnable { _namedPipeServer = make_unique<NamedPipeServer>(NAMED_PIPE); }
+CEPlugin_OnEnable {
+    RegisterLuaFunctions();
+    _namedPipeServer = make_unique<NamedPipeServer>(NAMED_PIPE);
+}
 
 CEPlugin_OnDisable { _namedPipeServer->shutdown(); }
