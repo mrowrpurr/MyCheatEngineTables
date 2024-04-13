@@ -1072,6 +1072,30 @@ address:
         <Byte>59</Byte>
       </After>
     </CodeEntry>
+    <CodeEntry>
+      <Description>Pick up item and inc :add [esi+eax+04],edx</Description>
+      <AddressString>falloutwHR.exe+6A363</AddressString>
+      <Before>
+        <Byte>08</Byte>
+        <Byte>8B</Byte>
+        <Byte>54</Byte>
+        <Byte>24</Byte>
+        <Byte>1C</Byte>
+      </Before>
+      <Actual>
+        <Byte>01</Byte>
+        <Byte>54</Byte>
+        <Byte>06</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>41</Byte>
+        <Byte>08</Byte>
+        <Byte>31</Byte>
+        <Byte>D2</Byte>
+      </After>
+    </CodeEntry>
   </CheatCodes>
   <UserdefinedSymbols/>
   <Structures StructVersion="2">
